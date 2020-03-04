@@ -1,39 +1,35 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { View, Text , Button} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import Navigator from './src/navigation';
+import * as Font from 'expo-font';
+import { Ionicons } from '@expo/vector-icons';
+import { AppLoading } from 'expo';
 
 
-function HomeScreen({navigation}) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screens</Text>
-      <Button
-        title="Login"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
-  );
-}
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReady: false,
+    };
+  }
 
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screens</Text>
-    </View>
-  );
-}
+  async componentDidMount() {
+    await Font.loadAsync({
+      Roboto: require('native-base/Fonts/Roboto.ttf'),
+      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      ...Ionicons.font,
+    });
+    this.setState({ isReady: true });
+  }
 
-const Stack = createStackNavigator();
+  render() {
+    if (!this.state.isReady) {
+      return <AppLoading />;
+    }
 
-export default function App() {
-  return (
-    <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" options={{ headerShown: false }} component={HomeScreen} />
-      <Stack.Screen name="Details"   component={DetailsScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
-  );
+    return (
+      <Navigator/>
+    );
+  }
 }
