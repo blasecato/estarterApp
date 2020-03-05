@@ -11,18 +11,20 @@ export default function HomeScreen({ navigation }) {
       />
       <Container style={{ backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
         <Image style={{ marginTop: 0, width: 300, height: 100, resizeMode: 'contain', backgroundColor: 'transparent' }} source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
-        <Form>
-          <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel>
-            <Label style={{ marginBottom: 15, color: '#ffff' }}>Número de identificación</Label>
-            <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, paddingLeft: 20 }} />
-          </Item>
-          <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel last>
-            <Label style={{ marginBottom: 15, color: '#ffff' }}>Contraseña</Label>
-            <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, paddingLeft: 20 }} />
-          </Item>
-        </Form>
-        <Button light><Text> Inciar sesion </Text></Button>
+        {/* <Form> */}
+        <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel>
+          <Label style={{ marginBottom: 15, color: '#FFFF' }}>Número de identificación</Label>
+          <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF33' }} />
+        </Item>
+        <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel last>
+          <Label style={{ marginBottom: 15, color: '#FFFF' }}>Contraseña</Label>
+          <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF33' }} />
+        </Item>
+        {/* </Form> */}
+        <Button light style={{ marginTop: 20, width: 336, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }} ><Text> Inciar sesión </Text></Button>
+        <Button transparent><Text> Olvide mi contraseña </Text></Button>
       </Container>
+      <Button full light><Text> ¿No tienes una cuenta? </Text></Button>
     </Container>
   );
 }
