@@ -50,7 +50,7 @@ export default function HomeScreen({ navigation }) {
               <LinearGradient
                 colors={['#9DDCFF', '#19428D']}
                 style={{ height: '100%', width: '100%', alignItems: 'center', borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
-                <Image style={{ marginTop: 32, width: 300, height: 100, resizeMode: 'contain', backgroundColor: 'transparent' }} source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
+                <Image style={{ marginTop: 32, width: 300, height: 100, resizeMode: 'contain', backgroundColor: 'transparent' }} source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }}/>
                 <Text style={{ marginTop: 24, marginBottom: 27, color: '#282828', textAlign: 'center' }}>Completa la siguiente información para realizar tu registro.</Text>
                 <Form style={{ paddingRight: 15 }}>
                   <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90, width: 320 }} stackedLabel>
