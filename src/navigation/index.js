@@ -13,7 +13,7 @@ export default function navigator() {
             <Stack.Navigator initialRouteName="Splash">
                 <Stack.Screen name="Login" options={{ headerShown: false }} component={Login} />
                 <Stack.Screen name="Onboarding" component={Onboarding} />
-                <Stack.Screen name="Splash" options={{ headerShown: false }} component={Splash} />
+                {/* <Stack.Screen name="Splash" options={{ headerShown: false }} component={Splash} /> */}
             </Stack.Navigator>
         </NavigationContainer>
     );
