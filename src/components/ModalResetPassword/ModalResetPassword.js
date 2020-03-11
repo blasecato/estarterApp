@@ -29,11 +29,17 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
                             <Text style={{ marginTop: 24, marginBottom: 13, color: '#282828', textAlign: 'center' }}>¿Cómo deseas reestablecer tu contraseña?</Text>
                             <Container style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', marginBottom: 8, backgroundColor: 'transparent' }}>
                                 <TouchableOpacity onPress={() => { setModalCode(1) }} style={{ backgroundColor: '#103256', width: 122, height: 170, borderRadius: 10, marginRight: 15 }}>
-
+                                    <Image
+                                        source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/celular.png' }}
+                                        style={{ height: 15, width: 15, resizeMode: 'contain', alignItems: 'flex-end', marginLeft: 15 }}
+                                    />
                                     <Text style={{ marginTop: 24, marginBottom: 13, color: '#FFFF', textAlign: 'center' }}>Enviar código a mi <Text style={{ color: '#FFFF', fontWeight: 'bold' }}>número celular</Text></Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() => { setModalCode(2) }} style={{ backgroundColor: '#103256', width: 122, height: 170, borderRadius: 10, marginLeft: 15 }}>
-
+                                    <Image
+                                        source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/msj.png' }}
+                                        style={{ height: 15, width: 15, resizeMode: 'contain', alignItems: 'flex-end', marginLeft: 15 }}
+                                    />
                                     <Text style={{ marginTop: 24, marginBottom: 13, color: '#FFFF', textAlign: 'center' }}>Enviar código a mi <Text style={{ color: '#FFFF', fontWeight: 'bold' }}>correo electrónico</Text></Text>
                                 </TouchableOpacity>
                             </Container>

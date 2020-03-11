@@ -13,4 +13,7 @@ export default styles = StyleSheet.create({
         resizeMode: 'cover',
         position: 'absolute'
     }
-});
+
+
+
+})

@@ -10,24 +10,24 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
             animationType="fade"
             transparent={false}
             visible={hidden}>
-            <Container style={{ height: '100%', backgroundColor: '#000000' }}>
+            <Container style={styles.container}>
                 <LinearGradient
                     colors={['#072148', '#000000']}
-                    style={{ height: '100%', width: '100%', alignItems: 'center', flexDirection: 'row', justifyContent: "center", display: 'flex', position: "relative" }}>
+                    style={{ height: '100%', width: '100%', alignItems: 'center', flexDirection: 'row', justifyContent: "center", display: 'flex', position: "relative", flexDirection: 'column' }}>
+                    <TouchableHighlight
+                        style={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end',  }}
+                        onPress={() => {
+                            setHidden(false)
+                        }}>
+                        <View style={{ width: 100, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "center" }}>
+                            <Text style={{ color: '#FFFFFF', textAlign: 'right' }}>Cerrar</Text>
+                            <Image
+                                source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583451323/closeIcon.png' }}
+                                style={{ height: 15, width: 15, resizeMode: 'contain', alignItems: 'flex-end', marginLeft: 15 }}
+                            />
+                        </View>
+                    </TouchableHighlight>
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: "center", marginBottom: 10, position: 'absolute', width: 100, height: 40, backgroundColor: 'transparent', top: 15, right: 10, zIndex: 99 }}>
-                        <TouchableHighlight
-                            style={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}
-                            onPress={() => {
-                                setHidden(false)
-                            }}>
-                            <View style={{ width: 100, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: "center" }}>
-                                <Text style={{ color: '#FFFFFF', textAlign: 'right' }}>Cerrar</Text>
-                                <Image
-                                    source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583451323/closeIcon.png' }}
-                                    style={{ height: 15, width: 15, resizeMode: 'contain', alignItems: 'flex-end', marginLeft: 15 }}
-                                />
-                            </View>
-                        </TouchableHighlight>
                     </View>
                     <View style={{ height: 680, width: '90%', backgroundColor: 'transparent', position: 'relative' }}>
                         <LinearGradient

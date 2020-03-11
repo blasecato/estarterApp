@@ -11,7 +11,6 @@ export default function HomeScreen({ navigation }) {
 
   const [modalRegister, setModalRegister] = useState(false)
   const [modalPassword, setModalPassword] = useState(false)
-  const [modalActivate, setModalActivate] = useState(false)
   const [modalCode, setModalCode] = useState(0)
 
   return (
@@ -39,8 +38,8 @@ export default function HomeScreen({ navigation }) {
         <Text style={{ color: '#162CA3' }}> ¿No tienes una cuenta? </Text>
       </Button>
       <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} ></ModalSignup>
-      <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
       <ModalConfirm hidden={modalPassword} setHidden={setModalPassword} ></ModalConfirm>
+      {/* <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm> */}
     </Container >
   );
 }
