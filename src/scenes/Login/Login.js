@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
-import { Image, Modal, TouchableHighlight } from 'react-native';
+import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import ModalSignup from '../../components/ModalSignup/ModalSignup';
+import ModalConfirm from '../../components/ModalConfirm/ModalConfirm';
+import ModalResetPassword from '../../components/ModalResetPassword/ModalResetPassword';
 import styles from './Login.styles';
 
 export default function HomeScreen({ navigation }) {
 
-  const [modalVisible, setModalVisible] = useState(false)
+  const [modalRegister, setModalRegister] = useState(false)
+  const [modalPassword, setModalPassword] = useState(false)
+  const [modalActivate, setModalActivate] = useState(false)
+  const [modalCode, setModalCode] = useState(0)
 
   return (
     <Container style={styles.container} >
@@ -28,12 +33,14 @@ export default function HomeScreen({ navigation }) {
           </Item>
         </Form>
         <Button light style={{ marginTop: 20, width: 336, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }} ><Text> Inciar sesión </Text></Button>
-        <Button transparent><Text> Olvide mi contraseña </Text></Button>
+        <Button onPress={() => { setModalPassword(!modalPassword) }} transparent><Text> Olvide mi contraseña </Text></Button>
       </Container>
-      <Button onPress={() => { setModalVisible(!modalVisible) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0 }} >
+      <Button onPress={() => { setModalRegister(!modalRegister) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0 }} >
         <Text style={{ color: '#162CA3' }}> ¿No tienes una cuenta? </Text>
       </Button>
-      <ModalSignup hidden={modalVisible} setHidden={setModalVisible} ></ModalSignup>
-    </Container>
+      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} ></ModalSignup>
+      <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
+      <ModalConfirm hidden={modalPassword} setHidden={setModalPassword} ></ModalConfirm>
+    </Container >
   );
 }
