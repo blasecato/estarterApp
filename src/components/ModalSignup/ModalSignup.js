@@ -3,8 +3,7 @@ import { Container, Header, Content, Button, Text, Form, Item, Input, Label, Vie
 import { Image, Modal, TouchableHighlight } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function ModalSignup({ navigation, hidden, setHidden }) {
-
+export default function ModalSignup({ navigation, hidden, setHidden, setModalCode }) {
 
     return (
         <Modal
@@ -40,30 +39,30 @@ export default function ModalSignup({ navigation, hidden, setHidden }) {
                                 <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90, width: 320 }} stackedLabel>
                                     <Label style={{ marginBottom: 15, color: '#FFFF' }}>
                                         Número de identificación
-                    </Label>
+                                    </Label>
                                     <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF1A', width: 320 }} />
                                 </Item>
                                 <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel last>
                                     <Label style={{ marginBottom: 15, color: '#FFFF' }}>
                                         Nombre y apellido
-                    </Label>
+                                    </Label>
                                     <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF1A', width: 320 }} />
                                 </Item>
                                 <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel last>
                                     <Label style={{ marginBottom: 15, color: '#FFFF' }}>
                                         Correo Electrónico
-                    </Label>
+                                    </Label>
                                     <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF1A', width: 320 }} />
                                 </Item>
                                 <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel last>
                                     <Label style={{ marginBottom: 15, color: '#FFFF' }}>
                                         Número de celular
-                    </Label>
+                                    </Label>
                                     <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF1A', width: 320 }} />
                                 </Item>
                             </Form>
                         </LinearGradient>
-                        <Button full style={{ backgroundColor: '#417CCA', color: '#162CA3', borderColor: 'transparent', elevation: 0, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} >
+                        <Button onPress={() => { setModalCode(2) }} full style={{ backgroundColor: '#417CCA', color: '#162CA3', borderColor: 'transparent', elevation: 0, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }} >
                             <Text style={{ color: '#FFFFFF' }}> Registrarme </Text>
                         </Button>
                     </View>
