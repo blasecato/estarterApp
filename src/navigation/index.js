@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export default function navigator() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Splash">
+            <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen name="Login" options={{ headerShown: false }} component={Login} />
                 <Stack.Screen name="Onboarding" component={Onboarding} />
                 <Stack.Screen name="Splash" options={{ headerShown: false }} component={Splash} />
