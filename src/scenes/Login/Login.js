@@ -38,8 +38,8 @@ export default function HomeScreen({ navigation }) {
         <Text style={{ color: '#162CA3' }}> ¿No tienes una cuenta? </Text>
       </Button>
       <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} ></ModalSignup>
-      <ModalConfirm hidden={modalPassword} setHidden={setModalPassword} ></ModalConfirm>
-      {/* <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm> */}
+      <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} ></ModalResetPassword>
+      <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
     </Container >
   );
 }
