@@ -14,32 +14,34 @@ export default function HomeScreen({ navigation }) {
   const [modalCode, setModalCode] = useState(0)
 
   return (
-    <Container style={styles.container} >
+    <Container style={styles.containerbg} >
       <Image
         source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583314195/bg.png' }}
-        style={styles.logo}
+        style={styles.bg}
       />
-      <Container style={{ backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
-        <Image style={{ marginTop: 0, width: 300, height: 100, resizeMode: 'contain', backgroundColor: 'transparent' }} source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
-        <Form style={{ paddingRight: 15 }}>
-          <Item style={{ borderWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel>
-            <Label style={{ marginBottom: 15, color: '#FFFF' }}>Número de identificación</Label>
-            <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF1A' }} />
+      <Container style={styles.container}>
+        <Image
+          style={styles.logo}
+          source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
+        <Form style={styles.form}>
+          <Item style={styles.item} stackedLabel>
+            <Label style={styles.label}>Número de identificación</Label>
+            <Input style={styles.input} />
           </Item>
-          <Item style={{ bor5erWidth: 0, borderColor: 'transparent', height: 90 }} stackedLabel last>
-            <Label style={{ marginBottom: 15, color: '#FFFF' }}>Contraseña</Label>
-            <Input style={{ borderWidth: 1, borderColor: '#FFFF', borderRadius: 10, backgroundColor: '#FFFFFF1A' }} />
+          <Item style={styles.item} stackedLabel last>
+            <Label style={styles.label}>Contraseña</Label>
+            <Input style={styles.input} />
           </Item>
         </Form>
-        <Button light style={{ marginTop: 20, width: 336, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }} ><Text> Inciar sesión </Text></Button>
+        <Button light style={styles.buttonSignin} ><Text> Inciar sesión </Text></Button>
         <Button onPress={() => { setModalPassword(!modalPassword) }} transparent><Text> Olvide mi contraseña </Text></Button>
       </Container>
       <Button onPress={() => { setModalRegister(!modalRegister) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0 }} >
-        <Text style={{ color: '#162CA3' }}> ¿No tienes una cuenta? </Text>
+        <Text style={styles.buttonSignup}> ¿No tienes una cuenta? </Text>
       </Button>
       <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} ></ModalSignup>
       <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} ></ModalResetPassword>
       <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
-    </Container >
+    </Container>
   );
 }
