@@ -5,12 +5,14 @@ import { LinearGradient } from 'expo-linear-gradient';
 import ModalSignup from '../../components/ModalSignup/ModalSignup';
 import ModalConfirm from '../../components/ModalConfirm/ModalConfirm';
 import ModalResetPassword from '../../components/ModalResetPassword/ModalResetPassword';
+import ModalActivation from '../../components/ModalActivation/ModalActivation';
 import styles from './Login.styles';
 
 export default function HomeScreen({ navigation }) {
 
   const [modalRegister, setModalRegister] = useState(false)
   const [modalPassword, setModalPassword] = useState(false)
+  const [modalActivation, setModalActivation] = useState(0)
   const [modalCode, setModalCode] = useState(0)
 
   return (
@@ -39,9 +41,10 @@ export default function HomeScreen({ navigation }) {
       <Button onPress={() => { setModalRegister(!modalRegister) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0 }} >
         <Text style={styles.buttonSignup}> ¿No tienes una cuenta? </Text>
       </Button>
-      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} ></ModalSignup>
-      <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} ></ModalResetPassword>
-      <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
+      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalActivation={setModalActivation} ></ModalSignup>
+      <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
+      <ModalConfirm hidden={modalCode} setHidden={setModalCode} setModalActivation={setModalActivation} ></ModalConfirm>
+      <ModalActivation hidden={modalActivation} setHidden={setModalActivation} ></ModalActivation>
     </Container>
   );
 }
