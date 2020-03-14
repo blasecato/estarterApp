@@ -8,7 +8,7 @@ export default function ModalConfirm({ navigation, hidden, setHidden }) {
 
     return (
         <Modal
-            animationType="slide"
+            animationType="fade"
             transparent={false}
             visible={hidden != 0}>
             <Container style={{ height: '100%', backgroundColor: '#000000' }}>

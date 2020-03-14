@@ -33,14 +33,14 @@ export default function HomeScreen({ navigation }) {
             <Input style={styles.input} />
           </Item>
         </Form>
-        <Button light style={styles.buttonSignin} ><Text> Inciar sesión </Text></Button>
+        <Button light onPress={() => navigation.navigate('Onboarding')} style={styles.buttonSignin} ><Text> Inciar sesión </Text></Button>
         <Button onPress={() => { setModalPassword(!modalPassword) }} transparent><Text> Olvide mi contraseña </Text></Button>
       </Container>
       <Button onPress={() => { setModalRegister(!modalRegister) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0 }} >
         <Text style={styles.buttonSignup}> ¿No tienes una cuenta? </Text>
       </Button>
-      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} ></ModalSignup>
-      <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} ></ModalResetPassword>
+      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} navigation></ModalSignup>
+      <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
       <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
     </Container>
   );
