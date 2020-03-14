@@ -8,7 +8,7 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
 
     return (
         <Modal
-            animationType="slide"
+            animationType="fade"
             transparent={false}
             visible={hidden}>
             <Container style={styles.containerbg}>
