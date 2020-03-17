@@ -4,7 +4,7 @@ import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalConfirm.style';
 
-export default function ModalConfirm({ navigation, hidden, setHidden }) {
+export default function ModalConfirm({ navigation, hidden, setHidden, setModalActivation }) {
 
     return (
         <Modal
@@ -35,15 +35,12 @@ export default function ModalConfirm({ navigation, hidden, setHidden }) {
                                             <Image style={styles.imageCardCircle}
                                                 source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/celular.png' }} />
                                         </View>
+                                        <Text style={styles.label}>¿Cuál es tu número de celular?</Text>
                                         <Form style={styles.form}>
                                             <Item style={styles.item} stackedLabel last>
-                                                <Label style={styles.label}>¿Cuál es tu número de celular?</Label>
                                                 <Input style={styles.input} />
                                             </Item>
                                         </Form>
-                                        <Button onPress={() => { setModalActivation(1) }} full style={styles.buttonPass} >
-                                            <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
-                                        </Button>
                                     </>
                                     :
                                     <>
@@ -51,18 +48,28 @@ export default function ModalConfirm({ navigation, hidden, setHidden }) {
                                             <Image style={styles.imageCardCircle}
                                                 source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/msj.png' }} />
                                         </View>
+                                        <Text style={styles.label}>¿Cuál es tu correo electrónico?</Text>
                                         <Form style={styles.form}>
                                             <Item style={styles.item} stackedLabel last>
-                                                <Label style={styles.label}>¿Cuál es tu correo electrónico?</Label>
                                                 <Input style={styles.input} />
                                             </Item>
                                         </Form>
-                                        <Button onPress={() => { setModalActivation(2) }} full style={styles.buttonPass} >
-                                            <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
-                                        </Button>
                                     </>
                             }
                         </LinearGradient>
+                        {
+                            hidden == 1 ?
+
+                                <Button onPress={() => { setModalActivation(1) }} full style={styles.buttonPass} >
+                                    <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
+                                </Button>
+
+                                :
+
+                                <Button onPress={() => { setModalActivation(2) }} full style={styles.buttonPass} >
+                                    <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
+                                </Button>
+                        }
                     </View>
                 </LinearGradient>
             </Container>

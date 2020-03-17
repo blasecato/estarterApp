@@ -13,7 +13,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center'
     },
     container: {
-        height: '60%',
+        height: '55%',
         width: '90%',
         backgroundColor: 'transparent'
     },
@@ -67,15 +67,17 @@ export default styles = StyleSheet.create({
     form: {
         paddingRight: 15,
         marginTop: 19,
-        marginBottom: 36
+        marginBottom: 36,
+
     },
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 90
+        height: 28,
     },
     label: {
-        marginBottom: 15,
+        marginBottom: 10,
+        marginTop: 15,
         color: '#FFFF',
     },
     input: {
@@ -83,7 +85,11 @@ export default styles = StyleSheet.create({
         borderColor: '#FFFF',
         borderRadius: 10,
         backgroundColor: '#FFFFFF1A',
-        width: 320
+        height: 38,
+        width: 288,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flex: 0
     },
     buttonPass: {
         backgroundColor: '#417CCA',

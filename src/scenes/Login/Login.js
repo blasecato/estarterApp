@@ -41,9 +41,10 @@ export default function HomeScreen({ navigation }) {
       <Button onPress={() => { setModalRegister(!modalRegister) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0 }} >
         <Text style={styles.buttonSignup}> ¿No tienes una cuenta? </Text>
       </Button>
-      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalCode={setModalCode} navigation></ModalSignup>
+      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalActivation={setModalActivation} navigation></ModalSignup>
       <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
-      <ModalConfirm hidden={modalCode} setHidden={setModalCode} ></ModalConfirm>
+      <ModalActivation hidden={modalActivation} setHidden={setModalActivation} ></ModalActivation>
+      <ModalConfirm hidden={modalCode} setHidden={setModalCode} setModalActivation={setModalActivation}></ModalConfirm>
     </Container>
   );
 }
@@ -52,4 +53,4 @@ export default function HomeScreen({ navigation }) {
 {/* <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalActivation={setModalActivation} ></ModalSignup>
 <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
 <ModalConfirm hidden={modalCode} setHidden={setModalCode} setModalActivation={setModalActivation} ></ModalConfirm>
-<ModalActivation hidden={modalActivation} setHidden={setModalActivation} ></ModalActivation> */}
+*/}

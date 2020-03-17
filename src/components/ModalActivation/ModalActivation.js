@@ -5,12 +5,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalActivation.style';
 
 export default function ModalActivation({ navigation, hidden, setHidden }) {
-
+    console.log({ hidden });
     return (
         <Modal
             animationType="slide"
             transparent={false}
-            visible={hidden}>
+            visible={hidden > 0}>
             <Container style={styles.containerbg}>
                 <LinearGradient
                     colors={['#072148', '#000000']}
@@ -31,50 +31,68 @@ export default function ModalActivation({ navigation, hidden, setHidden }) {
                             {
                                 hidden == 1 &&
                                 <>
-                                    <View style={styles.cardCircle}>
-                                        <Image style={styles.imageCardCircle}
-                                            source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/celular.png' }} />
+                                    <Text style={{ color: '#282828', textAlign: 'center', paddingBottom: 25 }}>Hemos enviado un código de activación al número de celular</Text>
+                                    <View style={{ color: '#282828', textAlign: 'center', backgroundColor: '#03173a36', width: 280, height: 56, alignItems: 'center', justifyContent: 'center', borderColor: '#3866a8', borderWidth: 1 }}>
+                                        <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 30 }}> 300 3000000 </Text>
                                     </View>
+                                    <View style={styles.lineStyle} />
+                                    <Text style={{ color: '#FFFFFF' }}> Código de activación </Text>
                                     <Form style={styles.form}>
                                         <Item style={styles.item} stackedLabel last>
-                                            <Label style={styles.label}>¿Cuál es tu número de celular?</Label>
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
                                             <Input style={styles.input} />
                                         </Item>
                                     </Form>
+                                   
                                 </>
                             }
                             {hidden == 2 &&
                                 <>
-                                    <View style={styles.cardCircle}>
-                                        <Image style={styles.imageCardCircle}
-                                            source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/msj.png' }} />
+                                    <Text style={{ color: '#282828', textAlign: 'center', paddingBottom: 25 }}>Hemos enviado un código de activación a tu correo electrónico</Text>
+                                    <View style={{ color: '#282828', textAlign: 'center', backgroundColor: '#03173a36', width: 280, height: 56, alignItems: 'center', justifyContent: 'center', borderColor: '#3866a8', borderWidth: 1 }}>
+                                        <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 30 }}> hola@correo.com </Text>
                                     </View>
+                                    <View style={styles.lineStyle} />
+                                    <Text style={{ color: '#FFFFFF' }}> Código de activación </Text>
                                     <Form style={styles.form}>
                                         <Item style={styles.item} stackedLabel last>
-                                            <Label style={styles.label}>¿Cuál es tu correo electrónico?</Label>
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
                                             <Input style={styles.input} />
                                         </Item>
                                     </Form>
+                                  
                                 </>
                             }
                             {hidden == 3 &&
                                 <>
-                                    <View style={styles.cardCircle}>
-                                        <Image style={styles.imageCardCircle}
-                                            source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/msj.png' }} />
+                                    <Text style={{ color: '#282828', textAlign: 'center', paddingBottom: 25 }}>Hemos enviado un código de activación al número de celular</Text>
+                                    <View style={{ color: '#282828', textAlign: 'center', backgroundColor: '#03173a36', width: 280, height: 56, alignItems: 'center', justifyContent: 'center', borderColor: '#3866a8', borderWidth: 1 }}>
+                                        <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 30 }}> 300 3000000 </Text>
                                     </View>
+                                    <View style={styles.lineStyle} />
+                                    <Text style={{ color: '#FFFFFF' }}> Código de activación </Text>
                                     <Form style={styles.form}>
                                         <Item style={styles.item} stackedLabel last>
-                                            <Label style={styles.label}>¿Cuál es tu correo electrónico?</Label>
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
+                                            <Input style={[styles.input, { marginRight: 17 }]} />
                                             <Input style={styles.input} />
                                         </Item>
                                     </Form>
+                                    <Text style={{ color: '#FFFFFF' }}> Enviar al correo electrónico </Text>
                                 </>
                             }
                         </LinearGradient>
-                        <Button full style={styles.buttonPass} >
-                            <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
+                        <Button full style={styles.buttonPass}>
+                            <Text style={{ color: '#FFFFFF' }}> Iniciar sesión </Text>
                         </Button>
+                    </View>
+                    <View style={{ marginTop: '20%' }}>
+                        <Text style={{ color: '#FFFFFF' }}> Volver a enviar </Text>
                     </View>
                 </LinearGradient>
             </Container>

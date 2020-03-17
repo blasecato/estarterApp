@@ -4,7 +4,7 @@ import { Image, Modal, TouchableHighlight } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalSignup.style';
 
-export default function ModalSignup({ navigation, hidden, setHidden, setModalActivation }) {
+export default function ModalSignup({ navigation, hidden, setHidden, setModalCode, setModalActivation }) {
 
     return (
         <Modal
@@ -62,7 +62,8 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalAct
                                 </Item>
                             </Form>
                         </LinearGradient>
-                        <Button onPress={() => navigation.navigate('Onbording')} full style={styles.button} >
+                        {/* <Button onPress={() => navigation.navigate('Onbording')} full style={styles.button} > */}
+                        <Button onPress={() => setModalActivation(3)} full style={styles.button} >
                             <Text style={styles.textButton}> Registrarme </Text>
                         </Button>
                     </View>
