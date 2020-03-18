@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalActivation.style';
 
 export default function ModalActivation({ navigation, hidden, setHidden }) {
-    console.log({ hidden });
+
     return (
         <Modal
             animationType="slide"
