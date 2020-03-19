@@ -11,23 +11,30 @@ export default function ModalAviso({ navigation }) {
             animationType="fade"
             transparent={false}
             visible={true}>
-            <Container style={styles.containerbg}>
-                <View>
-                </View>
-                <LinearGradient
-                    colors={['#072148D9', '#000000D9']}
-                    style={styles.bg}>
-                    <Image style={styles.imageClose} source={require('./images/cerrar.png')} />
-                    <View style={styles.container}>
-                        <Image source={require('./images/rutas.png')} />
-                        <Text style={{ textAlign: 'center' }}>Para un mejor experiencia <Text style={{ fontWeight: 'bold' }}>ACTIVA</Text> la localización de tu celular.</Text>
-                        <LinearGradient
-                            colors={['#FFA51F', '#EF940C']}
-                            style={styles.linearStyle}>
-                        </LinearGradient>
+
+            <LinearGradient
+                colors={['#072148D9', '#000000D9']}
+                style={styles.container}>
+                <View style={styles.container}>
+                    <View style={styles.row}>
+                        <View style={[styles.box, styles.boxOne]}>
+                            <Image style={styles.imageClose} source={require('./images/cerrar.png')} />
+                        </View>
                     </View>
-                </LinearGradient>
-            </Container>
+                    <View style={styles.row}>
+                        <View style={[styles.box, styles.boxTwo]}>
+                            <View style={styles.card}>
+                                <Image style={{ marginBottom: 8 }} source={require('./images/rutas.png')} />
+                                <Text style={{ textAlign: 'center', marginBottom: 30 }}>Para un mejor experiencia <Text style={{ fontWeight: 'bold' }}>ACTIVA</Text> la localización de tu celular.</Text>
+                                <LinearGradient
+                                    colors={['#FFA51F', '#EF940C']}
+                                    style={styles.linearStyle}>
+                                </LinearGradient>
+                            </View>
+                        </View>
+                    </View>
+                </View>
+            </LinearGradient>
         </Modal>
     );
 }
