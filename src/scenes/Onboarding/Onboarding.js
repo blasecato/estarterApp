@@ -51,7 +51,7 @@ export default function DetailsScreen({ navigation }) {
             DotComponent={Square}
             DoneButtonComponent={Done}
             onDone={() =>
-                navigation.navigate('ModalAviso')
+                navigation.navigate('Home')
             }
             pages={[
                 {
