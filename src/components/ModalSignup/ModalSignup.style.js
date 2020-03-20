@@ -75,7 +75,7 @@ export default styles = StyleSheet.create({
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 90
+        height: 98
     },
     label: {
         marginBottom: 15,
@@ -93,6 +93,7 @@ export default styles = StyleSheet.create({
         color: '#162CA3',
         borderColor: 'transparent',
         elevation: 0,
+        height: 58,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10
     },

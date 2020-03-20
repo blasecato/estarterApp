@@ -1,5 +1,4 @@
-
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from 'react-native';
 
 export default styles = StyleSheet.create({
     containerbg: {
@@ -18,7 +17,6 @@ export default styles = StyleSheet.create({
         backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
-        maxWidth: 330,
         width: '100%',
         position: 'relative'
     },
@@ -78,5 +76,9 @@ export default styles = StyleSheet.create({
     buttonSignup: {
         color: '#162CA3',
         fontSize: 15
+    },
+    mapStyle: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
     }
 })

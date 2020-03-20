@@ -64,7 +64,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
                         </LinearGradient>
                         {/* <Button onPress={() => navigation.navigate('Onbording')} full style={styles.button} > */}
                         <Button onPress={() => setModalActivation(3)} full style={styles.button} >
-                            <Text style={styles.textButton}> Registrarme </Text>
+                            <Text uppercase={false} style={styles.textButton}> Registrarme </Text>
                         </Button>
                     </View>
                 </LinearGradient>
