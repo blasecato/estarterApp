@@ -2,83 +2,146 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 export default styles = StyleSheet.create({
     containerbg: {
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
         position: "relative",
     },
-    bg: {
-        height: '100%',
-        width: '100%',
-        resizeMode: 'cover',
-        position: 'absolute'
+    mapStyle: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
     },
     container: {
         backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
+        flex: 1,
         position: 'relative'
     },
-    logo: {
-        marginTop: 100,
-        minWidth: '100%',
-        position: "relative",
-        height: 100,
-        resizeMode: 'contain',
-        backgroundColor: 'transparent',
-        marginBottom: 60
+    text__info: {
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: 18,
+        textAlign: 'center',
+        marginTop: 29,
+        marginBottom: 15
     },
     form: {
-
-        width: '100%'
-        /* backgroundColor: '#333' */
+        width: '60%',
+        display: 'flex',
+        flexDirection: 'row',
+        marginBottom: 10,
+        alignItems: 'center',
+        padding: 25
     },
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 98,
+        height: 40,
         maxWidth: '100%',
         width: '100%',
-        marginRight: 0,
-        marginLeft: 0,
-        paddingLeft: 0,
-        marginBottom: 13
-    },
-    label: {
-        marginBottom: 18,
-        color: '#FFFF',
-        fontSize: 14,
-        maxWidth: '100%'
+        paddingRight: 0,
+        paddingLeft: 0
     },
     input: {
         borderWidth: 1,
-        borderColor: '#FFFF',
-        borderRadius: 5,
-        backgroundColor: '#FFFFFF1A',
-        maxWidth: '100%'
+        borderColor: '#D5D5D5',
+        backgroundColor: '#FFFFFF',
+        padding: 11,
+        maxWidth: '100%',
+        marginRight: 7,
+        flex: 0
     },
-    buttonSignin: {
-        marginTop: 20,
-        marginBottom: 23,
-        minWidth: '100%',
+    buttonVinc: {
+        minWidth: '40%',
         position: 'relative',
-        borderRadius: 5,
+
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60
+        height: 50,
+        backgroundColor: 'transparent',
+        elevation: 0
     },
-    buttonSignin__text: {
-        color: '#19439F',
+    buttonVinc__text: {
+        color: '#FFFF',
+        fontSize: 19,
+        fontStyle: 'normal',
         fontWeight: '500',
-        fontSize: 19
     },
-    buttonSignup: {
-        color: '#162CA3',
-        fontSize: 15
+    list: {
+        display: 'flex',
+        alignItems: 'center'
     },
-    mapStyle: {
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
-    }
+    listItem: {
+        borderColor: 'transparent',
+    },
+    imageList: {
+        marginRight: 14,
+    },
+    viewList: {
+        backgroundColor: '#044C74',
+        width: 45,
+        height: 20,
+        borderRadius: 5,
+        textAlign: 'center'
+    },
+    textList__routes: {
+        color: '#ffff',
+        width: 45,
+        height: 20,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontStyle: 'normal',
+        fontSize: 14,
+    },
+    textList__info: {
+        color: '#565656',
+        marginLeft: 10,
+        textAlign: 'center',
+        fontWeight: 'normal',
+        fontStyle: 'normal',
+        fontSize: 16,
+    },
+    tab: {
+        backgroundColor: 'transparent',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+    },
+    activeTab: {
+        backgroundColor: '',
+        borderTopColor: '#044C74',
+        borderTopWidth: 5,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
+        width: 127,
+        height: 46,
+        backgroundColor: '#ffffffF5',
+        marginLeft: 20
+    },
+    activeTab__text: {
+        color: '#044C74',
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: 16,
+    },
+    inactiveTab: {
+        backgroundColor: '#ffffffF6',
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
+        width: 127,
+        height: 36,
+        marginTop: 10,
+
+    },
+    inactiveTab__text: {
+        color: '#AEAEAE',
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: 14,
+    },
 })

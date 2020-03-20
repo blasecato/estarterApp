@@ -18,7 +18,7 @@ export default function ModalAviso({ navigation }) {
                 <View style={styles.container}>
                     <View style={styles.row}>
                         <View style={[styles.box, styles.boxOne]}>
-                            <Image style={styles.imageClose} source={require('./images/cerrar.png')} />
+                            <Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
                         </View>
                     </View>
                     <View style={styles.row}>

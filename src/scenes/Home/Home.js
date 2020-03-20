@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
-import { Container, Button, Text, View } from 'native-base';
+import { Container, Button, Text, View, Form, Item, Input, Label, Segment, Header, Left, Body, Right, Icon, Title, Content, List, ListItem, } from 'native-base';
 import { Image, Modal, TouchableOpacity, Animated, Dimensions } from 'react-native';
 import { mapStyle } from './constans';
+import { LinearGradient } from 'expo-linear-gradient';
 import MapView from 'react-native-maps';
 import styles from './Home.styles';
 import SlidingUpPanel from 'rn-sliding-up-panel';
+import ModalNuevaRuta from './../../components/ModalNuevaRuta/ModalNuevaRuta';
 
 const { height, width } = Dimensions.get('window')
 
 export default class App extends React.Component {
+
+    state = {
+        activeTab: 1,
+        modalNuevaRuta: false,
+        selected: 0
+    }
 
     static defaultProps = {
         draggableRange: {
@@ -21,9 +29,12 @@ export default class App extends React.Component {
 
     _draggedValue = new Animated.Value(300)
 
+
+
     render() {
         return (
             <View style={styles.container}>
+
                 <MapView
                     initialRegion={{
                         latitude: 37.78825,
@@ -34,6 +45,10 @@ export default class App extends React.Component {
                     style={styles.mapStyle}
                     customMapStyle={mapStyle}
                 />
+                <TouchableOpacity style={{ height: 39, width: 39, backgroundColor: '#FFFF', borderRadius: 100, justifyContent: 'flex-start', alignItems: 'flex-start', position: "relative", flex: 1, }}>
+                    <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/menu.png')} />
+                </TouchableOpacity>
+
                 <SlidingUpPanel
                     style
                     visible
@@ -51,17 +66,96 @@ export default class App extends React.Component {
                     }}
                     draggableRange={this.props.draggableRange}
                     ref={c => this._panel = c}>
-                    <View style={styles.container, {
-                        backgroundColor: '#fff', flex: 1,
-                        backgroundColor: 'white',
-                        position: 'relative',
-                        marginHorizontal: 20
-                    }}>
-                        <Text>Here is the content inside panel</Text>
-                        <Button title='Hide' onPress={() => this._panel.hide()} />
-                    </View>
+
+
+                    <LinearGradient
+                        colors={['#f5f5f500', '#1b7bd7E8', '#03325F']}
+                        style={{ height: '100%', width: '100%' }}>
+
+                        <Segment style={styles.tab} >
+                            <TouchableOpacity
+                                style={styles.activeTab}
+                                first onPress={() => this.setState({ activeTab: 1 })}>
+                                <Text style={styles.activeTab__text} >Mis rutas</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.inactiveTab}
+                                onPress={() => this.setState({ activeTab: 2 })}>
+                                <Text style={styles.inactiveTab__text}>Compartidas
+                                <Image source={require('./../../../assets/down.png')}></Image>
+                                </Text>
+                            </TouchableOpacity>
+                        </Segment>
+
+                        <TouchableOpacity>
+
+                        </TouchableOpacity>
+                        <View style={{
+                            backgroundColor: '#ffff', flex: 1,
+                            position: 'relative',
+                            marginHorizontal: 20,
+                            textAlign: 'center'
+                        }}>
+                            {this.state.activeTab == 1 &&
+                                < View >
+                                    <Text style={styles.text__info}> Ingresa el código que te han asignado en tu empresa.</Text>
+                                    <Form style={styles.form}>
+                                        <Item regular style={styles.item} last>
+                                            <Input
+                                                style={styles.input}
+                                                placeholderTextColor="#BEBEBE"
+                                                placeholder='Ejemplo: EST4RT3' />
+                                        </Item>
+                                        <LinearGradient
+                                            colors={['#044C74', '#348AC7']}
+                                            style={{ marginLeft: 7 }}>
+                                            <Button style={styles.buttonVinc}>
+                                                <Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
+                                            </Button>
+                                        </LinearGradient>
+                                    </Form>
+                                    {/* <Button title='Hide' onPress={() => this._panel.hide()} /> */}
+                                </View>
+                            }
+                            {this.state.activeTab == 2 &&
+                                <List style={styles.list} >
+                                    <ListItem onPress={() => this.setState({ modalNuevaRuta: true })} style={styles.listItem}>
+                                        <Image
+                                            style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
+                                        <View style={styles.viewList}>
+                                            <Text style={styles.textList__routes}>RE1</Text>
+                                        </View>
+                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                                    </ListItem>
+                                    <ListItem style={styles.listItem}>
+                                        <Image
+                                            style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
+                                        <View style={styles.viewList}>
+                                            <Text style={styles.textList__routes}>RE1</Text>
+                                        </View>
+                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                                    </ListItem>
+                                    <ListItem style={styles.listItem}>
+                                        <Image
+                                            style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+                                        <View style={styles.viewList}>
+                                            <Text style={styles.textList__routes}>RE1</Text>
+                                        </View>
+                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                                    </ListItem>
+                                </List>
+                            }
+                        </View>
+                    </LinearGradient>
                 </SlidingUpPanel>
-            </View>
+
+                <ModalNuevaRuta hidden={this.state.modalNuevaRuta}></ModalNuevaRuta>
+
+            </View >
+
         )
     }
 }
+
+
+

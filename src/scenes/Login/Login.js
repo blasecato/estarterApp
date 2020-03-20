@@ -48,9 +48,3 @@ export default function LoginScreen({ navigation }) {
     </Container>
   );
 }
-
-
-{/* <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalActivation={setModalActivation} ></ModalSignup>
-<ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
-<ModalConfirm hidden={modalCode} setHidden={setModalCode} setModalActivation={setModalActivation} ></ModalConfirm>
-*/}

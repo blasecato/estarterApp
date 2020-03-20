@@ -38,17 +38,59 @@ export default styles = StyleSheet.create({
     boxTwo: {
         alignItems: 'center',
         justifyContent: 'center',
-        height: 135,
+        height: 143,
         width: 315,
         flex: 1
     },
     card: {
-        height: 135,
+        height: 143,
         width: 315,
         backgroundColor: '#fff',
         borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'flex-end',
+    },
+    form: {
+        width: '60%',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 25,
+        marginVertical: -5 
+    },
+    item: {
+        borderWidth: 0,
+        borderColor: 'transparent',
+        height: 40,
+        maxWidth: '100%',
+        width: '100%',
+        paddingRight: 0,
+        paddingLeft: 0
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: '#D5D5D5',
+        backgroundColor: '#FFFFFF',
+        padding: 11,
+        maxWidth: '100%',
+        marginRight: 7,
+        flex: 0
+    },
+    buttonVinc: {
+        minWidth: '40%',
+        position: 'relative',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        backgroundColor: 'transparent',
+        elevation: 0
+    },
+    buttonVinc__text: {
+        color: '#FFFF',
+        fontSize: 19,
+        fontStyle: 'normal',
+        fontWeight: '500',
     },
     linearStyle: {
         height: 8,
