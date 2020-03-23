@@ -3,8 +3,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 export default styles = StyleSheet.create({
     containerbg: {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+     
         flexDirection: 'column',
         position: "relative",
     },
@@ -14,8 +13,7 @@ export default styles = StyleSheet.create({
     },
     container: {
         backgroundColor: 'transparent',
-        justifyContent: 'center',
-        alignItems: 'center',
+
         width: '100%',
         flex: 1,
         position: 'relative'
@@ -35,6 +33,30 @@ export default styles = StyleSheet.create({
         marginBottom: 10,
         alignItems: 'center',
         padding: 25
+    },
+    viewButton: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        marginBottom: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 25
+    },
+    buttonAna: {
+        minWidth: '80%',
+        position: 'relative',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        backgroundColor: 'transparent',
+        elevation: 0
+    },
+    buttonAna__text: {
+        color: '#FFFF',
+        fontSize: 19,
+        fontStyle: 'normal',
+        fontWeight: '500',
     },
     item: {
         borderWidth: 0,
@@ -57,7 +79,6 @@ export default styles = StyleSheet.create({
     buttonVinc: {
         minWidth: '40%',
         position: 'relative',
-
         justifyContent: 'center',
         alignItems: 'center',
         height: 50,

@@ -7,6 +7,7 @@ import MapView from 'react-native-maps';
 import styles from './Home.styles';
 import SlidingUpPanel from 'rn-sliding-up-panel';
 import ModalNuevaRuta from './../../components/ModalNuevaRuta/ModalNuevaRuta';
+import ModalCompartirRuta from './../../components/ModalRutaCompartida/ModalRutaCompartida';
 
 const { height, width } = Dimensions.get('window')
 
@@ -15,6 +16,7 @@ export default class App extends React.Component {
     state = {
         activeTab: 1,
         modalNuevaRuta: false,
+        modalCompartirRuta: false,
         selected: 0
     }
 
@@ -45,10 +47,11 @@ export default class App extends React.Component {
                     style={styles.mapStyle}
                     customMapStyle={mapStyle}
                 />
-                <TouchableOpacity style={{ height: 39, width: 39, backgroundColor: '#FFFF', borderRadius: 100, justifyContent: 'flex-start', alignItems: 'flex-start', position: "relative", flex: 1, }}>
-                    <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/menu.png')} />
-                </TouchableOpacity>
-
+                <View style={{ height: 39, width: 39, backgroundColor: 'transparent', borderRadius: 100, display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', position: 'absolute', zIndex: 1, margin: 20 }}>
+                    <TouchableOpacity style={{ height: 39, width: 39, backgroundColor: '#FFFF', borderRadius: 100, justifyContent: 'center', alignItems: 'center', position: 'absolute', zIndex: 99 }}>
+                        <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/menu.png')} />
+                    </TouchableOpacity>
+                </View>
                 <SlidingUpPanel
                     style
                     visible
@@ -66,12 +69,9 @@ export default class App extends React.Component {
                     }}
                     draggableRange={this.props.draggableRange}
                     ref={c => this._panel = c}>
-
-
                     <LinearGradient
                         colors={['#f5f5f500', '#1b7bd7E8', '#03325F']}
                         style={{ height: '100%', width: '100%' }}>
-
                         <Segment style={styles.tab} >
                             <TouchableOpacity
                                 style={styles.activeTab}
@@ -86,15 +86,12 @@ export default class App extends React.Component {
                                 </Text>
                             </TouchableOpacity>
                         </Segment>
-
-                        <TouchableOpacity>
-
-                        </TouchableOpacity>
                         <View style={{
                             backgroundColor: '#ffff', flex: 1,
                             position: 'relative',
                             marginHorizontal: 20,
-                            textAlign: 'center'
+                            textAlign: 'center',
+                            borderRadius: 5
                         }}>
                             {this.state.activeTab == 1 &&
                                 < View >
@@ -144,13 +141,24 @@ export default class App extends React.Component {
                                         <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
                                     </ListItem>
                                 </List>
+                                // <View>
+                                //     <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
+                                //     <View style={styles.viewButton}>
+                                //         <LinearGradient
+                                //             colors={['#044C74', '#348AC7']}>
+                                //             <Button style={styles.buttonAna}>
+                                //                 <Text uppercase={false} onPress={() => this.setState({ modalCompartirRuta: true })} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
+                                //             </Button>
+                                //         </LinearGradient>
+                                //     </View>
+                                //     <Button title='Hide' onPress={() => this._panel.hide()} />
+                                // </View>
                             }
                         </View>
                     </LinearGradient>
                 </SlidingUpPanel>
-
                 <ModalNuevaRuta hidden={this.state.modalNuevaRuta}></ModalNuevaRuta>
-
+                <ModalCompartirRuta hidden={this.state.modalCompartirRuta}></ModalCompartirRuta>
             </View >
 
         )

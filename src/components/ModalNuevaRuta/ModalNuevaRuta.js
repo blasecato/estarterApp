@@ -11,11 +11,8 @@ export default function ModalNuevaRuta({ navigation, hidden }) {
             animationType="fade"
             transparent={false}
             visible={hidden}>
-
             <LinearGradient
                 colors={['#072148D9', '#000000D9']}
-
-
                 style={styles.container}>
                 <View style={styles.container}>
                     <View style={styles.row}>
