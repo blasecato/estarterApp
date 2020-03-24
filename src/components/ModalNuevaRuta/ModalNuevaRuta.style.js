@@ -32,8 +32,9 @@ export default styles = StyleSheet.create({
     boxOne: {
         alignItems: 'flex-end',
         justifyContent: 'flex-start',
+        marginTop: 50,
         paddingRight: 38,
-        paddingTop: 30
+        paddingTop: 25
     },
     boxTwo: {
         alignItems: 'center',
