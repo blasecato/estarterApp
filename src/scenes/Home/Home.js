@@ -111,7 +111,7 @@ export default class App extends React.Component {
                                             </Button>
                                         </LinearGradient>
                                     </Form>
-                                    {/* <Button title='Hide' onPress={() => this._panel.hide()} /> */}
+                                    <Button title='Hide' onPress={() => this._panel.hide()} />
                                 </View>
                             }
                             {this.state.activeTab == 2 &&
