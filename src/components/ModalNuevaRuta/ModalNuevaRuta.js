@@ -4,7 +4,7 @@ import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalNuevaRuta.style';
 
-export default function ModalNuevaRuta({ navigation, hidden }) {
+export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
 
     return (
         <Modal
@@ -16,14 +16,15 @@ export default function ModalNuevaRuta({ navigation, hidden }) {
                 style={styles.container}>
                 <View style={styles.container}>
                     <View style={styles.row}>
-                        <View style={[styles.box, styles.boxOne]}>
+                        <TouchableOpacity onPress={() => { setHidden(!hidden) }} style={[styles.box, styles.boxOne]}>
                             <Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
-                        </View>
+                        </TouchableOpacity>
+
                     </View>
                     <View style={styles.row}>
                         <View style={[styles.box, styles.boxTwo]}>
                             <View style={styles.card}>
-                                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', width: 300, justifyContent:'center', marginVertical: -5 }}>
+                                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', width: 300, justifyContent: 'center', marginVertical: -5 }}>
                                     <Image source={require('./../../../assets/bus.png')} />
                                     <Text style={{ textAlign: 'left', width: 180, marginLeft: 20 }}>
                                         Ingresa el código para asignar una nueva ruta.</Text>

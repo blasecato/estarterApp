@@ -20,18 +20,19 @@ export default styles = StyleSheet.create({
     text__info: {
         fontStyle: 'normal',
         fontWeight: '500',
+        maxWidth: 275,
         fontSize: 18,
         textAlign: 'center',
         marginTop: 29,
         marginBottom: 15
     },
     form: {
-        width: '60%',
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         marginBottom: 10,
         alignItems: 'center',
-        padding: 25
+        paddingHorizontal: 25
     },
     viewButton: {
         width: '100%',
@@ -61,19 +62,18 @@ export default styles = StyleSheet.create({
         borderWidth: 0,
         borderColor: 'transparent',
         height: 40,
-        maxWidth: '100%',
-        width: '100%',
         paddingRight: 0,
-        paddingLeft: 0
+        paddingLeft: 0,
+        marginRight: 14
     },
     input: {
         borderWidth: 1,
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
         padding: 11,
+        width: '100%',
         maxWidth: '100%',
-        marginRight: 7,
-        flex: 0
+        flex: 0,
     },
     buttonVinc: {
         minWidth: '40%',
@@ -129,6 +129,7 @@ export default styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
+        marginLeft: 14,
     },
     activeTab: {
         backgroundColor: '',
@@ -137,25 +138,30 @@ export default styles = StyleSheet.create({
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
         width: 127,
-        height: 46,
-        backgroundColor: '#ffffffF5',
-        marginLeft: 20
+        zIndex: 99,
+        elevation: 99,
+        height: 45,
+        backgroundColor: '#ffff',
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "row"
     },
     activeTab__text: {
         color: '#044C74',
         textAlign: 'center',
-        fontStyle: 'normal',
-        fontWeight: '500',
+        fontWeight: 'bold',
         fontSize: 16,
     },
     inactiveTab: {
-        backgroundColor: '#ffffffF6',
+        backgroundColor: '#F8F9FA',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
         width: 127,
         height: 36,
         marginTop: 10,
-
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "row"
     },
     inactiveTab__text: {
         color: '#AEAEAE',
