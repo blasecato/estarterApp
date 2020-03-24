@@ -44,8 +44,8 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                 <Segment style={styles.tab} >
                     <TouchableOpacity
                         style={{
-                        /*     position: 'absolute',
-                            left: 10, */
+                            /*     position: 'absolute',
+                                left: 10, */
                         }, activeTab == 2 ? styles.inactiveTab : styles.activeTab}
                         first onPress={() => {
                             setTimeout(() => {
@@ -83,15 +83,20 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                         < View style={{ alignItems: 'center', display: 'flex', width: '100%' }} >
                             <Text style={styles.text__info}> Ingresa el código que te han asignado en tu empresa.</Text>
                             <Form style={styles.form}>
-                                <Item regular style={styles.item} last>
-                                    <Input
-                                        style={styles.input}
-                                        placeholderTextColor="#BEBEBE"
-                                        placeholder='Ejemplo: EST4RT3' />
-                                </Item>
+                                <View style={{
+                                    width: '60%',
+                                    maxWidth: '100%',
+                                }}>
+                                    <Item regular style={styles.item} last>
+                                        <Input
+                                            style={styles.input}
+                                            placeholderTextColor="#BEBEBE"
+                                            placeholder='Ejemplo: EST4RT3' />
+                                    </Item>
+                                </View>
                                 <LinearGradient
                                     colors={['#044C74', '#348AC7']}
-                                    style={{ marginLeft: 10, width: '40%' }}>
+                                    style={{ width: '40%' }}>
                                     <Button onPress={() => { console.log("cliek") }} style={styles.buttonVinc}>
                                         <Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
                                     </Button>

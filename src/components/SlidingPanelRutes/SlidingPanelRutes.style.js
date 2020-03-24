@@ -62,10 +62,9 @@ export default styles = StyleSheet.create({
         borderWidth: 0,
         borderColor: 'transparent',
         height: 40,
-        width: '60%',
-        maxWidth: '100%',
         paddingRight: 0,
-        paddingLeft: 0
+        paddingLeft: 0,
+        marginRight: 14
     },
     input: {
         borderWidth: 1,
@@ -74,8 +73,7 @@ export default styles = StyleSheet.create({
         padding: 11,
         width: '100%',
         maxWidth: '100%',
-        marginRight: 7,
-        flex: 0
+        flex: 0,
     },
     buttonVinc: {
         minWidth: '40%',
