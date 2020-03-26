@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../scenes/Login/Login';
 import Splash from '../scenes/Splash/Splash';
 import Onboarding from '../scenes/Onboarding/Onboarding';
 import Home from '../scenes/Home/Home';
-import ModalAviso from '../components/ModalAviso/ModalAviso';
+import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
@@ -20,6 +20,9 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 export default function navigator() {
+
+    const [modalCodeQr, setModalCodeQr] = useState(false)
+
     return (
         <NavigationContainer >
             <Drawer.Navigator drawerStyle={{
@@ -78,6 +81,7 @@ export default function navigator() {
                         }}>Soporte</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
+                        onPress={() => { setModalCodeQr(!modalCodeQr) }}
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
@@ -112,6 +116,8 @@ export default function navigator() {
                 <Drawer.Screen name="Login" component={Login} />
                 <Drawer.Screen name="Onboarding" component={Onboarding} />
             </Drawer.Navigator>
+
+            <ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>
         </NavigationContainer >
     );
 }
