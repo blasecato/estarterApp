@@ -14,7 +14,6 @@ export default function LoginScreen({ navigation }) {
   const [modalPassword, setModalPassword] = useState(false)
   const [modalActivation, setModalActivation] = useState(0)
   const [modalCode, setModalCode] = useState(0)
-
   return (
     <Container style={styles.containerbg} >
       <Image
@@ -35,8 +34,8 @@ export default function LoginScreen({ navigation }) {
             <Input style={styles.input} />
           </Item>
         </Form>
-        <Button light onPress={() => navigation.navigate('Onboarding')}  style={styles.buttonSignin} ><Text uppercase={false} style={styles.buttonSignin__text}> Iniciar sesión </Text></Button>
-        <Button onPress={() => { setModalPassword(!modalPassword) }} transparent><Text uppercase={false} style={{fontSize: 15}}> Olvide mi contraseña </Text></Button>
+        <Button light onPress={() => navigation.navigate('Onboarding')} style={styles.buttonSignin} ><Text uppercase={false} style={styles.buttonSignin__text}> Iniciar sesión </Text></Button>
+        <Button onPress={() => { setModalPassword(!modalPassword) }} transparent><Text uppercase={false} style={{ fontSize: 15 }}> Olvide mi contraseña </Text></Button>
       </Container>
       <Button onPress={() => { setModalRegister(!modalRegister) }} full style={{ backgroundColor: '#FFFFFF4D', color: '#162CA3', borderColor: 'transparent', elevation: 0, height: 60 }} >
         <Text uppercase={false} style={styles.buttonSignup}> ¿No tienes una cuenta? </Text>

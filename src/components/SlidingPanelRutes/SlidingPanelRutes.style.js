@@ -23,8 +23,7 @@ export default styles = StyleSheet.create({
         maxWidth: 275,
         fontSize: 18,
         textAlign: 'center',
-        marginTop: 29,
-        marginBottom: 15
+        marginTop: 26,
     },
     form: {
         width: '100%',
