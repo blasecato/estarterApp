@@ -87,8 +87,7 @@ export default styles = StyleSheet.create({
         backgroundColor: '#FFFFFF1A',
         height: 38,
         width: 288,
-        paddingLeft: 20,
-        paddingRight: 20,
+        padding: 11,
         flex: 0
     },
     buttonPass: {

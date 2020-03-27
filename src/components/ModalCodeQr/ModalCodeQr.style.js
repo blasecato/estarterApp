@@ -67,21 +67,6 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 25
     },
-    buttonAna: {
-        minWidth: '80%',
-        position: 'relative',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 50,
-        backgroundColor: 'transparent',
-        elevation: 0
-    },
-    buttonAna__text: {
-        color: '#FFFF',
-        fontSize: 19,
-        fontStyle: 'normal',
-        fontWeight: '500',
-    },
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
@@ -100,7 +85,7 @@ export default styles = StyleSheet.create({
         flex: 0,
     },
     buttonVinc: {
-        minWidth: '0%',
+        minWidth: '50%',
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',
@@ -110,7 +95,7 @@ export default styles = StyleSheet.create({
     },
     buttonVinc__text: {
         color: '#FFFF',
-        fontSize: 19,
+        fontSize: 18,
         fontStyle: 'normal',
         fontWeight: '500',
     },

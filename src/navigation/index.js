@@ -6,14 +6,16 @@ import Splash from '../scenes/Splash/Splash';
 import Onboarding from '../scenes/Onboarding/Onboarding';
 import Home from '../scenes/Home/Home';
 import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
+import ModalQualification from './../components/ModalQualification/ModalQualification';
+
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
     DrawerItemList,
     DrawerItem,
 } from '@react-navigation/drawer';
-import { Image, Modal, TouchableOpacity } from 'react-native';
-import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
+import { Image, Modal, TouchableOpacity, Text } from 'react-native';
+import { View } from 'native-base';
 
 const Stack = createStackNavigator();
 
@@ -115,6 +117,7 @@ export default function navigator() {
                 <Drawer.Screen name="Home" component={Home} />
                 <Drawer.Screen name="Login" component={Login} />
                 <Drawer.Screen name="Onboarding" component={Onboarding} />
+                <Drawer.Screen name="ModalQualification" component={ModalQualification} />
             </Drawer.Navigator>
 
             <ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>

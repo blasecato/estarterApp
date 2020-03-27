@@ -32,9 +32,7 @@ export default styles = StyleSheet.create({
         marginBottom: 60
     },
     form: {
-
         width: '100%'
-        /* backgroundColor: '#333' */
     },
     item: {
         borderWidth: 0,
@@ -57,6 +55,7 @@ export default styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#FFFF',
         borderRadius: 5,
+        padding: 11,
         backgroundColor: '#FFFFFF1A',
         maxWidth: '100%'
     },

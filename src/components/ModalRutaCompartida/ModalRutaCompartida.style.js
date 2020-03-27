@@ -75,7 +75,7 @@ export default styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
-        padding: 21,
+        padding: 11,
         maxWidth: '100%',
         flex: 0
     },

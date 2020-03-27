@@ -20,7 +20,7 @@ export default styles = StyleSheet.create({
     text__info: {
         fontStyle: 'normal',
         fontWeight: '500',
-        maxWidth: 275,
+        maxWidth: 300,
         fontSize: 18,
         textAlign: 'center',
         marginTop: 26,
@@ -129,6 +129,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         marginLeft: 14,
+        marginRight: '19%'
     },
     activeTab: {
         backgroundColor: '',
