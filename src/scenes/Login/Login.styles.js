@@ -1,20 +1,19 @@
-
 import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
-    containerbg: {
+    container: {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
         position: "relative",
     },
-    bg: {
+    container__Background: {
         height: '100%',
         width: '100%',
         resizeMode: 'cover',
         position: 'absolute'
     },
-    container: {
+    content: {
         backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
@@ -37,7 +36,7 @@ export default styles = StyleSheet.create({
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 98,
+        height: 90,
         maxWidth: '100%',
         width: '100%',
         marginRight: 0,
@@ -48,7 +47,10 @@ export default styles = StyleSheet.create({
     label: {
         marginBottom: 18,
         color: '#FFFF',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
         fontSize: 14,
+        lineHeight: 16,
         maxWidth: '100%'
     },
     input: {
@@ -56,6 +58,7 @@ export default styles = StyleSheet.create({
         borderColor: '#FFFF',
         borderRadius: 5,
         padding: 11,
+        color: '#ffff',
         backgroundColor: '#FFFFFF1A',
         maxWidth: '100%'
     },
@@ -74,8 +77,24 @@ export default styles = StyleSheet.create({
         fontWeight: '500',
         fontSize: 19
     },
+    buttonForgot__text: {
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 15,
+        lineHeight: 17
+    },
     buttonSignup: {
+        backgroundColor: '#FFFFFF4D',
         color: '#162CA3',
-        fontSize: 15
+        borderColor: 'transparent',
+        elevation: 0,
+        height: 60
+    },
+    buttonSignup__text: {
+        color: '#162CA3',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 15,
+        lineHeight: 17
     }
 })

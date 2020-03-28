@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
-import { Image, Modal, TouchableOpacity } from 'react-native';
+import { Image, Modal, TouchableOpacity, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalConfirm.style';
 
@@ -61,18 +61,37 @@ export default function ModalConfirm({ navigation, hidden, setHidden, setModalAc
                             hidden == 1 ?
 
                                 <Button onPress={() => { setModalActivation(1) }} full style={styles.buttonPass} >
-                                    <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
+                                    <Text uppercase={false} style={styles.buttonPass__text}> Restablecer contraseña </Text>
                                 </Button>
 
                                 :
 
                                 <Button onPress={() => { setModalActivation(2) }} full style={styles.buttonPass} >
-                                    <Text style={{ color: '#FFFFFF' }}> Restablecer contraseña </Text>
+                                    <Text uppercase={false} style={styles.buttonPass__text}> Restablecer contraseña </Text>
                                 </Button>
                         }
                     </View>
                 </LinearGradient>
             </Container>
+
+
+            {/* <Container style={styles.container}>
+                <LinearGradient>
+                    <ScrollView>
+                        <View>
+                            <TouchableOpacity onPress={() => { setHidden(0) }} style={styles.touchClose}>
+                                <Text style={styles.textClose}>Cerrar</Text>
+                                <Image
+                                    source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583451323/closeIcon.png' }}
+                                    style={styles.imageClose}
+                                />
+                            </TouchableOpacity>
+
+
+                        </View>
+                    </ScrollView>
+                </LinearGradient>
+            </Container> */}
         </Modal>
 
     );

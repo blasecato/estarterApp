@@ -1,15 +1,13 @@
 import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
-    containerbg: {
+    container: {
         height: '100%',
-        backgroundColor: '#000000',
     },
-    bg: {
+    container__background: {
         height: '100%',
         width: '100%',
         alignItems: 'center',
-        flexDirection: 'row',
         justifyContent: "center",
         display: 'flex',
         position: "relative",
@@ -33,7 +31,11 @@ export default styles = StyleSheet.create({
     },
     textClose: {
         color: '#FFFFFF',
-        textAlign: 'right'
+        textAlign: 'right',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 20,
     },
     imageClose: {
         height: 15,
@@ -42,8 +44,8 @@ export default styles = StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 15
     },
-    container: {
-        height: 680,
+    content: {
+        height: 690,
         width: '90%',
         backgroundColor: 'transparent',
         position: 'relative'
@@ -64,10 +66,14 @@ export default styles = StyleSheet.create({
     },
     textRegister: {
         width: 288,
-        marginTop: 24,
-        marginBottom: 27,
+        marginTop: 14,
+        marginBottom: 17,
         color: '#282828',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 20,
     },
     form: {
         paddingRight: 15
@@ -75,17 +81,23 @@ export default styles = StyleSheet.create({
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 98
+        height: 90,
+        marginBottom: 13
     },
     label: {
         marginBottom: 15,
-        color: '#FFFF'
+        color: '#FFFF',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 16,
     },
     input: {
         borderWidth: 1,
         borderColor: '#FFFF',
         borderRadius: 10,
         padding: 11,
+        color: '#ffff',
         backgroundColor: '#FFFFFF1A',
         width: 320
     },
@@ -99,6 +111,10 @@ export default styles = StyleSheet.create({
         borderBottomRightRadius: 10
     },
     textButton: {
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: 19,
+        lineHeight: 22,
     }
 });

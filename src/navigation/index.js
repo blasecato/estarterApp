@@ -7,6 +7,7 @@ import Onboarding from '../scenes/Onboarding/Onboarding';
 import Home from '../scenes/Home/Home';
 import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
 import ModalQualification from './../components/ModalQualification/ModalQualification';
+import ModalAviso from './../components/ModalAviso/ModalAviso';
 
 import {
     createDrawerNavigator,

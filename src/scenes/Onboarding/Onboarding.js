@@ -30,15 +30,20 @@ const Square = ({ isLight, selected }) => {
 };
 
 const Done = ({ isLight, ...props }) => (
-
-    <Button
-        transparent
-        title={'terminar'}
-        style={{ color: '#162CA3', backgroundColor: 'transparent', borderColor: 'transparent', shadowColor: 'transparent' }}
-        {...props}>
-        <Text style={{ color: '#162CA3' }}> Continuar </Text>
-    </Button>
-
+    <View>
+        <View style={{
+            borderWidth: 1,
+            borderColor: '#D9D9D9',
+            marginRight: 10
+        }} />
+        <Button
+            transparent
+            title={'terminar'}
+            style={{ color: '#162CA3', backgroundColor: 'transparent', borderColor: 'transparent', shadowColor: 'transparent' }}
+            {...props}>
+            <Text uppercase={false} style={{ color: '#162CA3', fontStyle: 'normal', fontWeight: 'bold', fontSize: 15, lineHeight: 17, }}> Continuar </Text>
+        </Button>
+    </View>
 );
 
 export default function DetailsScreen({ navigation }) {

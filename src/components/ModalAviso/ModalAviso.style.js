@@ -1,16 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 export default styles = StyleSheet.create({
-
-    bg: {
-        height: '100%',
-        width: '100%',
-        display: 'flex',
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     imageClose: {
         height: 32,
         width: 32,

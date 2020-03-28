@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
-    containerbg: {
+    container: {
         height: '100%',
         backgroundColor: '#000000'
     },
-    bg: {
+    container__background: {
         height: '100%',
         width: '100%',
         alignItems: 'center',
@@ -15,7 +15,7 @@ export default styles = StyleSheet.create({
         position: "relative",
         flexDirection: 'column'
     },
-    container: {
+    content: {
         height: '55%',
         width: '90%',
         backgroundColor: 'transparent'
@@ -29,7 +29,12 @@ export default styles = StyleSheet.create({
     },
     textClose: {
         color: '#FFFFFF',
-        textAlign: 'right'
+        textAlign: 'right',
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 20,
     },
     imageClose: {
         height: 15,
@@ -38,11 +43,11 @@ export default styles = StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 15
     },
-    linerGradient: {
+    linearGradient: {
         height: '100%',
         width: '100%',
         alignItems: 'center',
-        borderRadius: 10
+        borderRadius: 5
     },
     logo: {
         marginTop: 32,
@@ -52,12 +57,18 @@ export default styles = StyleSheet.create({
         backgroundColor: 'transparent'
     },
     textPass: {
-        marginTop: 24,
+        width: 252,
+        height: 40,
+        marginTop: 10,
         marginBottom: 13,
         color: '#282828',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 20,
     },
-    content: {
+    cards: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -65,23 +76,35 @@ export default styles = StyleSheet.create({
         marginBottom: 8,
         backgroundColor: 'transparent'
     },
-    cards: {
+    card: {
         backgroundColor: '#103256',
         width: 122,
         height: 170,
-        borderRadius: 10,
+        borderRadius: 5,
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
     },
-    textNormal: {
+    textCard: {
         marginTop: 7,
         marginBottom: 13,
         color: '#FFFF',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 12,
+        lineHeight: 16,
+        width: 105,
+        height: 61,
+        marginTop: 20
+
     },
-    textBold: {
+    textCard__bold: {
         color: '#FFFF',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontStyle: 'normal',
+        fontSize: 12,
+        lineHeight: 16,
     }
 
 });

@@ -19,8 +19,9 @@ export default styles = StyleSheet.create({
     },
     text__info: {
         fontStyle: 'normal',
-        fontWeight: '500',
+        fontWeight: 'normal',
         maxWidth: 300,
+        lineHeight: 20,
         fontSize: 18,
         textAlign: 'center',
         marginTop: 26,
@@ -85,7 +86,7 @@ export default styles = StyleSheet.create({
     },
     buttonVinc__text: {
         color: '#FFFF',
-        fontSize: 19,
+        fontSize: 17,
         fontStyle: 'normal',
         fontWeight: '500',
     },

@@ -11,7 +11,6 @@ export default function ModalAviso({ navigation }) {
             animationType="fade"
             transparent={false}
             visible={true}>
-
             <LinearGradient
                 colors={['#072148D9', '#000000D9']}
                 style={styles.container}>

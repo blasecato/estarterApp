@@ -1,4 +1,3 @@
-
 import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
@@ -26,7 +25,11 @@ export default styles = StyleSheet.create({
     },
     textClose: {
         color: '#FFFFFF',
-        textAlign: 'right'
+        textAlign: 'right',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 20,
     },
     imageClose: {
         height: 15,
@@ -68,7 +71,8 @@ export default styles = StyleSheet.create({
         paddingRight: 15,
         marginTop: 19,
         marginBottom: 36,
-
+        position: 'relative', 
+        flex: 0
     },
     item: {
         borderWidth: 0,
@@ -79,16 +83,21 @@ export default styles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 15,
         color: '#FFFF',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 16,
     },
     input: {
         borderWidth: 1,
         borderColor: '#FFFF',
+        color: '#ffff',
         borderRadius: 10,
         backgroundColor: '#FFFFFF1A',
-        height: 38,
+        height: 50,
         width: 288,
         padding: 11,
-        flex: 0
+
     },
     buttonPass: {
         backgroundColor: '#417CCA',
@@ -97,6 +106,11 @@ export default styles = StyleSheet.create({
         elevation: 0,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10
+    },
+    buttonPass__text: {
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: 19,
+        lineHeight: 22,
     }
-
 });
