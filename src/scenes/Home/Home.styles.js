@@ -1,113 +1,81 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 export default styles = StyleSheet.create({
-    containerbg: {
-        display: 'flex',
-        flexDirection: 'column',
-        position: "relative"
-    },
     mapStyle: {
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
     },
     container: {
         backgroundColor: 'transparent',
-
         width: '100%',
         flex: 1,
-        position: 'relative'
-    },
-    text__info: {
-        fontStyle: 'normal',
-        fontWeight: '500',
-        fontSize: 18,
-        textAlign: 'center',
-        marginTop: 29,
-        marginBottom: 15
-    },
-    form: {
-        width: '60%',
-        display: 'flex',
-        flexDirection: 'row',
-        marginBottom: 10,
-        alignItems: 'center',
-        padding: 25
-    },
-    viewButton: {
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        marginBottom: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 25
-    },
-    buttonAna: {
-        minWidth: '80%',
         position: 'relative',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 50,
+        display: 'flex'
+    },
+    menu: {
+        height: 39,
+        width: 39,
+        top: 30,
         backgroundColor: 'transparent',
-        elevation: 0
-    },
-    buttonAna__text: {
-        color: '#FFFF',
-        fontSize: 19,
-        fontStyle: 'normal',
-        fontWeight: '500',
-    },
-    item: {
-        borderWidth: 0,
-        borderColor: 'transparent',
-        height: 40,
-        maxWidth: '100%',
-        width: '100%',
-        paddingRight: 0,
-        paddingLeft: 0
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: '#D5D5D5',
-        backgroundColor: '#FFFFFF',
-        padding: 11,
-        maxWidth: '100%',
-        marginRight: 7,
-        flex: 0
-    },
-    buttonVinc: {
-        minWidth: '40%',
-        position: 'relative',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 50,
-        backgroundColor: 'transparent',
-        elevation: 0
-    },
-    buttonVinc__text: {
-        color: '#FFFF',
-        fontSize: 19,
-        fontStyle: 'normal',
-        fontWeight: '500',
-    },
-    list: {
+        borderRadius: 100,
         display: 'flex',
-        alignItems: 'center'
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        position: 'absolute',
+        zIndex: 1,
+        margin: 20
     },
-    listItem: {
-        borderColor: 'transparent',
+    menú__button: {
+        height: 39,
+        width: 39,
+        backgroundColor: '#FFFF',
+        borderRadius: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        zIndex: 99,
+        top: 0,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.36,
+        shadowRadius: 6.68,
+        zIndex: 11,
+        elevation: 11,
     },
-    imageList: {
-        marginRight: 14,
+    route: {
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        flexDirection: 'column',
+        backgroundColor: 'transparent',
+        position: 'absolute',
+        zIndex: 1,
+        margin: 20,
+        top: 30,
+        left: '73%'
     },
-    viewList: {
+    route__one: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    route__imgOne: {
+        resizeMode: 'cover',
+        width: 18,
+        height: 18
+    },
+    route__label: {
         backgroundColor: '#044C74',
         width: 45,
         height: 20,
         borderRadius: 5,
-        textAlign: 'center'
+        textAlign: 'center',
     },
-    textList__routes: {
+    route__text: {
         color: '#ffff',
         width: 45,
         height: 20,
@@ -115,53 +83,80 @@ export default styles = StyleSheet.create({
         fontWeight: 'bold',
         fontStyle: 'normal',
         fontSize: 14,
-    },
-    textList__info: {
-        color: '#565656',
-        marginLeft: 10,
         textAlign: 'center',
-        fontWeight: 'normal',
-        fontStyle: 'normal',
-        fontSize: 16,
     },
-    tab: {
-        backgroundColor: 'transparent',
+    route__two: {
         display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row'
     },
-    activeTab: {
-        backgroundColor: '',
-        borderTopColor: '#044C74',
-        borderTopWidth: 5,
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
-        width: 127,
-        height: 46,
-        backgroundColor: '#ffffffF5',
-        marginLeft: 20
+    route__imgTwo: {
+        resizeMode: 'contain',
+        width: 70,
+        height: 28
     },
-    activeTab__text: {
-        color: '#044C74',
-        textAlign: 'center',
-        fontStyle: 'normal',
-        fontWeight: '500',
-        fontSize: 16,
+    whatsapp: {
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        flexDirection: 'column',
+        backgroundColor: 'transparent',
+        position: 'absolute',
+        zIndex: 1,
+        margin: 20,
+        top: 25,
+        left: '75%'
     },
-    inactiveTab: {
-        backgroundColor: '#ffffffF6',
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
-        width: 127,
-        height: 36,
-        marginTop: 10,
+    whatsapp__one: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    whatsapp__imgOne: {
+        resizeMode: 'cover',
+        width: 60,
+        height: 60
+    },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    containerbg: {
+        height: '100%',
+        backgroundColor: '#000000'
     },
-    inactiveTab__text: {
-        color: '#AEAEAE',
-        textAlign: 'center',
-        fontStyle: 'normal',
-        fontWeight: '500',
-        fontSize: 14,
+    bg: {
+        height: '100%',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
+    contenttt: {
+        height: '55%',
+        width: '90%',
+        backgroundColor: 'transparent'
+    },
+    linearGradient: {
+        height: '100%',
+        width: '100%',
+        alignItems: 'center',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
+    },
+
+
+
+
 })

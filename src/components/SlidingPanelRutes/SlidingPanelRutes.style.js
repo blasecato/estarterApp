@@ -12,7 +12,6 @@ export default styles = StyleSheet.create({
     },
     container: {
         backgroundColor: 'transparent',
-
         width: '100%',
         flex: 1,
         position: 'relative'
@@ -92,10 +91,11 @@ export default styles = StyleSheet.create({
     },
     list: {
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     listItem: {
         borderColor: 'transparent',
+        width: '100%'
     },
     imageList: {
         marginRight: 14,
@@ -133,7 +133,6 @@ export default styles = StyleSheet.create({
         marginRight: '19%'
     },
     activeTab: {
-        backgroundColor: '',
         borderTopColor: '#044C74',
         borderTopWidth: 5,
         borderTopLeftRadius: 5,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SlidingUpPanel from 'rn-sliding-up-panel';
-import { Image, TouchableOpacity, Animated, Dimensions, ActivityIndicator } from 'react-native';
+import { Image, TouchableOpacity, Animated, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
 import { Button, Text, View, Form, Item, Input, Segment, List, ListItem, Drawer } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './SlidingPanelRutes.style';
@@ -94,6 +94,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                     backgroundColor: '#ffff',
                     position: 'relative',
                     flex: 1,
+                    marginTop: -1,
                     alignContent: 'center',
                     marginHorizontal: 14,
                     flexDirection: 'column',
@@ -103,7 +104,6 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                 }}>
                     {activeTab == 1 &&
                         < View style={{ alignItems: 'center', display: 'flex', width: '100%', marginVertical: 20 }} >
-
                             <Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
                             <Form style={styles.form}>
                                 <View style={{
@@ -125,8 +125,6 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                                     </Button>
                                 </LinearGradient>
                             </Form>
-
-
                             {/* <ActivityIndicator size="large" color="#00ff00" />
                             <Text style={styles.text__info}>Estamos validando tu código por favor espera unos segundos.</Text> */}
 
@@ -137,32 +135,39 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                         </View>
                     }
                     {activeTab == 2 &&
-                        <List style={styles.list} >
-                            <ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
-                                <Image
-                                    style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-                                <View style={styles.viewList}>
-                                    <Text style={styles.textList__routes}>RE1</Text>
-                                </View>
-                                <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-                            </ListItem>
-                            <ListItem style={styles.listItem}>
-                                <Image
-                                    style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-                                <View style={styles.viewList}>
-                                    <Text style={styles.textList__routes}>RE1</Text>
-                                </View>
-                                <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-                            </ListItem>
-                            <ListItem style={styles.listItem}>
-                                <Image
-                                    style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-                                <View style={styles.viewList}>
-                                    <Text style={styles.textList__routes}>RE1</Text>
-                                </View>
-                                <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-                            </ListItem>
-                        </List>
+                        <View>
+                            <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
+                                <List style={styles.list} >
+                                    <ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+                                        <Image
+                                            style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
+                                        <View style={styles.viewList}>
+                                            <Text style={styles.textList__routes}>RE1</Text>
+                                        </View>
+                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                                    </ListItem>
+                                    <ListItem style={styles.listItem}>
+                                        <Image
+                                            style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
+                                        <View style={styles.viewList}>
+                                            <Text style={styles.textList__routes}>RE1</Text>
+                                        </View>
+                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                                    </ListItem>
+                                    <ListItem style={styles.listItem}>
+                                        <Image
+                                            style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+                                        <View style={styles.viewList}>
+                                            <Text style={styles.textList__routes}>RE1</Text>
+                                        </View>
+                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                                    </ListItem>
+                                </List>
+                            </ScrollView>
+                            <View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 20, marginTop: -30 }}>
+                                <Image style={{ width: 40, height: 40, resizeMode: 'contain' }} source={require('./../../../assets/add.png')}></Image>
+                            </View>
+                        </View>
                         // <View style={{display: 'flex', alignItems: 'center', justifyContent:'center'}}>
                         //     <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
                         //     <View style={styles.viewButton}>
