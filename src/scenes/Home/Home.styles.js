@@ -134,29 +134,13 @@ export default styles = StyleSheet.create({
 
 
     containerbg: {
-        height: '100%',
-        backgroundColor: '#000000'
-    },
-    bg: {
-        height: '100%',
+        backgroundColor: 'transparent',
         width: '100%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'flex-start',
+        flex: 0.5,
+        display: 'flex',
+        zIndex: 99
     },
-    contenttt: {
-        height: '55%',
-        width: '90%',
-        backgroundColor: 'transparent'
-    },
-    linearGradient: {
-        height: '100%',
-        width: '100%',
-        alignItems: 'center',
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
-    },
-
-
-
 
 })

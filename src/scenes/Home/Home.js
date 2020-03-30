@@ -66,44 +66,64 @@ export default function Home({ navigation }) {
                 transparent={true}
                 visible={routeActive} >
                 <Container style={styles.containerbg}>
-                    <LinearGradient
-                        colors={['#ffffffff', '#ffffffff']}
-                        style={styles.bg}>
-                        <View style={styles.contenttt}>
-                            <View
-                                style={{ width: 346, height: 87, backgroundColor: 'red', borderRadius: 5, display: 'flex', flexDirection: 'row' }}>
-                                <View
-                                    style={{ width: 104, height: 87, backgroundColor: 'blue', borderBottomLeftRadius: 5, borderTopLeftRadius: 5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <Image style={{ width: 102, height: 53 }} source={require('./../../../assets/30.png')} />
+                    <View
+                        style={{ width: 370, height: 100, backgroundColor: '#044C74', borderRadius: 5, display: 'flex', flexDirection: 'row' }}>
+                        <View
+                            style={{ width: 104, height: 100, backgroundColor: '#ffff', borderBottomLeftRadius: 5, borderTopLeftRadius: 5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Image style={{ width: 102, height: 53 }} source={require('./../../../assets/30.png')} />
 
-                                </View>
-                                <View style={{ display: 'flex', flexDirection: 'column' }}>
-                                    <Image style={{ width: 36, height: 36 }} source={require('./../../../assets/profile.png')} />
-                                    <Text>Yeison Jimenez</Text>
-                                    <Text>Conductor</Text>
-                                    <View style={{
-                                        borderWidth: 1,
-                                        borderColor: '#D9D9D9',
-                                        marginRight: 10
-                                    }} />
-                                    <View style={{
-                                        backgroundColor: '#044C74',
-                                        width: 63,
-                                        height: 29,
-                                        borderRadius: 5,
+                        </View>
+                        <View style={{ display: 'flex', flexDirection: 'column' }}>
+                            <Text style={{
+                                fontStyle: 'normal',
+                                fontWeight: 'bold',
+                                fontSize: 11,
+                                lineHeight: 13,
+                                textAlign: 'center'
+                            }}>
+                                <Image style={{ width: 36, height: 36 }} source={require('./../../../assets/profile.png')} />
+                                        Yeison Jimenez</Text>
+                            <Text>Conductor</Text>
+                            <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                <View style={{
+                                    borderWidth: 1,
+                                    width: 141,
+                                    height: 0,
+                                    borderColor: '#c4c4c44F',
+                                }} />
+                                <View style={{
+                                    backgroundColor: '#082249',
+                                    width: 63,
+                                    height: 29,
+                                    borderRadius: 5,
+                                    textAlign: 'center',
+                                }}>
+                                    <Text style={{
+                                        fontStyle: 'normal',
+                                        fontWeight: 'bold',
+                                        fontSize: 11,
+                                        lineHeight: 13,
                                         textAlign: 'center',
-                                    }}>
-                                        <Text style={styles.route__text}>DHM-170</Text>
-                                        <Text style={styles.route__text}>Bogotá</Text>
-                                    </View>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 11, height: 12 }} source={require('./../../../assets/barras.png')} />
-                                        <Text>Hace 5 minutos</Text>
-                                    </View>
+                                        color: '#ffff',
+                                    }}>DHM-170</Text>
+                                    <Text style={{
+                                        fontStyle: 'normal',
+                                        fontWeight: 'bold',
+                                        fontSize: 9,
+                                        lineHeight: 13,
+                                        textAlign: 'center',
+                                        color: '#ffff',
+                                    }}>Bogotá</Text>
                                 </View>
                             </View>
+
+
+                            <Text> <Image style={{ width: 11, height: 12, marginRight: 5 }} source={require('./../../../assets/barras.png')} />Hace 5 minutos</Text>
                         </View>
-                    </LinearGradient>
+
+                    </View>
+
+
                 </Container>
             </Modal >
         </View >
