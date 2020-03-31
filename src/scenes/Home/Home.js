@@ -14,6 +14,7 @@ export default function Home({ navigation }) {
     const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
     const [modalCompartirRuta, setModalCompartirRuta] = useState(false)
     const [routeActive, setModalrouteActive] = useState(false)
+    const [routeInactive, setModalrouteInactive] = useState(false)
     const [selected, setSelected] = useState(0)
 
     return (
@@ -33,18 +34,19 @@ export default function Home({ navigation }) {
                     <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/menu.png')} />
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={() => { setModalrouteActive(true) }} style={styles.route}>
+            <TouchableOpacity onPress={() => { setModalrouteInactive(true) }} style={styles.route}>
                 <View style={styles.route__one}>
                     <View style={{ marginRight: 5 }}>
-                        <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} />
-                        {/* <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} /> */}
+                        {/* <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} /> */}
+                        <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} />
                     </View>
                     <View style={styles.route__label}>
                         <Text style={styles.route__text}>RE1</Text>
                     </View>
                 </View>
                 <View style={styles.route__two}>
-                    <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} />
+                    {/* <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} /> */}
+                    <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} />
                 </View>
             </TouchableOpacity>
             {/* <View style={styles.whatsapp}>
@@ -54,78 +56,84 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
             </View> */}
-
-
-
             <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
             <ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
             <ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} ></ModalCompartirRuta>
 
-            < Modal
+            {/* <Modal
                 animationType="fade"
                 transparent={true}
                 visible={routeActive} >
                 <Container style={styles.containerbg}>
                     <View
-                        style={{ width: 370, height: 100, backgroundColor: '#044C74', borderRadius: 5, display: 'flex', flexDirection: 'row' }}>
+                        style={styles.notification}>
                         <View
-                            style={{ width: 104, height: 100, backgroundColor: '#ffff', borderBottomLeftRadius: 5, borderTopLeftRadius: 5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            style={styles.notification__img}>
                             <Image style={{ width: 102, height: 53 }} source={require('./../../../assets/30.png')} />
-
                         </View>
                         <View style={{ display: 'flex', flexDirection: 'column' }}>
-                            <Text style={{
-                                fontStyle: 'normal',
-                                fontWeight: 'bold',
-                                fontSize: 11,
-                                lineHeight: 13,
-                                textAlign: 'center'
-                            }}>
-                                <Image style={{ width: 36, height: 36 }} source={require('./../../../assets/profile.png')} />
-                                        Yeison Jimenez</Text>
-                            <Text>Conductor</Text>
+                            <View style={styles.viewProfile}>
+                                <Image style={styles.viewProfile__img} source={require('./../../../assets/profile.png')} />
+                                <Text style={styles.viewProfile__text}> Yeison Jimenez</Text>
+                            </View>
+                            <Text
+                                style={styles.viewProfile__rol}>Conductor</Text>
                             <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                <View style={{
-                                    borderWidth: 1,
-                                    width: 141,
-                                    height: 0,
-                                    borderColor: '#c4c4c44F',
-                                }} />
-                                <View style={{
-                                    backgroundColor: '#082249',
-                                    width: 63,
-                                    height: 29,
-                                    borderRadius: 5,
-                                    textAlign: 'center',
-                                }}>
-                                    <Text style={{
-                                        fontStyle: 'normal',
-                                        fontWeight: 'bold',
-                                        fontSize: 11,
-                                        lineHeight: 13,
-                                        textAlign: 'center',
-                                        color: '#ffff',
-                                    }}>DHM-170</Text>
-                                    <Text style={{
-                                        fontStyle: 'normal',
-                                        fontWeight: 'bold',
-                                        fontSize: 9,
-                                        lineHeight: 13,
-                                        textAlign: 'center',
-                                        color: '#ffff',
-                                    }}>Bogotá</Text>
+                                <View style={styles.linearStyle} />
+                                <View style={styles.viewLabel}>
+                                    <Text style={styles.viewLabel__placa}>DHM-170</Text>
+                                    <Text style={styles.viewLabel__city}>Bogotá</Text>
                                 </View>
                             </View>
-
-
-                            <Text> <Image style={{ width: 11, height: 12, marginRight: 5 }} source={require('./../../../assets/barras.png')} />Hace 5 minutos</Text>
+                            <View style={styles.viewTime}>
+                                <Image style={styles.viewTime__img} source={require('./../../../assets/barras.png')} />
+                                <Text style={styles.viewTime__text}> Hace 5 minutos</Text>
+                            </View>
                         </View>
-
                     </View>
-
-
                 </Container>
-            </Modal >
+            </Modal> */}
+
+            {/* <Modal
+                animationType="fade"
+                transparent={true}
+                visible={routeInactive} >
+                <Container style={styles.containerbg}>
+                    <View
+                        style={styles.routeInactive}>
+                        <View
+                            style={styles.routeInactive__img}>
+                            <Image style={{ width: 102, height: 53 }} source={require('./../../../assets/black.png')} />
+                        </View>
+                        <View style={{ display: 'flex', flexDirection: 'column', display: 'flex', justifyContent: 'center', marginLeft: 17 }}>
+                            <Text style={styles.routeInactive__text}>Ruta Inactiva</Text>
+                            <Text style={styles.routeInactive__info}>Solo podras ver la información de tu ruta cuando este disponible.</Text>
+                        </View>
+                    </View>
+                </Container>
+            </Modal> */}
+
+            <Modal
+                animationType="fade"
+                transparent={true}
+                visible={true} >
+                <Container style={styles.containerShared}>
+                    <View
+                        style={styles.routeShared}>
+                        <View style={styles.routeShared__img}>
+                            <Image style={{ width: 32, height: 32 }} source={require('./../../../assets/carro.png')} />
+                        </View>
+                        <View style={{ display: 'flex', flexDirection: 'column',  justifyContent: 'center', marginLeft: 17 }}>
+                            <Text style={styles.routeShared__text}>Tienes una ruta compartida</Text>
+                            <Text style={styles.routeShared__info}>Usme - Convergys 127</Text>
+                        </View>
+                        <View style={{ width: 70, display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
+                            <Image style={{ width: 16, height: 16 }} source={require('./../../../assets/editar.png')} />
+                            <Image style={{ width: 12, height: 16 }} source={require('./../../../assets/delete.png')} />
+                        </View>
+                    </View>
+                </Container>
+            </Modal>
         </View >
     )
 }

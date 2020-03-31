@@ -124,15 +124,6 @@ export default styles = StyleSheet.create({
 
 
 
-
-
-
-
-
-
-
-
-
     containerbg: {
         backgroundColor: 'transparent',
         width: '100%',
@@ -142,5 +133,199 @@ export default styles = StyleSheet.create({
         display: 'flex',
         zIndex: 99
     },
+    notification: {
+        width: 370,
+        height: 100,
+        backgroundColor: '#044C74',
+        borderRadius: 5,
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: '20%'
+    },
+    notification__img: {
+        width: 104,
+        height: 100,
+        backgroundColor: '#ffff',
+        borderBottomLeftRadius: 5,
+        borderTopLeftRadius: 5,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    viewProfile: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    viewProfile__img: {
+        width: 40,
+        height: 40,
+        resizeMode: 'cover',
+        marginLeft: 5
+    },
+    viewProfile__text: {
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 18,
+        textAlign: 'left',
+        color: '#ffff',
+    },
+    viewProfile__rol: {
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 14,
+        lineHeight: 14,
+        textAlign: 'left',
+        color: '#0FE6F3',
+        marginLeft: '18%'
+    },
+    linearStyle: {
+        borderWidth: 1,
+        width: 141,
+        height: 0,
+        borderColor: '#c4c4c44F',
+        marginLeft: '18%'
+    },
+    viewLabel: {
+        backgroundColor: '#082249',
+        width: 63,
+        height: 29,
+        borderRadius: 5,
+        textAlign: 'center',
+    },
+    viewLabel__placa: {
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 11,
+        lineHeight: 13,
+        textAlign: 'center',
+        color: '#ffff',
+    },
+    viewLabel__city: {
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 9,
+        lineHeight: 13,
+        textAlign: 'center',
+        color: '#ffff',
+    },
+    viewTime: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginVertical: -9,
+        marginLeft: 10
+    },
+    viewTime__img: {
+        width: 11,
+        height: 12,
+        resizeMode: 'cover'
+    },
+    viewTime__text: {
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 11,
+        lineHeight: 13,
+        textAlign: 'left',
+        color: '#ffff',
+        alignItems: 'center',
+        marginLeft: 5
+    },
+    routeInactive: {
+        width: 370,
+        height: 100,
+        backgroundColor: '#f3f3f3',
+        borderRadius: 5,
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: '20%'
+    },
+    routeInactive__img: {
+        width: 104,
+        height: 100,
+        backgroundColor: '#ffff',
+        borderBottomLeftRadius: 5,
+        borderTopLeftRadius: 5,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    routeInactive__text: {
+        textAlign: 'left',
+        width: 230,
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 16,
+        display: 'flex',
+        alignItems: 'center',
+        color: '#4E4E4E',
+        marginBottom: 10
+    },
+    routeInactive__info: {
+        textAlign: 'left',
+        width: 230,
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 11,
+        lineHeight: 13,
+        display: 'flex',
+        alignItems: 'center',
+        color: '#4E4E4E',
+    },
 
+
+
+    containerShared: {
+        backgroundColor: 'transparent',
+        width: '100%',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-end',
+        flex: 0.55,
+        display: 'flex',
+        zIndex: 99, 
+        marginHorizontal: 10
+    },
+    routeShared: {
+        width: 280,
+        height: 47,
+        backgroundColor: '#ffffff',
+        borderRadius: 5,
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: '20%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    routeShared__img: {
+        width: 40,
+        height: 47,
+        borderBottomLeftRadius: 5,
+        borderTopLeftRadius: 5,
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'center'
+    },
+    routeShared__text: {
+        textAlign: 'left',
+        width: 134,
+        fontStyle: 'normal',
+        fontWeight: '300',
+        fontSize: 10,
+        lineHeight: 11,
+        display: 'flex',
+        alignItems: 'center',
+        color: '#4E4E4E',
+    },
+    routeShared__info: {
+        textAlign: 'left',
+        width: 134,
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 13,
+        lineHeight: 15,
+        display: 'flex',
+        alignItems: 'center',
+        color: '#4E4E4E',
+    }
 })
