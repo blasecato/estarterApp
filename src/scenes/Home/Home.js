@@ -113,7 +113,7 @@ export default function Home({ navigation }) {
                 </Container>
             </Modal> */}
 
-            <Modal
+            {/* <Modal
                 animationType="fade"
                 transparent={true}
                 visible={true} >
@@ -133,7 +133,7 @@ export default function Home({ navigation }) {
                         </View>
                     </View>
                 </Container>
-            </Modal>
+            </Modal> */}
         </View >
     )
 }

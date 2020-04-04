@@ -1,41 +1,52 @@
-import { StyleSheet } from "react-native";
+import {
+    StyleSheet,
+    Dimensions
+} from 'react-native';
+
+var { width } = Dimensions.get('window');
+
+var box_width = width / 1.3;
 
 export default styles = StyleSheet.create({
     container: {
-        height: '100%',
+        flex: 1,
+        flexDirection: 'column'
+    },
+    box: {
+        height: '100%'
+    },
+    box1: {
+        backgroundColor: 'transparent'
     },
     container__background: {
         height: '100%',
         width: '100%',
-        alignItems: 'center',
-        justifyContent: "center",
-        display: 'flex',
-        position: "relative",
         flexDirection: 'column'
     },
     touchClose: {
-        width: '100%',
+        width: '96%',
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'flex-end',
         marginLeft: 8,
-        marginBottom: 8
+        marginBottom: 8,
+        marginTop: 10,
     },
     viewClose: {
         width: 100,
         display: 'flex',
         flexDirection: 'row',
+        justifyContent: 'flex-end',
         alignItems: 'center',
-
     },
     textClose: {
         color: '#FFFFFF',
         textAlign: 'right',
+        alignItems: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: 14,
-        lineHeight: 20,
+        lineHeight: 17,
     },
     imageClose: {
         height: 15,
@@ -45,27 +56,29 @@ export default styles = StyleSheet.create({
         marginLeft: 15
     },
     content: {
-        height: 690,
+        height: '90%',
         width: '90%',
         backgroundColor: 'transparent',
-        position: 'relative'
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     linearGradient: {
         flex: 1,
         width: '100%',
         alignItems: 'center',
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5
     },
     logo: {
-        marginTop: 32,
-        width: 300,
+        marginTop: 10,
+        width: '90%',
         height: 100,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },
     textRegister: {
-        width: 288,
+        width: '80%',
         marginTop: 14,
         marginBottom: 17,
         color: '#282828',
@@ -76,13 +89,13 @@ export default styles = StyleSheet.create({
         lineHeight: 20,
     },
     form: {
-        paddingRight: 15
+        paddingRight: 15,
     },
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 90,
-        marginBottom: 13
+        height: 85,
+        marginBottom: 10
     },
     label: {
         marginBottom: 15,
@@ -95,11 +108,11 @@ export default styles = StyleSheet.create({
     input: {
         borderWidth: 1,
         borderColor: '#FFFF',
-        borderRadius: 10,
+        borderRadius: 5,
         padding: 11,
         color: '#ffff',
         backgroundColor: '#FFFFFF1A',
-        width: 320
+        width: box_width
     },
     button: {
         backgroundColor: '#417CCA',
@@ -107,8 +120,9 @@ export default styles = StyleSheet.create({
         borderColor: 'transparent',
         elevation: 0,
         height: 58,
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5,
+        marginBottom: 40,
     },
     textButton: {
         color: '#FFFFFF',

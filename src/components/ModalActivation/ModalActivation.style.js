@@ -1,35 +1,55 @@
-import { StyleSheet } from "react-native";
+import {
+    StyleSheet,
+    Dimensions
+} from 'react-native';
+
+var { width, height } = Dimensions.get('window');
+
+var box_width = width / 1.3;
+var box_height = height ;
 
 export default styles = StyleSheet.create({
-    containerbg: {
-        height: '100%',
-        backgroundColor: '#000000'
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center', alignItems: 'center'
     },
-    bg: {
+    box: {
+        height: '100%',
+
+    },
+    box1: {
+        backgroundColor: 'transparent',
+
+    },
+    container__background: {
         height: '100%',
         width: '100%',
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: "center",
-        display: 'flex',
-        position: "relative",
         flexDirection: 'column'
     },
-    container: {
-        height: '60%',
-        width: '90%',
-        backgroundColor: 'transparent'
-    },
     touchClose: {
+        width: '86%',
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'flex-end',
+        marginLeft: 8,
         marginBottom: 8
+    },
+    viewClose: {
+        width: 100,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     },
     textClose: {
         color: '#FFFFFF',
-        textAlign: 'right'
+        textAlign: 'right',
+        alignItems: 'center',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 17,
     },
     imageClose: {
         height: 15,
@@ -38,30 +58,56 @@ export default styles = StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 15
     },
+    content: {
+        width: '90%',
+        backgroundColor: 'transparent',
+    },
     linearGradient: {
-        height: '100%',
+        flex: 1,
         width: '100%',
         alignItems: 'center',
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5
     },
     logo: {
-        marginTop: 32,
-        width: 300,
+        marginTop: 10,
+        width: '90%',
         height: 100,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
+    },
+    text__info: {
+        width: '80%',
+        marginTop: 14,
+        marginBottom: 17,
+        color: '#282828',
+        textAlign: 'center',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 14,
+        lineHeight: 20,
+    },
+    content__info: {
+        color: '#282828',
+        textAlign: 'center',
+        backgroundColor: '#03173A36',
+        width: box_width,
+        height: 56,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderColor: '#3866A8',
+        borderWidth: 1
     },
     lineStyle: {
         borderWidth: 1,
         borderColor: '#FFFFFF6B',
         marginTop: 27,
         marginBottom: 23,
-        width: 288
+        width: box_width
     },
     form: {
-        marginTop: 19
-
+        marginTop: 19,
+        paddingRight: 15,
     },
     item: {
         borderWidth: 0,
@@ -77,9 +123,11 @@ export default styles = StyleSheet.create({
     input: {
         borderWidth: 1,
         borderColor: '#FFFF',
+        color: '#FFFF',
         borderRadius: 5,
-        paddingRight: 0,
         backgroundColor: '#FFFFFF1A',
+        textAlign: 'center',
+        paddingRight: 0,
     },
     buttonPass: {
         backgroundColor: '#417CCA',
@@ -89,5 +137,4 @@ export default styles = StyleSheet.create({
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10
     }
-
 });

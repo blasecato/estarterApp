@@ -70,7 +70,7 @@ export default styles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60
+        height: 60,
     },
     buttonSignin__text: {
         color: '#19439F',

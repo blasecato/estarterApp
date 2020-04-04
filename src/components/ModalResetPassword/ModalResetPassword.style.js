@@ -1,40 +1,51 @@
-import { StyleSheet } from "react-native";
+import {
+    StyleSheet,
+    Dimensions
+} from 'react-native';
+
+var { width } = Dimensions.get('window');
+
+var box_width = width / 1.3;
 
 export default styles = StyleSheet.create({
     container: {
+        flex: 1,
+        flexDirection: 'column',
+    },
+    box: {
         height: '100%',
-        backgroundColor: '#000000'
+    },
+    box1: {
+        backgroundColor: 'transparent',
     },
     container__background: {
         height: '100%',
         width: '100%',
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: "center",
-        display: 'flex',
-        position: "relative",
         flexDirection: 'column'
     },
-    content: {
-        height: '55%',
-        width: '90%',
-        backgroundColor: 'transparent'
-    },
     touchClose: {
+        width: '96%',
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'flex-end',
+        marginLeft: 8,
         marginBottom: 8
+    },
+    viewClose: {
+        width: 100,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     },
     textClose: {
         color: '#FFFFFF',
         textAlign: 'right',
-        textAlign: 'center',
+        alignItems: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: 14,
-        lineHeight: 20,
+        lineHeight: 17,
     },
     imageClose: {
         height: 15,
@@ -43,24 +54,29 @@ export default styles = StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 15
     },
+    content: {
+        width: '90%',
+        backgroundColor: 'transparent',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
     linearGradient: {
-        height: '100%',
         width: '100%',
         alignItems: 'center',
-        borderRadius: 5
+        borderRadius: 5,
     },
     logo: {
-        marginTop: 32,
-        width: 300,
+        marginTop: 10,
+        width: '90%',
         height: 100,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },
     textPass: {
-        width: 252,
-        height: 40,
-        marginTop: 10,
-        marginBottom: 13,
+        width: '80%',
+        marginTop: 14,
+        marginBottom: 17,
         color: '#282828',
         textAlign: 'center',
         fontStyle: 'normal',
@@ -106,5 +122,4 @@ export default styles = StyleSheet.create({
         fontSize: 12,
         lineHeight: 16,
     }
-
 });
