@@ -104,7 +104,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                 }}>
                     {activeTab == 1 &&
                         < View style={{ alignItems: 'center', display: 'flex', width: '100%', marginVertical: 20 }} >
-                            <Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
+                            {/* <Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
                             <Form style={styles.form}>
                                 <View style={{
                                     width: '60%',
@@ -124,14 +124,14 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                                         <Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
                                     </Button>
                                 </LinearGradient>
-                            </Form>
+                            </Form> */}
                             {/* <ActivityIndicator size="large" color="#00ff00" />
                             <Text style={styles.text__info}>Estamos validando tu código por favor espera unos segundos.</Text> */}
 
-                            {/* <Image
+                            <Image
                                 style={styles.imageList} source={require('./../../../assets/msg.png')}></Image>
                             <Text style={styles.text__info}>Tu código no coincide con nuestras bases de datos por favor contacta con soporte técnico.
-                             </Text>*/}
+                             </Text>
                         </View>
                     }
                     {activeTab == 2 &&

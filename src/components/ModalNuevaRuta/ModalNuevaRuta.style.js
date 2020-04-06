@@ -51,14 +51,30 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
     },
+    view__info: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        marginVertical: -5
+    },
+    text__info: {
+        textAlign: 'left',
+        width: '55%',
+        marginLeft: 10,
+        fontSize: 14,
+        fontStyle: 'normal',
+        lineHeight: 20,
+        fontWeight: 'normal',
+    },
     form: {
-        width: '60%',
+        width: '65%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         padding: 25,
-        marginVertical: -5 
+        marginVertical: -5
     },
     item: {
         borderWidth: 0,
@@ -75,8 +91,12 @@ export default styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         padding: 11,
         maxWidth: '100%',
-        marginRight: 7,
-        flex: 0
+        width: '98%', 
+        flex: 0,
+        fontSize: 13,
+        fontStyle: 'normal',
+        lineHeight: 20,
+        fontWeight: 'normal',
     },
     buttonVinc: {
         minWidth: '40%',

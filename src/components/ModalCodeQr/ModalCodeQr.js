@@ -45,6 +45,8 @@ export default function ModalCodeQr({ navigation, hidden, setHidden }) {
                                         </View>
                                         <LinearGradient
                                             colors={['#044C74', '#348AC7']}
+                                            start={{ x: 0.0, y: 0.2 }}
+                                            end={{ x: 0.8, y: 2.8 }}
                                             style={{ width: '40%' }}>
                                             <Button onPress={() => { console.log("cliek") }} style={styles.buttonVinc}>
                                                 <Text uppercase={false} style={styles.buttonVinc__text}> ACTIVAR </Text>
@@ -94,6 +96,8 @@ export default function ModalCodeQr({ navigation, hidden, setHidden }) {
                                         </View>
                                         <LinearGradient
                                             colors={['#044C74', '#348AC7']}
+                                            start={{ x: 0.0, y: 0.2 }}
+                                            end={{ x: 0.8, y: 2.8 }}
                                             style={{ width: '40%' }}>
                                             <Button onPress={() => { console.log("cliek") }} style={styles.buttonVinc}>
                                                 <Text uppercase={false} style={styles.buttonVinc__text}>VINCULAR</Text>

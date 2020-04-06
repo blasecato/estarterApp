@@ -63,7 +63,7 @@ export default function Home({ navigation }) {
             <ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} ></ModalCompartirRuta>
             <ModalAviso hidden={modalAviso} setHidden={setModalAviso}></ModalAviso>
             
-            {/* <Modal
+            <Modal
                 animationType="fade"
                 transparent={true}
                 visible={routeActive} >
@@ -95,7 +95,7 @@ export default function Home({ navigation }) {
                         </View>
                     </View>
                 </Container>
-            </Modal> */}
+            </Modal>
 
             {/* <Modal
                 animationType="fade"

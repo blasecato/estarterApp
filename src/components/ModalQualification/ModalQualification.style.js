@@ -1,19 +1,19 @@
 import { StyleSheet, Dimensions } from "react-native";
 
+var { height } = Dimensions.get('window');
+
+var box_count = 3;
+var box_height = height / box_count;
 export default styles = StyleSheet.create({
 
-    bg: {
-        height: '100%',
-        width: '100%',
-        display: 'flex',
+    container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
     imageClose: {
         height: 32,
         width: 32,
+        margin: 25,
         resizeMode: 'contain',
     },
     qualification: {
@@ -22,44 +22,40 @@ export default styles = StyleSheet.create({
         resizeMode: 'contain',
         marginRight: 19
     },
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-    },
-    row: {
-        flex: .4,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
     box: {
-        flex: 1,
-        height: 200,
+        height: box_height,
     },
     boxOne: {
         alignItems: 'flex-end',
         justifyContent: 'flex-start',
-        paddingRight: 38,
-        paddingTop: 30
+        flex: .8,
     },
     boxTwo: {
         alignItems: 'center',
         justifyContent: 'center',
-        height: 135,
-        width: 315,
+        flex: 2,
+
+    },
+    boxTwo__textBold: {
+        fontSize: 24,
+        lineHeight: 28,
+        color: '#FFFF',
+        textAlign: 'center',
+        marginBottom: 27,
+        fontWeight: 'bold'
+    },
+    boxTwo__textNormal: {
+        fontSize: 18,
+        lineHeight: 21,
+        color: '#FFFF',
+        textAlign: 'center',
+        fontWeight: 'normal',
+        width: 212
+    },
+    boxThree: {
+        alignItems: 'center',
+        justifyContent: 'center',
         flex: 1
     },
-    card: {
-        height: 135,
-        width: 315,
-        backgroundColor: '#fff',
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-    },
-    linearStyle: {
-        height: 8,
-        width: 315,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius: 5,
-    },
+
 });
