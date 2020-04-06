@@ -8,11 +8,13 @@ import ModalNuevaRuta from './../../components/ModalNuevaRuta/ModalNuevaRuta';
 import ModalCompartirRuta from './../../components/ModalRutaCompartida/ModalRutaCompartida';
 import SlidingPanelRutes from '../../components/SlidingPanelRutes/SlidingPanelRutes';
 import { LinearGradient } from 'expo-linear-gradient';
+import ModalAviso from '../../components/ModalAviso/ModalAviso';
 
 export default function Home({ navigation }) {
 
     const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
     const [modalCompartirRuta, setModalCompartirRuta] = useState(false)
+    const [modalAviso, setModalAviso] = useState(true);
     const [routeActive, setModalrouteActive] = useState(false)
     const [routeInactive, setModalrouteInactive] = useState(false)
     const [selected, setSelected] = useState(0)
@@ -59,7 +61,8 @@ export default function Home({ navigation }) {
             <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
             <ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
             <ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} ></ModalCompartirRuta>
-
+            <ModalAviso hidden={modalAviso} setHidden={setModalAviso}></ModalAviso>
+            
             {/* <Modal
                 animationType="fade"
                 transparent={true}
@@ -134,6 +137,8 @@ export default function Home({ navigation }) {
                     </View>
                 </Container>
             </Modal> */}
+
+
         </View >
     )
 }

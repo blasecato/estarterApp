@@ -38,12 +38,12 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         height: 500,
-        width: 350,
+        width: '90%',
         flex: 1
     },
     card: {
         height: 500,
-        width: 350,
+        width: '90%',
         backgroundColor: '#fff',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
@@ -56,7 +56,9 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 10,
         alignItems: 'center',
-        paddingHorizontal: 25
+        paddingHorizontal: 25,
+        paddingLeft: 10,
+        paddingRight: 10
     },
     viewButton: {
         width: '100%',
@@ -111,3 +113,4 @@ export default styles = StyleSheet.create({
         borderBottomRightRadius: 5,
     },
 });
+

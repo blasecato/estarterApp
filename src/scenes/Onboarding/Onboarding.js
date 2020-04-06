@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Image } from 'react-native';
+import { Image, Dimensions } from 'react-native';
 import { Button, View, Text } from 'native-base';
 import Onboarding from 'react-native-onboarding-swiper';
+import ModalAviso from '../../components/ModalAviso/ModalAviso';
 
 const Square = ({ isLight, selected }) => {
     let backgroundColor;

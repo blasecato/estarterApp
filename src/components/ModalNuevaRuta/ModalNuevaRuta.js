@@ -5,7 +5,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalNuevaRuta.style';
 
 export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
-
     return (
         <Modal
             animationType="fade"
@@ -19,14 +18,13 @@ export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
                         <TouchableOpacity onPress={() => { setHidden(!hidden) }} style={[styles.box, styles.boxOne]}>
                             <Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
                         </TouchableOpacity>
-
                     </View>
                     <View style={styles.row}>
                         <View style={[styles.box, styles.boxTwo]}>
                             <View style={styles.card}>
-                                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', width: 300, justifyContent: 'center', marginVertical: -5 }}>
+                                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center', marginVertical: -5 }}>
                                     <Image source={require('./../../../assets/bus.png')} />
-                                    <Text style={{ textAlign: 'left', width: 180, marginLeft: 20 }}>
+                                    <Text style={{ textAlign: 'left', width: '60%', marginLeft: 10 }}>
                                         Ingresa el código para asignar una nueva ruta.</Text>
                                 </View>
                                 <Form style={styles.form}>

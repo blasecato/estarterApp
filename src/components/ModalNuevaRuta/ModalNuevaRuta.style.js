@@ -40,12 +40,12 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         height: 143,
-        width: 315,
+        width: '90%',
         flex: 1
     },
     card: {
         height: 143,
-        width: 315,
+        width: '90%',
         backgroundColor: '#fff',
         borderRadius: 5,
         alignItems: 'center',
@@ -89,13 +89,13 @@ export default styles = StyleSheet.create({
     },
     buttonVinc__text: {
         color: '#FFFF',
-        fontSize: 19,
+        fontSize: 16,
         fontStyle: 'normal',
         fontWeight: '500',
     },
     linearStyle: {
         height: 8,
-        width: 315,
+        width: '100%',
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },

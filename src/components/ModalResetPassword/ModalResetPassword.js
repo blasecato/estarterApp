@@ -19,8 +19,7 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
                         start={{ x: 0.0, y: 0.5 }}
                         end={{ x: 0.0, y: 0.9 }}
                         style={styles.container__background}>
-                        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}>
-
+                        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}> 
                             <View style={styles.content}>
                                 <TouchableOpacity
                                     style={styles.touchClose}
