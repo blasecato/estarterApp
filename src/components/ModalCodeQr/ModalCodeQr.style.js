@@ -13,7 +13,8 @@ export default styles = StyleSheet.create({
         width: '95%',
         display: 'flex',
         alignItems: 'flex-end',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: '20%'
     },
     imageClose: {
         margin: 20,
@@ -30,10 +31,11 @@ export default styles = StyleSheet.create({
         width: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginBottom: 20
     },
     card: {
-        height: 550,
+        height: 470,
         width: '90%',
         flexDirection: 'column',
         backgroundColor: '#ffff',
@@ -42,15 +44,12 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
+
     },
     cardBox: {
         flexDirection: 'column',
     },
     cardBoxOne: {
-        flexDirection: 'row',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         width: '90%',
     },
     cardBoxTwo: {
@@ -59,40 +58,50 @@ export default styles = StyleSheet.create({
         justifyContent: 'center'
     },
     form: {
-        width: '90%',
-        marginTop: 23
+        width: '65%',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+
+        padding: 25,
+        marginVertical: -5
     },
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 98,
+        height: 40,
         maxWidth: '100%',
         width: '100%',
-        marginRight: 0,
-        marginLeft: 0,
-        paddingLeft: 0,
         paddingRight: 0,
-        marginBottom: 0
-    },
-    label: {
-        marginBottom: 7,
-        color: '#454545',
-        fontSize: 14,
-        maxWidth: '100%',
-        lineHeight: 16,
+        paddingLeft: 0
     },
     input: {
         borderWidth: 1,
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
         padding: 11,
-        maxWidth: '102%',
+        maxWidth: '100%',
+        width: '98%',
         flex: 0,
-        color: '#FFFF',
-        fontSize: 13,
-        lineHeight: 16,
+        fontSize: 20,
         fontStyle: 'normal',
+        lineHeight: 20,
         fontWeight: 'normal',
+    },
+    buttonVinc: {
+        minWidth: '40%',
+        position: 'relative',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        backgroundColor: 'transparent',
+        elevation: 0
+    },
+    buttonVinc__text: {
+        color: '#FFFF',
+        fontSize: 16,
+        fontStyle: 'normal',
+        fontWeight: '500',
     },
     cardBoxThree: {
         display: 'flex',
@@ -106,4 +115,3 @@ export default styles = StyleSheet.create({
         borderBottomRightRadius: 5,
     },
 });
-

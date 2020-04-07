@@ -37,6 +37,7 @@ export default styles = StyleSheet.create({
         borderWidth: 0,
         borderColor: 'transparent',
         height: 90,
+        minWidth: '100%',
         maxWidth: '100%',
         width: '100%',
         marginRight: 0,
