@@ -15,8 +15,8 @@ import {
     DrawerItemList,
     DrawerItem,
 } from '@react-navigation/drawer';
-import { Image, Modal, TouchableOpacity, Text } from 'react-native';
-import { View } from 'native-base';
+import { Image, Modal, TouchableOpacity } from 'react-native';
+import { Button, Text, Form, Item, Input, View, } from 'native-base';
 
 const Stack = createStackNavigator();
 
@@ -27,7 +27,10 @@ export default function navigator() {
     const [modalCodeQr, setModalCodeQr] = useState(false)
 
     return (
+
+        
         <NavigationContainer >
+
             <Drawer.Navigator drawerStyle={{
                 backgroundColor: '#001324',
                 width: 246,
@@ -47,7 +50,7 @@ export default function navigator() {
                             }}
                         />
                     </View>
-                    <TouchableOpacity style={{
+                    {/* <TouchableOpacity style={{
                         display: 'flex',
                         flexDirection: 'row',
                         alignItems: 'center',
@@ -74,13 +77,11 @@ export default function navigator() {
                             flexDirection: 'row',
                             alignItems: 'center',
                             marginLeft: 36,
-                        }}
-                        onPress={() => alert('Link to help')}>
+                        }}>
                         <Image style={{ resizeMode: 'cover', width: 53, height: 53 }} source={require('./../../assets/soporte.png')} />
                         <Text style={{
                             color: '#FFFF',
-                            marginLeft: 13,
-
+                            marginLeft: 13
                         }}>Soporte</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -97,6 +98,256 @@ export default function navigator() {
                             color: '#FFFF',
                             marginLeft: 13
                         }}>Código QR</Text>
+                    </TouchableOpacity> */}
+
+                    {/* <View style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        marginBottom: 18,
+                    }}>
+                        <View style={{ width: 80, height: 30, backgroundColor: '#ffff', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: 50, borderTopRightRadius: 50 }}>
+                            <Image style={{ resizeMode: 'cover', width: 58, height: 19 }} source={require('./../../assets/convergys.png')} />
+                        </View>
+                        <View style={{
+                            borderWidth: 1,
+                            borderColor: '#5695f85C',
+                            width: 30
+                        }} />
+                        <TouchableOpacity style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        }}>
+                            <Image style={{ resizeMode: 'cover', width: 30, height: 30, marginLeft: 12, marginRight: 8 }} source={require('./../../assets/back.png')} />
+                            <Image style={{ resizeMode: 'cover', width: 54, height: 12, marginRight: 8 }} source={require('./../../assets/text-back.png')} />
+                        </TouchableOpacity>
+                        <View style={{
+                            borderWidth: 1,
+                            borderColor: '#5695f85C',
+                            width: 114
+                        }} />
+                    </View>
+                    <TouchableOpacity
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'flex-end',
+                            justifyContent: 'center'
+                        }}>
+                        <View style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: 124, height: 124,
+                            borderWidth: 1,
+                            borderColor: '#ffff',
+                            borderRadius: 100
+                        }}>
+                            <Image style={{ resizeMode: 'cover', width: 114, height: 114 }} source={require('./../../assets/perfil.png')} />
+                        </View>
+                        <Image style={{ resizeMode: 'cover', width: 20, height: 20 }} source={require('./../../assets/lapiz.png')} />
+
+                    </TouchableOpacity>
+                    <View style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+
+                    }}>
+                        <Text style={{
+                            color: '#FFFF',
+                            fontStyle: 'normal',
+                            fontWeight: '500',
+                            fontSize: 17,
+                            lineHeight: 20,
+                            marginBottom: 7,
+                            marginTop: 22,
+                        }}>Michael Martinez</Text>
+                        <Text style={{
+                            color: '#FFFF',
+                            fontStyle: 'normal',
+                            fontWeight: '300',
+                            fontSize: 15,
+                            lineHeight: 17,
+
+                            marginTop: 5,
+                        }}>322 7409090</Text>
+                        <Text style={{
+                            color: '#0FE6F3',
+                            fontStyle: 'normal',
+                            fontWeight: '300',
+                            fontSize: 15,
+                            lineHeight: 17,
+                            marginTop: 15,
+                        }}>michael@estarter.co</Text>
+                    </View>
+                    <TouchableOpacity
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+
+                        }}
+                    >
+                        <Text style={{
+                            color: '#FFFF',
+                            fontStyle: 'normal',
+                            fontWeight: '300',
+                            fontSize: 13,
+                            lineHeight: 15,
+                            marginTop: 40,
+                        }}>Cambiar contraseña</Text>
+                    </TouchableOpacity> */}
+
+                    <View style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        marginBottom: 18,
+                    }}>
+                        <View style={{ width: 80, height: 30, backgroundColor: '#ffff', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: 50, borderTopRightRadius: 50 }}>
+                            <Image style={{ resizeMode: 'cover', width: 58, height: 19 }} source={require('./../../assets/convergys.png')} />
+                        </View>
+                        <View style={{
+                            borderWidth: 1,
+                            borderColor: '#5695f85C',
+                            width: 30
+                        }} />
+                        <TouchableOpacity style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        }}>
+                            <Image style={{ resizeMode: 'cover', width: 30, height: 30, marginLeft: 12, marginRight: 8 }} source={require('./../../assets/back.png')} />
+                            <Image style={{ resizeMode: 'cover', width: 54, height: 12, marginRight: 8 }} source={require('./../../assets/text-back.png')} />
+                        </TouchableOpacity>
+                        <View style={{
+                            borderWidth: 1,
+                            borderColor: '#5695f85C',
+                            width: 114
+                        }} />
+                    </View>
+                    <View
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'flex-end',
+                            justifyContent: 'center'
+                        }}>
+                        <View style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: 124, height: 124,
+                            borderWidth: 1,
+                            borderColor: '#ffff',
+                            borderRadius: 100
+                        }}>
+                            <Image style={{ resizeMode: 'cover', width: 114, height: 114 }} source={require('./../../assets/perfil.png')} />
+                        </View>
+                    </View>
+                    <View style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+
+                    }}>
+                        <Form style={{
+                            width: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: 25,
+                        }}>
+                            <Item regular style={{
+                                borderWidth: 0,
+                                borderColor: 'transparent',
+                                height: 40,
+                                maxWidth: '100%',
+                                width: '100%',
+                                paddingRight: 0,
+                                paddingLeft: 0,
+                                marginBottom: 10,
+                            }}>
+                                <Input
+                                    style={{
+                                        textAlign: 'center',
+                                        borderBottomWidth: 1,
+                                        borderColor: '#0fe6f330',
+                                        backgroundColor: '#001324',
+                                        padding: 11,
+                                        maxWidth: '100%',
+                                        width: '98%',
+                                        flex: 0,
+                                        color: '#FFFF',
+                                        fontStyle: 'normal',
+                                        fontWeight: '500',
+                                        fontSize: 17,
+                                        lineHeight: 20,
+                                    }}
+                                    placeholderTextColor="#FFFF"
+                                    placeholder='Michael Martinez' />
+                            </Item>
+                            <Item regular style={{
+                                borderWidth: 0,
+                                borderColor: 'transparent',
+                                height: 40,
+                                maxWidth: '100%',
+                                width: '100%',
+                                paddingRight: 0,
+                                paddingLeft: 0
+                            }} last>
+                                <Input
+                                    style={{
+                                        textAlign: 'center',
+                                        borderBottomWidth: 1,
+                                        borderColor: '#0fe6f330',
+                                        backgroundColor: '#001324',
+                                        padding: 11,
+                                        maxWidth: '100%',
+                                        width: '98%',
+                                        flex: 0,
+                                        color: '#FFFF',
+                                        fontStyle: 'normal',
+                                        fontWeight: '300',
+                                        fontSize: 15,
+                                        lineHeight: 17,
+                                    }}
+                                    placeholderTextColor="#FFFF"
+                                    placeholder='322 7409090' />
+                            </Item>
+                        </Form>
+                        <Text style={{
+                            color: '#0FE6F3',
+                            fontStyle: 'normal',
+                            fontWeight: '300',
+                            fontSize: 15,
+                            lineHeight: 17,
+                            marginTop: 15,
+                        }}>michael@estarter.co</Text>
+                    </View>
+                    <TouchableOpacity
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+
+                        }}
+                    >
+                        <Text style={{
+                            color: '#FFFF',
+                            fontStyle: 'normal',
+                            fontWeight: '300',
+                            fontSize: 13,
+                            lineHeight: 15,
+                            marginTop: 40,
+                        }}>Cambiar contraseña</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={{
