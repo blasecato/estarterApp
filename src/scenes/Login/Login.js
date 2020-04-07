@@ -15,6 +15,9 @@ export default function LoginScreen({ navigation }) {
   const [modalPassword, setModalPassword] = useState(false)
   const [modalActivation, setModalActivation] = useState(0)
   const [modalCode, setModalCode] = useState(0)
+  const [phone, setPhone] = useState(undefined)
+  const [email, setEmail] = useState(undefined)
+
   return (
     <Container style={styles.container}>
       <Image
@@ -48,10 +51,24 @@ export default function LoginScreen({ navigation }) {
         <Text uppercase={false} style={styles.buttonSignup__text}> ¿No tienes una cuenta? </Text>
       </Button>
 
-      <ModalSignup hidden={modalRegister} setHidden={setModalRegister} setModalActivation={setModalActivation} navigation></ModalSignup>
+      <ModalSignup
+        hidden={modalRegister}
+        setHidden={setModalRegister}
+        setModalActivation={setModalActivation}
+        navigation
+        setPhone={setPhone}
+        setEmail={setEmail}
+      >
+
+      </ModalSignup>
       <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
-      <ModalActivation hidden={modalActivation} setHidden={setModalActivation} ></ModalActivation>
-      <ModalConfirm hidden={modalCode} setHidden={setModalCode} setModalActivation={setModalActivation}></ModalConfirm>
+      <ModalActivation hidden={modalActivation} setHidden={setModalActivation} phone={phone} email={email}>
+      </ModalActivation>
+      <ModalConfirm
+        hidden={modalCode}
+        setHidden={setModalCode}
+        setModalActivation={setModalActivation}></ModalConfirm>
     </Container>
+
   );
 }
