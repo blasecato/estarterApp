@@ -1,114 +1,107 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 export default styles = StyleSheet.create({
-    bg: {
+    container_background: {
         height: '100%',
         width: '100%',
-        display: 'flex',
-        flex: 1,
+    },
+    container: {
+        flex: 4,
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+    },
+    viewClose: {
+        width: '95%',
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center'
     },
     imageClose: {
+        margin: 20,
         height: 32,
         width: 32,
         resizeMode: 'contain',
     },
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-    },
-    row: {
-        flex: .19,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
     box: {
-        flex: 1,
-        height: 200,
-    },
-    boxOne: {
-        alignItems: 'flex-end',
-        justifyContent: 'flex-start',
-        paddingRight: 38,
-        paddingTop: 30,
-    },
-    boxTwo: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 500,
-        width: '90%',
-        flex: 1
-    },
-    card: {
-        height: 500,
-        width: '90%',
-        backgroundColor: '#fff',
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
-        alignItems: 'center',
+        height: '100%',
 
     },
-    form: {
+    boxOne: {
+        backgroundColor: 'transparent',
         width: '100%',
         display: 'flex',
-        flexDirection: 'row',
-        marginBottom: 10,
         alignItems: 'center',
-        paddingHorizontal: 25,
-        paddingLeft: 10,
-        paddingRight: 10
+        justifyContent: 'center'
     },
-    viewButton: {
-        width: '100%',
+    card: {
+        height: 550,
+        width: '90%',
+        flexDirection: 'column',
+        backgroundColor: '#ffff',
         display: 'flex',
-        flexDirection: 'row',
-        marginBottom: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 25
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
+    },
+    cardBox: {
+        flexDirection: 'column',
+    },
+    cardBoxOne: {
+        flexDirection: 'row',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '90%',
+    },
+    cardBoxTwo: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    form: {
+        width: '90%',
+        marginTop: 23
     },
     item: {
         borderWidth: 0,
         borderColor: 'transparent',
-        height: 40,
-        paddingRight: 0,
+        height: 98,
+        maxWidth: '100%',
+        width: '100%',
+        marginRight: 0,
+        marginLeft: 0,
         paddingLeft: 0,
-        marginRight: 14
+        paddingRight: 0,
+        marginBottom: 0
+    },
+    label: {
+        marginBottom: 7,
+        color: '#454545',
+        fontSize: 14,
+        maxWidth: '100%',
+        lineHeight: 16,
     },
     input: {
         borderWidth: 1,
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
         padding: 11,
-        width: '100%',
-        maxWidth: '100%',
+        maxWidth: '102%',
         flex: 0,
-    },
-    buttonVinc: {
-        minWidth: '50%',
-        position: 'relative',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 50,
-        backgroundColor: 'transparent',
-        elevation: 0
-    },
-    buttonVinc__text: {
         color: '#FFFF',
-        fontSize: 18,
+        fontSize: 13,
+        lineHeight: 16,
         fontStyle: 'normal',
-        fontWeight: '500',
+        fontWeight: 'normal',
     },
-    viewLinear: {
+    cardBoxThree: {
+        display: 'flex',
         alignItems: 'center',
-        justifyContent: 'flex-end',
-
+        justifyContent: 'flex-end'
     },
     linearStyle: {
         height: 8,
-        width: 350,
+        width: '90%',
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },
