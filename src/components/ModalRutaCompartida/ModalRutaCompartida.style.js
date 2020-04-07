@@ -13,7 +13,8 @@ export default styles = StyleSheet.create({
         width: '95%',
         display: 'flex',
         alignItems: 'flex-end',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: '20%'
     },
     imageClose: {
         margin: 20,
@@ -30,7 +31,8 @@ export default styles = StyleSheet.create({
         width: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginBottom: 20
     },
     card: {
         height: 550,
@@ -42,6 +44,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
+
     },
     cardBox: {
         flexDirection: 'column',
