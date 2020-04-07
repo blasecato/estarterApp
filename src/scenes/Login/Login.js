@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
-import { Image, Modal, TouchableOpacity } from 'react-native';
+import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Right } from 'native-base';
+import { Image, Modal, TouchableOpacity, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import ModalSignup from '../../components/ModalSignup/ModalSignup';
 import ModalConfirm from '../../components/ModalConfirm/ModalConfirm';
@@ -8,17 +8,19 @@ import ModalResetPassword from '../../components/ModalResetPassword/ModalResetPa
 import ModalActivation from '../../components/ModalActivation/ModalActivation';
 import styles from './Login.styles';
 import { ScrollView } from 'react-native-gesture-handler';
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from "react-hook-form";
 
 export default function LoginScreen({ navigation }) {
 
-  const { register, handleSubmit } = useForm()
+  const { control, handleSubmit, errors } = useForm();
   const [modalRegister, setModalRegister] = useState(false)
   const [modalPassword, setModalPassword] = useState(false)
   const [modalActivation, setModalActivation] = useState(0)
   const [modalCode, setModalCode] = useState(0)
   const [phone, setPhone] = useState(undefined)
   const [email, setEmail] = useState(undefined)
+
+  const onSubmit = data => navigation.navigate('Onboarding')
 
   return (
     <Container style={styles.container}>
@@ -34,20 +36,35 @@ export default function LoginScreen({ navigation }) {
           <Form style={styles.form}>
             <Item style={styles.item} stackedLabel>
               <Label style={styles.label}>Número de identificación</Label>
-              <Input
-                style={styles.input}
-                name="identification" ref={register({ required: true, maxLength: 20, minLength: 6 })}
+              <Controller
+                as={<Input style={styles.input} />}
+                control={control}
+                name="identification"
+                onChange={args => args[0].nativeEvent.text}
+                rules={{ required: true, minLength: 3, }}
+                defaultValue=""
               />
             </Item>
+            {errors.identification && <Text>Ingrese el número de identificación.</Text>}
             <Item style={styles.item} stackedLabel last>
               <Label style={styles.label}>Contraseña</Label>
-              <Input
-                style={styles.input}
-                name="password" ref={register({ required: true, maxLength: 20, minLength: 6 })}
+              <Controller
+                as={<Input style={styles.input} />}
+                control={control}
+                name="password"
+                onChange={args => args[0].nativeEvent.text}
+                rules={{ required: true, minLength: 3, }}
+                defaultValue=""
               />
             </Item>
+            {errors.password && <Text>Ingrese la contraseña.</Text>}
           </Form>
-          <Button light onPress={() => navigation.navigate('Onboarding')} style={styles.buttonSignin} >
+          <Button light
+            title="Submit"
+            onPress={handleSubmit(onSubmit)}
+
+            style={styles.buttonSignin}
+          >
             <Text uppercase={false} style={styles.buttonSignin__text}> Iniciar sesión </Text>
           </Button>
           <Button onPress={() => { setModalPassword(!modalPassword) }} transparent>
@@ -55,7 +72,9 @@ export default function LoginScreen({ navigation }) {
           </Button>
         </ScrollView>
       </Container>
-      <Button onPress={() => { setModalRegister(!modalRegister) }} full style={styles.buttonSignup} >
+      <Button
+        onPress={() => { setModalRegister(!modalRegister) }} full style={styles.buttonSignup}
+      >
         <Text uppercase={false} style={styles.buttonSignup__text}> ¿No tienes una cuenta? </Text>
       </Button>
 
