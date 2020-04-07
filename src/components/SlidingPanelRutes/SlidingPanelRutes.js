@@ -55,7 +55,16 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 									setActiveTab(1)
 								}, 100);
 							}}>
-							<Text style={activeTab == 1 ? styles.activeTab__text : styles.inactiveTab__text} >Mis rutas</Text>
+							<View style={{
+								alignItems: 'center',
+								display: 'flex',
+								flexDirection: 'row',
+								justifyContent: 'space-between',
+							}}>
+								<Text style={activeTab == 1 ? styles.activeTab__text : styles.inactiveTab__text}>Mis rutas
+                                </Text>
+								<Image style={activeTab == 1 ? styles.activeTab__img : styles.inactiveTab__img} source={require('./../../../assets/down.png')}></Image>
+							</View>
 						</TouchableOpacity>
 						<TouchableOpacity
 							style={{
@@ -67,8 +76,16 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 									setActiveTab(2)
 								}, 100);
 							}}>
-							<Text style={activeTab == 1 ? styles.inactiveTab__text : styles.activeTab__text}>Compartidas</Text>
-							{/* <Image source={require('./../../../assets/down.png')}></Image> */}
+							<View style={{
+								alignItems: 'center',
+								display: 'flex',
+								flexDirection: 'row',
+								justifyContent: 'space-between',
+							}}>
+								<Text style={activeTab == 1 ? styles.inactiveTab__text : styles.activeTab__text}>Compartidas
+                                </Text>
+								<Image style={activeTab == 1 ? styles.inactiveTab__img : styles.activeTab__img} source={require('./../../../assets/down.png')}></Image>
+							</View>
 						</TouchableOpacity>
 					</Segment>
 					<TouchableOpacity style={{
@@ -102,16 +119,14 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 					flexDirection: 'column',
 					display: 'flex',
 					textAlign: 'center',
-					borderTopRightRadius: 5,
+
 				}}>
 					{activeTab == 1 &&
 						< View style={{ alignItems: 'center', display: 'flex', width: '100%', marginVertical: 20 }} >
+
 							{!loading &&
 								<>
-									<Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>
-										Ingresa el código que te han asignado en tu empresa.
-									</Text>
-
+									<Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
 									<Form style={styles.form}>
 										<View style={{
 											width: '60%',
@@ -132,13 +147,20 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 												setTimeout(() => {
 													setSucces(true)
 												}, 2000);
-											}} style={styles.buttonVinc}>
+											}}
+												style={styles.buttonVinc}>
 												<Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
 											</Button>
 										</LinearGradient>
 									</Form>
 								</>
 							}
+
+							{/* <ActivityIndicator size="large" color="#00ff00" />
+										<Text 
+										style={styles.text__info}>
+										Estamos validando tu código por favor espera unos segundos.</Text> */}
+
 
 							{loading && !succes &&
 								<>
@@ -194,6 +216,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 									</View>
 								</>
 							}
+
 						</View>
 					}
 					{activeTab == 2 &&
@@ -211,6 +234,6 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 					}
 				</View>
 			</LinearGradient>
-		</SlidingUpPanel>
+		</SlidingUpPanel >
 	)
 }

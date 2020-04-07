@@ -130,14 +130,14 @@ export default styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         marginLeft: 14,
-        marginRight: '19%'
+        marginRight: '4.5%'
     },
     activeTab: {
         borderTopColor: '#044C74',
         borderTopWidth: 5,
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
-        width: 127,
+        width: '50.1%',
         zIndex: 99,
         elevation: 99,
         height: 45,
@@ -152,11 +152,15 @@ export default styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 16,
     },
+    activeTab__img: {
+        width: 0,
+        height: 0,
+    },
     inactiveTab: {
         backgroundColor: '#F8F9FA',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
-        width: 127,
+        width: '50%',
         height: 36,
         marginTop: 10,
         alignItems: "center",
@@ -169,5 +173,14 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '500',
         fontSize: 14,
+        marginRight: 10
+
+    },
+    inactiveTab__img: {
+        width: 11,
+        height: 7,
+        resizeMode: 'contain',
+        marginRight: 5
+
     },
 })
