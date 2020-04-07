@@ -85,13 +85,21 @@ export default function ModalRutaCompartida({ navigation, hidden }) {
                 start={{ x: 0.0, y: 0.5 }}
                 end={{ x: 0.0, y: 0.9 }}
                 style={styles.container_background}>
-                <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                <ScrollView >
                     <View style={styles.container}>
                         <View style={[styles.box, styles.boxOne]}>
+                            <TouchableOpacity style={styles.viewClose}>
+                                <Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
+                            </TouchableOpacity>
                             <View style={styles.card}>
                                 <View style={[styles.cardBox, styles.cardBoxOne]}>
                                     <Image style={{ height: 77, width: 77, resizeMode: 'cover' }} source={require('./../../../assets/carro.png')} />
-                                    <Text style={{ textAlign: 'left', width: 180, marginLeft: 20 }}>
+                                    <Text style={{
+                                        textAlign: 'left', width: 200, marginLeft: 10, fontStyle: 'normal',
+                                        fontWeight: 'normal',
+                                        fontSize: 12,
+                                        lineHeight: 16,
+                                    }}>
                                         Al crear esta ruta, sera compartida unicamente con tus compañeros de trabajo.</Text>
                                 </View>
                                 <View style={[styles.cardBox, styles.cardBoxTwo]}>
@@ -118,15 +126,34 @@ export default function ModalRutaCompartida({ navigation, hidden }) {
                                         </Item>
                                         <Item style={styles.item} stackedLabel last>
                                             <Label style={styles.label}>Escribe algunos detalles.</Label>
-                                            <Textarea rowSpan={4} style={styles.input} bordered placeholderTextColor="#BEBEBE"
+                                            <Textarea rowSpan={4} style={[styles.input, { width: '100%' }]} bordered placeholderTextColor="#BEBEBE"
                                                 placeholder='Ejemplo: Ejemplo: Hola, salgo todos los dias a las 7am y me regreso a las 6pm, los dias de pico y placa no llevo vehículo....' />
                                         </Item>
                                     </Form>
-                                </View>
-                                <View style={[styles.cardBox, styles.cardBoxOne]}>
-                                   
+                                    <TouchableOpacity>
+                                        <LinearGradient
+                                            colors={['#044C74', '#348AC7']}
+                                            start={{ x: 0.0, y: 0.2 }}
+                                            end={{ x: 0.8, y: 2.8 }}
+                                            style={{ padding: 15, width: 203, margin: 60, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                            <Text style={{
+                                                color: '#FFFF',
+                                                fontSize: 19,
+                                                fontStyle: 'normal',
+                                                fontWeight: '500',
+                                            }}>AÑADIR RUTA</Text>
+                                        </LinearGradient>
+                                    </TouchableOpacity>
+
                                 </View>
                             </View>
+                            <LinearGradient
+                                colors={['#1B7BD7', '#160F6B']}
+                                start={{ x: 0.0, y: 0.2 }}
+                                end={{ x: 0.8, y: 1.0 }}
+                                style={styles.linearStyle}>
+
+                            </LinearGradient>
                         </View>
                     </View>
                 </ScrollView>
