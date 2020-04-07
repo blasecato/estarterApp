@@ -8,9 +8,11 @@ import ModalResetPassword from '../../components/ModalResetPassword/ModalResetPa
 import ModalActivation from '../../components/ModalActivation/ModalActivation';
 import styles from './Login.styles';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useForm } from 'react-hook-form'
 
 export default function LoginScreen({ navigation }) {
 
+  const { register, handleSubmit } = useForm()
   const [modalRegister, setModalRegister] = useState(false)
   const [modalPassword, setModalPassword] = useState(false)
   const [modalActivation, setModalActivation] = useState(0)
@@ -32,11 +34,17 @@ export default function LoginScreen({ navigation }) {
           <Form style={styles.form}>
             <Item style={styles.item} stackedLabel>
               <Label style={styles.label}>Número de identificación</Label>
-              <Input style={styles.input} />
+              <Input
+                style={styles.input}
+                name="identification" ref={register({ required: true, maxLength: 20, minLength: 6 })}
+              />
             </Item>
             <Item style={styles.item} stackedLabel last>
               <Label style={styles.label}>Contraseña</Label>
-              <Input style={styles.input} />
+              <Input
+                style={styles.input}
+                name="password" ref={register({ required: true, maxLength: 20, minLength: 6 })}
+              />
             </Item>
           </Form>
           <Button light onPress={() => navigation.navigate('Onboarding')} style={styles.buttonSignin} >
