@@ -4,9 +4,12 @@ import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalSignup.style';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useForm, Controller } from "react-hook-form";
 
 export default function ModalSignup({ navigation, hidden, setHidden, setModalCode, setModalActivation, setPhone, setEmail }) {
 
+	const { control, handleSubmit, errors } = useForm();
+	const onSubmit = data => setModalActivation(3)
 
 	return (
 		<Modal
@@ -46,33 +49,64 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 											<Label style={styles.label}>
 												Número de identificación
                                     </Label>
-											<Input style={styles.input} />
+											<Controller
+												as={<Input style={styles.input} />}
+												control={control}
+												name="identification"
+												onChange={args => args[0].nativeEvent.text}
+												rules={{ required: true, minLength: 3, }}
+												defaultValue=""
+											/>
 										</Item>
+										{errors.identification && <Text>Ingrese el número de identificación.</Text>}
+
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
 												Nombre y apellido
                                     </Label>
-											<Input style={styles.input} />
+											<Controller
+												as={<Input style={styles.input} />}
+												control={control}
+												name="name"
+												onChange={args => args[0].nativeEvent.text}
+												rules={{ required: true, minLength: 3, }}
+												defaultValue=""
+											/>
 										</Item>
+										{errors.name && <Text>Ingrese el nombre del usuario.</Text>}
+
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
 												Correo Electrónico
-                                    </Label>
-											<Input style={styles.input}
-												onChangeText={(text) => setEmail(text)}
+										</Label>
+											<Controller
+												as={<Input onChangeText={(text) => setEmail(text)} style={styles.input} />}
+												control={control}
+												name="email"
+												onChange={args => args[0].nativeEvent.text}
+												rules={{ required: true, minLength: 3 }}
+												defaultValue=""
 											/>
 										</Item>
+										{errors.email && <Text>Ingrese el correo del usuario.</Text>}
 										<Item style={styles.item} stackedLabel last>
 											<Label style={styles.label}>
 												Número de celular
                                     </Label>
-											<Input style={styles.input}
-												onChangeText={(text) => setPhone(text)}
+											<Controller
+												as={<Input onChangeText={(text) => setPhone(text)} style={styles.input} />}
+												control={control}
+												name="phone"
+												onChange={args => args[0].nativeEvent.text}
+												rules={{ required: true, minLength: 3, }}
+												defaultValue=""
 											/>
 										</Item>
+										{errors.phone && <Text>Ingrese el telefono del usuario.</Text>}
+
 									</Form>
 								</LinearGradient>
-								<Button onPress={() => setModalActivation(3)} full style={styles.button} >
+								<Button onPress={handleSubmit(onSubmit)} full style={styles.button} >
 									<Text uppercase={false} style={styles.textButton}> Registrarme </Text>
 								</Button>
 							</View>
@@ -80,6 +114,6 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 					</LinearGradient>
 				</View>
 			</View>
-		</Modal>
+		</Modal >
 	)
 }

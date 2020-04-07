@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Image, Dimensions } from 'react-native';
-import { Button, View, Text } from 'native-base';
+import { Button, View, Container, Content, Card, CardItem, Body, Text } from 'native-base';
 import Onboarding from 'react-native-onboarding-swiper';
 import ModalAviso from '../../components/ModalAviso/ModalAviso';
 
@@ -49,30 +49,47 @@ const Done = ({ isLight, ...props }) => (
 
 export default function DetailsScreen({ navigation }) {
     return (
-        <Onboarding
-            containerStyles={{ borderBottomWidth: 10, borderBottomColor: '#333' }}
-            nextLabel={"Continuar"}
-            skipLabel={"Omitir"}
-            bottomBarHighlight={false}
-            DotComponent={Square}
-            DoneButtonComponent={Done}
-            onDone={() =>
-                navigation.navigate('Home')
-            }
-            pages={[
-                {
-                    backgroundColor: '#fff',
-                    image: <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/one.png')} />,
-                    title: '',
-                    subtitle: '',
-                },
-                {
-                    backgroundColor: '#fff',
-                    image: <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/two.png')} />,
-                    title: '',
-                    subtitle: '',
+
+        <Container style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+            <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
+                <Image style={{ resizeMode: 'contain', width: '100%', maxWidth: "80%", top: -5, position: 'absolute', zIndex: 1, display: 'flex', padding: 0 }} source={require('./images/logo.png')} />
+            </View>
+            < Onboarding
+                containerStyles={{ borderBottomWidth: 10, borderBottomColor: '#333' }}
+                nextLabel={"Continuar"}
+                skipLabel={"Omitir"}
+                bottomBarHighlight={false}
+                DotComponent={Square}
+                DoneButtonComponent={Done}
+                onDone={() =>
+                    navigation.navigate('Home')
                 }
-            ]}
-        />
+                pages={[
+                    {
+                        backgroundColor: '#fff',
+                        image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9', borderBottomWidth: 3 }}>
+                            <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/step1.png')} />
+                            <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
+                                <Image style={{ width: '80%', height: 100, position: 'absolute', zIndex: 1, bottom: 90 }} source={require('./images/card1.png')} />
+                            </View>
+                        </View>,
+                        title: '',
+                        subtitle: '',
+                    },
+                    {
+                        backgroundColor: '#fff',
+                        image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9', borderBottomWidth: 3 }}>
+                            <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/step2.png')} />
+                            <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
+                                <Image style={{ width: '80%', height: 100, position: 'absolute', zIndex: 1, bottom: 90 }} source={require('./images/card2.png')} />
+                            </View>
+                        </View>,
+                        title: '',
+                        subtitle: '',
+                    }
+                ]}
+            />
+        </Container>
     );
 }
+{/* */ }
