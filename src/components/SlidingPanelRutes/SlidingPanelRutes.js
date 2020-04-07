@@ -135,50 +135,50 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
                         </View>
                     }
                     {activeTab == 2 &&
-                        <View>
-                            <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
-                                <List style={styles.list} >
-                                    <ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
-                                        <Image
-                                            style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-                                        <View style={styles.viewList}>
-                                            <Text style={styles.textList__routes}>RE1</Text>
-                                        </View>
-                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-                                    </ListItem>
-                                    <ListItem style={styles.listItem}>
-                                        <Image
-                                            style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-                                        <View style={styles.viewList}>
-                                            <Text style={styles.textList__routes}>RE1</Text>
-                                        </View>
-                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-                                    </ListItem>
-                                    <ListItem style={styles.listItem}>
-                                        <Image
-                                            style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-                                        <View style={styles.viewList}>
-                                            <Text style={styles.textList__routes}>RE1</Text>
-                                        </View>
-                                        <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-                                    </ListItem>
-                                </List>
-                            </ScrollView>
-                            <View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 20, marginTop: -30 }}>
-                                <Image style={{ width: 40, height: 40, resizeMode: 'contain' }} source={require('./../../../assets/add.png')}></Image>
-                            </View>
-                        </View>
-                        // <View style={{display: 'flex', alignItems: 'center', justifyContent:'center'}}>
-                        //     <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
-                        //     <View style={styles.viewButton}>
-                        //         <LinearGradient
-                        //             colors={['#044C74', '#348AC7']}>
-                        //             <Button style={styles.buttonAna}>
-                        //                 <Text uppercase={false} onPress={() => this.setState({ modalCompartirRuta: true })} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
-                        //             </Button>
-                        //         </LinearGradient>
+                        // <View>
+                        //     <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
+                        //         <List style={styles.list} >
+                        //             <ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+                        //                 <Image
+                        //                     style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
+                        //                 <View style={styles.viewList}>
+                        //                     <Text style={styles.textList__routes}>RE1</Text>
+                        //                 </View>
+                        //                 <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                        //             </ListItem>
+                        //             <ListItem style={styles.listItem}>
+                        //                 <Image
+                        //                     style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
+                        //                 <View style={styles.viewList}>
+                        //                     <Text style={styles.textList__routes}>RE1</Text>
+                        //                 </View>
+                        //                 <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                        //             </ListItem>
+                        //             <ListItem style={styles.listItem}>
+                        //                 <Image
+                        //                     style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+                        //                 <View style={styles.viewList}>
+                        //                     <Text style={styles.textList__routes}>RE1</Text>
+                        //                 </View>
+                        //                 <Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+                        //             </ListItem>
+                        //         </List>
+                        //     </ScrollView>
+                        //     <View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 20, marginTop: -30 }}>
+                        //         <Image style={{ width: 40, height: 40, resizeMode: 'contain' }} source={require('./../../../assets/add.png')}></Image>
                         //     </View>
                         // </View>
+                        <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
+                            <View style={styles.viewButton}>
+                                <LinearGradient
+                                    colors={['#044C74', '#348AC7']}>
+                                    <Button style={styles.buttonAna}>
+                                        <Text uppercase={false} onPress={() => setModalCompartirRuta(true)} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
+                                    </Button>
+                                </LinearGradient>
+                            </View>
+                        </View>
                     }
                 </View>
             </LinearGradient>

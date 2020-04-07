@@ -1,7 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 export default styles = StyleSheet.create({
-
     bg: {
         height: '100%',
         width: '100%',
