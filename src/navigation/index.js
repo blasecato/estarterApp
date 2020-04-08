@@ -9,6 +9,8 @@ import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
 import ModalQualification from './../components/ModalQualification/ModalQualification';
 /* import ModalAviso from './../components/ModalAviso/ModalAviso'; */
 import ModalNuevaRuta from '../components/ModalNuevaRuta/ModalNuevaRuta';
+import ModalCompartirRuta from '../components/ModalRutaCompartida/ModalRutaCompartida';
+
 
 import {
 	createDrawerNavigator,
@@ -29,6 +31,10 @@ export default function navigator() {
 
 	const [modalCodeQr, setModalCodeQr] = useState(false)
 	const [perfil, setPerfil] = useState(false)
+	const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
+	const [modalCompartirRuta, setModalCompartirRuta] = useState(false)
+	const [newRuta, setNewRuta] = useState(false)
+
 
 	return (
 		<NavigationContainer >
@@ -78,7 +84,49 @@ export default function navigator() {
 									width: 114
 								}} />
 							</TouchableOpacity>
-							<DrawerItemList labelStyle={{ color: 'white', fontSize: 17, fontWeight: '300' }} activeBackgroundColor={{ color: '#001324' }} itemStyle={{ marginLeft: 28 }} {...props} />
+							<DrawerItemList labelStyle={{ color: 'white', fontSize: 17, fontWeight: '300' }}
+								activeBackgroundColor={{ color: '#001324' }}
+								itemStyle={{ marginLeft: 28 }} {...props} />
+							<TouchableOpacity
+								style={{
+									display: 'flex',
+									flexDirection: 'row',
+									alignItems: 'center',
+									marginLeft: 36,
+								}}
+								onPress={() => {
+									setModalNuevaRuta(true)
+								}}
+							>
+								<Text style={{
+									color: '#FFFF',
+									marginLeft: 13
+
+								}}>
+									Vincular ruta
+							</Text>
+							</TouchableOpacity>
+
+							<TouchableOpacity
+								style={{
+									display: 'flex',
+									flexDirection: 'row',
+									alignItems: 'center',
+									marginLeft: 36,
+								}}
+								onPress={() => {
+									setModalCompartirRuta(true)
+								}}
+							>
+								<Text style={{
+									color: '#FFFF',
+									marginLeft: 13
+
+								}}>
+									Compartir mi vehículo
+							</Text>
+							</TouchableOpacity>
+
 							<TouchableOpacity
 								style={{
 									display: 'flex',
@@ -107,11 +155,11 @@ export default function navigator() {
 									marginLeft: 13
 								}}>Código QR</Text>
 							</TouchableOpacity>
-							<Text>Vincular ruta</Text>
 						</>
 					}
 
 					<ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
+					<ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} setNewRuta={setNewRuta}></ModalCompartirRuta>
 
 					{/* <View style={{
                         display: 'flex',
@@ -393,9 +441,9 @@ export default function navigator() {
 				</DrawerContentScrollView>
 			}>
 				<Drawer.Screen name="Mis Rutas" component={Home} />
-				<Drawer.Screen name="Vincular Ruta" component={ModalNuevaRuta} />
+				{/* <Drawer.Screen name="Vincular Ruta" component={ModalNuevaRuta} /> */}
 				<Drawer.Screen name="Onboarding" component={Onboarding} />
-				<Drawer.Screen name="Compartir mi vehículo" component={ModalQualification} />
+				{/* <Drawer.Screen name="Compartir mi vehículo" component={ModalQualification} /> */}
 				<Drawer.Screen name="Login" component={Login} />
 			</Drawer.Navigator>
 			<ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>
