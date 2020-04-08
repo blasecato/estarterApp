@@ -113,11 +113,11 @@ export default function Home({ navigation, route }) {
 				animationType="fade"
 				transparent={true}
 				visible={routeActive} >
-				<TouchableOpacity onPress={() => {
-					setModalrouteActive(false)
-					setModalrouteInactive(false)
-				}}>
-					<Container style={styles.containerbg}>
+
+				<Container style={styles.containerbg}>
+					<TouchableOpacity onPress={() => {
+						setModalrouteActive(false)
+					}}>
 						<View
 							style={styles.notification}>
 							<View
@@ -144,8 +144,8 @@ export default function Home({ navigation, route }) {
 								</View>
 							</View>
 						</View>
-					</Container>
-				</TouchableOpacity>
+					</TouchableOpacity>
+				</Container>
 			</Modal>
 
 			<Modal
