@@ -157,11 +157,6 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 								</>
 							}
 
-							{/* <ActivityIndicator size="large" color="#00ff00" />
-										<Text 
-										style={styles.text__info}>
-										Estamos validando tu código por favor espera unos segundos.</Text> */}
-
 
 							{loading && !succes &&
 								<>
