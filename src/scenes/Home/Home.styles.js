@@ -268,8 +268,8 @@ export default styles = StyleSheet.create({
         color: '#4E4E4E',
     },
     marker: {
-        height: '50px', 
-        width: '50px',
+        height: 50,
+        width: 50,
         top: '40%',
         left: '42%',
         backgroundColor: 'transparent',
