@@ -14,28 +14,42 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta }) {
 	return (
 		<Container style={styles.container}>
 			<LinearGradient
-				colors={['#f5f5f500', '#1b7bd7E8', '#03325F']}
+				colors={['#03325F00', '#1b7bd7E8', '#03325F']}
 				style={styles.container__gradient}>
 				<View style={styles.container_tab}>
-					<TouchableOpacity style={styles.button__ubication}>
-						<Image source={require('./../../../assets/marker.png')}></Image>
-					</TouchableOpacity>
+					<View style={{ width: ' 90%', flexDirection: 'flex-end', justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
+						<TouchableOpacity style={styles.button__ubication}>
+							<Image source={require('./../../../assets/marker.png')}></Image>
+						</TouchableOpacity>
+					</View>
 					<Segment style={styles.tab} >
-						<TouchableOpacity
-							style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab}
-							first onPress={() => {
-								setTimeout(() => {
-									setActiveTab(1)
-								}, 100);
-							}}>
-							<View style={styles.view_tab}>
+
+						<View style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab} >
+							<TouchableOpacity style={styles.view_tab}
+								onPress={() => {
+									setTimeout(() => {
+										setActiveTab(1)
+									}, 100);
+								}}>
 								<Text style={activeTab == 1 ? styles.activeTab__text : styles.inactiveTab__text}>Mis rutas
                                 </Text>
-								<Image style={activeTab == 1 ? styles.activeTab__img : styles.inactiveTab__img}
-									source={require('./../../../assets/down.png')}></Image>
-							</View>
-						</TouchableOpacity>
-						<TouchableOpacity
+								<Image style={activeTab == 1 ? styles.activeTab__img : styles.inactiveTab__img} source={require('./../../../assets/down.png')}></Image>
+							</TouchableOpacity>
+						</View>
+						<View style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab} >
+							<TouchableOpacity style={styles.view_tab}
+								onPress={() => {
+									setTimeout(() => {
+										setActiveTab(2)
+									}, 100);
+								}}>
+								<Text style={activeTab == 1 ? styles.inactiveTab__text : styles.activeTab__text}>Compartidas
+                                </Text>
+								<Image style={activeTab == 1 ? styles.inactiveTab__img : styles.activeTab__img} source={require('./../../../assets/down.png')}></Image>
+							</TouchableOpacity>
+						</View>
+
+						{/* <TouchableOpacity
 							style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab}
 							onPress={() => {
 								setTimeout(() => {
@@ -47,7 +61,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta }) {
                                 </Text>
 								<Image style={activeTab == 1 ? styles.inactiveTab__img : styles.activeTab__img} source={require('./../../../assets/down.png')}></Image>
 							</View>
-						</TouchableOpacity>
+						</TouchableOpacity> */}
 					</Segment>
 				</View>
 				<Card style={styles.container__card}>
@@ -55,7 +69,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta }) {
 						<Body>
 							{activeTab == 1 &&
 
-								<View style={{}} >
+								<View style={{ width: '100%' }} >
 									{!loading &&
 										<>
 											<Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
@@ -191,8 +205,8 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta }) {
 							}
 							{activeTab == 2 &&
 
-								<View>
-									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', }}>
+								<View style={{ width: '100%' }} >
+									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', width: '100%' }}>
 										<List style={styles.list} >
 											<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
 												<Image
