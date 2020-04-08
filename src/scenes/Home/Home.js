@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Drawer, Container } from 'native-base';
 import { Image, TouchableOpacity, Text, Modal } from 'react-native';
 import { mapStyle } from './constans';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import styles from './Home.styles';
 import ModalNuevaRuta from './../../components/ModalNuevaRuta/ModalNuevaRuta';
 import ModalCompartirRuta from './../../components/ModalRutaCompartida/ModalRutaCompartida';
@@ -18,11 +18,13 @@ export default function Home({ navigation }) {
     const [routeActive, setModalrouteActive] = useState(false)
     const [routeInactive, setModalrouteInactive] = useState(false)
     const [selected, setSelected] = useState(0)
+    const [statusRute, setStatusRute] = useState(3)
     const [newRuta, setNewRuta] = useState(false)
 
     return (
         <View style={styles.container}>
             <MapView
+                provider={PROVIDER_GOOGLE}
                 initialRegion={{
                     latitude: 37.78825,
                     longitude: -122.4324,
@@ -37,21 +39,23 @@ export default function Home({ navigation }) {
                     <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/menu.png')} />
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={() => { setModalrouteInactive(true) }} style={styles.route}>
-                <View style={styles.route__one}>
-                    <View style={{ marginRight: 5 }}>
-                        {/* <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} /> */}
-                        <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} />
+            {statusRute != 3 &&
+                <TouchableOpacity onPress={() => { setModalrouteInactive(true) }} style={styles.route}>
+                    <View style={styles.route__one}>
+                        <View style={{ marginRight: 5 }}>
+                            {statusRute == 0 && <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} />}
+                            {statusRute == 1 && <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} />}
+                        </View>
+                        <View style={styles.route__label}>
+                            <Text style={styles.route__text}>RE1</Text>
+                        </View>
                     </View>
-                    <View style={styles.route__label}>
-                        <Text style={styles.route__text}>RE1</Text>
+                    <View style={styles.route__two}>
+                        {statusRute == 0 && <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} />}
+                        {statusRute == 1 && <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} />}
                     </View>
-                </View>
-                <View style={styles.route__two}>
-                    {/* <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} /> */}
-                    <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} />
-                </View>
-            </TouchableOpacity>
+                </TouchableOpacity>}
+
             {/* <View style={styles.whatsapp}>
                 <View style={styles.whatsapp__one}>
                     <View style={{ marginRight: 5 }}>
@@ -59,7 +63,7 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
             </View> */}
-            <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
+            <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setStatusRute} />
             <ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
             <ModalCompartirRuta
                 hidden={modalCompartirRuta}
@@ -103,24 +107,28 @@ export default function Home({ navigation }) {
                 </Container>
             </Modal>
 
-            {/* <Modal
+            <Modal
                 animationType="fade"
                 transparent={true}
                 visible={routeInactive} >
                 <Container style={styles.containerbg}>
-                    <View
-                        style={styles.routeInactive}>
+                    <TouchableOpacity
+                        onPress={() => setModalrouteInactive(false)}
+                        style={{ flex: 1 }}>
                         <View
-                            style={styles.routeInactive__img}>
-                            <Image style={{ width: 102, height: 53 }} source={require('./../../../assets/black.png')} />
+                            style={styles.routeInactive}>
+                            <View
+                                style={styles.routeInactive__img}>
+                                <Image style={{ width: 102, height: 53 }} source={require('./../../../assets/black.png')} />
+                            </View>
+                            <View style={{ display: 'flex', flexDirection: 'column', display: 'flex', justifyContent: 'center', marginLeft: 17 }}>
+                                <Text style={styles.routeInactive__text}>Ruta Inactiva</Text>
+                                <Text style={styles.routeInactive__info}>Solo podras ver la información de tu ruta cuando este disponible.</Text>
+                            </View>
                         </View>
-                        <View style={{ display: 'flex', flexDirection: 'column', display: 'flex', justifyContent: 'center', marginLeft: 17 }}>
-                            <Text style={styles.routeInactive__text}>Ruta Inactiva</Text>
-                            <Text style={styles.routeInactive__info}>Solo podras ver la información de tu ruta cuando este disponible.</Text>
-                        </View>
-                    </View>
+                    </TouchableOpacity>
                 </Container>
-            </Modal> */}
+            </Modal>
 
             <Modal
                 animationType="fade"

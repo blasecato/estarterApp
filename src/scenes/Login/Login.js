@@ -45,7 +45,7 @@ export default function LoginScreen({ navigation }) {
                 defaultValue=""
               />
             </Item>
-            {errors.identification && <Text>Ingrese el número de identificación.</Text>}
+            {errors.identification && <Text style={{ color: "#282828", marginLeft: 10 }}>Ingrese el número de identificación.</Text>}
             <Item style={styles.item} stackedLabel last>
               <Label style={styles.label}>Contraseña</Label>
               <Controller
@@ -57,7 +57,7 @@ export default function LoginScreen({ navigation }) {
                 defaultValue=""
               />
             </Item>
-            {errors.password && <Text>Ingrese la contraseña.</Text>}
+            {errors.password && <Text style={{ color: "#282828", marginLeft: 10 }}>Ingrese la contraseña.</Text>}
           </Form>
           <Button light
             title="Submit"

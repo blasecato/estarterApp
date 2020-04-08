@@ -14,7 +14,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 	const { height, width } = Dimensions.get('window')
 	let draggableRange = {
 		top: height - 140,
-		bottom: 230,
+		bottom: 400,
 		start: 230,
 		end: 0,
 	}
@@ -34,11 +34,12 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 				draggableRange.start = c;
 			}}
 			draggableRange={draggableRange}
+			allowDragging={false}
 			ref={c => _panel = c}
-			onDragEnd={c => {
-				let positio = (draggableRange.start + height / 10 < c) ? height : (draggableRange.start > c + height / 6) ? 230 : 230;
+			/* onDragEnd={c => {
+				let positio = (draggableRange.start + height / 10 < c) ? height : (draggableRange.start > c + height / 8) ? 230 : 230;
 				_panel.show(positio)
-			}}
+			}} */
 		>
 			<LinearGradient
 				colors={['#f5f5f500', '#1b7bd7E8', '#03325F']}
@@ -180,7 +181,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 								<>
 									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
 										<List style={styles.list} >
-											<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+											<ListItem onPress={() => setModalNuevaRuta(0)} style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 												<View style={styles.viewList}>
@@ -191,6 +192,38 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 											<ListItem style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
+												<View style={styles.viewList}>
+													<Text style={styles.textList__routes}>RE1</Text>
+												</View>
+												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+											</ListItem>
+											<ListItem style={styles.listItem}>
+												<Image
+													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+												<View style={styles.viewList}>
+													<Text style={styles.textList__routes}>RE1</Text>
+												</View>
+												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+											</ListItem>
+											<ListItem style={styles.listItem}>
+												<Image
+													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+												<View style={styles.viewList}>
+													<Text style={styles.textList__routes}>RE1</Text>
+												</View>
+												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+											</ListItem>
+											<ListItem style={styles.listItem}>
+												<Image
+													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+												<View style={styles.viewList}>
+													<Text style={styles.textList__routes}>RE1</Text>
+												</View>
+												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+											</ListItem>
+											<ListItem style={styles.listItem}>
+												<Image
+													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
 												<View style={styles.viewList}>
 													<Text style={styles.textList__routes}>RE1</Text>
 												</View>

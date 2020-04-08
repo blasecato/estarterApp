@@ -58,7 +58,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												defaultValue=""
 											/>
 										</Item>
-										{errors.identification && <Text>Ingrese el número de identificación.</Text>}
+										{errors.identification && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el número de identificación.</Text>}
 
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
@@ -73,7 +73,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												defaultValue=""
 											/>
 										</Item>
-										{errors.name && <Text>Ingrese el nombre del usuario.</Text>}
+										{errors.name && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el nombre del usuario.</Text>}
 
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
@@ -88,7 +88,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												defaultValue=""
 											/>
 										</Item>
-										{errors.email && <Text>Ingrese el correo del usuario.</Text>}
+										{errors.email && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el correo del usuario.</Text>}
 										<Item style={styles.item} stackedLabel last>
 											<Label style={styles.label}>
 												Número de celular
@@ -102,7 +102,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												defaultValue=""
 											/>
 										</Item>
-										{errors.phone && <Text>Ingrese el telefono del usuario.</Text>}
+										{errors.phone && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el telefono del usuario.</Text>}
 
 									</Form>
 								</LinearGradient>
