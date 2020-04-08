@@ -29,6 +29,7 @@ export default function navigator() {
 
 	const [modalCodeQr, setModalCodeQr] = useState(false)
 	const [perfil, setPerfil] = useState(true)
+	const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
 
 	return (
 		<NavigationContainer >
@@ -109,6 +110,8 @@ export default function navigator() {
 							</TouchableOpacity>
 						</>
 					}
+
+					<ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
 
 					{/* <View style={{
                         display: 'flex',
