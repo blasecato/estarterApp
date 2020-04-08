@@ -206,9 +206,6 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 											</ListItem>
 										</List>
 									</ScrollView>
-									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 20, marginTop: -30 }}>
-										<Image style={{ width: 40, height: 40, resizeMode: 'contain' }} source={require('./../../../assets/add.png')}></Image>
-									</View>
 								</>
 							}
 
@@ -216,7 +213,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 					}
 					{activeTab == 2 &&
 						<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-							<Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
+							{/* <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
 							<View style={styles.viewButton}>
 								<LinearGradient
 									colors={['#044C74', '#348AC7']}>
@@ -224,6 +221,36 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 										<Text uppercase={false} onPress={() => setModalCompartirRuta(true)} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
 									</Button>
 								</LinearGradient>
+							</View> */}
+							<View>
+								<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
+									<List style={styles.list} >
+										<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+											<Image
+												style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
+											<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+										</ListItem>
+										<ListItem style={styles.listItem}>
+											<Image
+												style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
+											<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+										</ListItem>
+										<ListItem style={styles.listItem}>
+											<Image
+												style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
+											<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
+										</ListItem>
+									</List>
+									<TouchableOpacity onPress={() => {
+										setModalCompartirRuta(true)
+									}}
+									>
+										<Image style={{ width: 40, height: 40, resizeMode: 'contain' }}
+											source={require('./../../../assets/add.png')}></Image>
+									</TouchableOpacity>
+									{/* <View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 20, marginTop: -30 }}> */}
+									{/* </View> */}
+								</ScrollView>
 							</View>
 						</View>
 					}
