@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Drawer, Container } from 'native-base';
 import { Image, TouchableOpacity, Text, Modal } from 'react-native';
 import { mapStyle } from './constans';
@@ -12,9 +12,7 @@ import CardHome from '../../components/CardHome/CardHome';
 // import SlidingPanelRutes from '../../components/SlidingPanelRutes/SlidingPanelRutes';
 
 
-export default function Home({ navigation, tab }) {
-
-	console.log("tab==>", tab)
+export default function Home({ navigation, route }) {
 
 	const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
 	const [modalCompartirRuta, setModalCompartirRuta] = useState(false)
@@ -24,6 +22,13 @@ export default function Home({ navigation, tab }) {
 	const [selected, setSelected] = useState(0)
 	const [statusRute, setStatusRute] = useState(3)
 	const [newRuta, setNewRuta] = useState(false)
+	const [activeTab, setActiveTab] = useState(1)
+
+
+	// useEffect(() => {
+	// 	if (route && route.name === 'Vincular Ruta')
+	// 		setActiveTab(2)
+	// }, [route])
 
 	return (
 		<View style={styles.container}>
@@ -72,7 +77,12 @@ export default function Home({ navigation, tab }) {
                     </View>
                 </View>
             </View> */}
-			<CardHome setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
+			<CardHome
+				setModalCompartirRuta={setModalCompartirRuta}
+				setModalNuevaRuta={setModalNuevaRuta}
+				activeTab={activeTab}
+				setActiveTab={setActiveTab}
+			/>
 			{/* <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setStatusRute} /> */}
 			<ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
 			<ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} setNewRuta={setNewRuta}></ModalCompartirRuta>

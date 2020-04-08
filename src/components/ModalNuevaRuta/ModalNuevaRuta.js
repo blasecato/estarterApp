@@ -1,15 +1,16 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
 import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalNuevaRuta.style';
 
 export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
+	const [visible, setVisible] = useState(true)
 	return (
 		<Modal
 			animationType="fade"
 			transparent={false}
-			visible={hidden}>
+			visible={!hidden ? visible : hidden}>
 			<LinearGradient
 				colors={['#072148D9', '#000000D9']}
 				start={{ x: 0.0, y: 0.5 }}
@@ -17,7 +18,13 @@ export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
 				style={styles.container}>
 				<View style={styles.container}>
 					<View style={styles.row}>
-						<TouchableOpacity onPress={() => { setHidden(false) }} style={[styles.box, styles.boxOne]}>
+						<TouchableOpacity onPress={() => {
+							if (hidden) {
+								setHidden(false)
+							} else {
+								setVisible(false)
+							}
+						}} style={[styles.box, styles.boxOne]}>
 							<Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
 						</TouchableOpacity>
 					</View>

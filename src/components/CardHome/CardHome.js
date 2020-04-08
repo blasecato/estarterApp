@@ -5,9 +5,8 @@ import { Button, Text, View, Form, Item, Input, Segment, List, ListItem, Drawer,
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './CardHome.style';
 
-export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta }) {
+export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, activeTab, setActiveTab }) {
 
-	const [activeTab, setActiveTab] = useState(1)
 	const [loading, setLoading] = useState(false)
 	const [succes, setSucces] = useState(false)
 

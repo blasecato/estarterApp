@@ -8,6 +8,7 @@ import Home from '../scenes/Home/Home';
 import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
 import ModalQualification from './../components/ModalQualification/ModalQualification';
 import ModalAviso from './../components/ModalAviso/ModalAviso';
+import ModalNuevaRuta from '../components/ModalNuevaRuta/ModalNuevaRuta';
 
 import {
 	createDrawerNavigator,
@@ -21,6 +22,8 @@ import { Button, Text, Form, Item, Input, View, } from 'native-base';
 const Stack = createStackNavigator();
 
 const Drawer = createDrawerNavigator();
+
+const tab = 1
 
 export default function navigator() {
 
@@ -387,7 +390,7 @@ export default function navigator() {
 				</DrawerContentScrollView>
 			}>
 				<Drawer.Screen name="Mis Rutas" component={Home} />
-				<Drawer.Screen name="Vincular Ruta" component={Home} />
+				<Drawer.Screen name="Vincular Ruta" component={ModalNuevaRuta} />
 				{/* <Drawer.Screen name="Onboarding" component={Onboarding} /> */}
 				<Drawer.Screen name="Compartir mi vehículo" component={ModalQualification} />
 				{/* <Drawer.Screen name="ModalAviso" component={ModalAviso} /> */}

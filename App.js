@@ -6,7 +6,6 @@ import { AppLoading } from 'expo';
 import Splash from './src/scenes/Splash/Splash';
 import React, { useState, useEffect } from 'react';
 
-
 /* const App = () => {
   const [isReady, setIsReady] = useState(false);
 
