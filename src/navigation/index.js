@@ -7,7 +7,7 @@ import Onboarding from '../scenes/Onboarding/Onboarding';
 import Home from '../scenes/Home/Home';
 import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
 import ModalQualification from './../components/ModalQualification/ModalQualification';
-import ModalAviso from './../components/ModalAviso/ModalAviso';
+/* import ModalAviso from './../components/ModalAviso/ModalAviso'; */
 import ModalNuevaRuta from '../components/ModalNuevaRuta/ModalNuevaRuta';
 
 import {
@@ -28,7 +28,7 @@ const tab = 1
 export default function navigator() {
 
 	const [modalCodeQr, setModalCodeQr] = useState(false)
-	const [perfil, setPerfil] = useState(true)
+	const [perfil, setPerfil] = useState(false)
 
 	return (
 		<NavigationContainer >
@@ -109,113 +109,6 @@ export default function navigator() {
 							</TouchableOpacity>
 						</>
 					}
-
-					{/* <View style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        marginBottom: 18,
-                    }}>
-                        <View style={{ width: 80, height: 30, backgroundColor: '#ffff', alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: 50, borderTopRightRadius: 50 }}>
-														<Image style={{ resizeMode: 'cover', width: 58, height: 19 }} 
-															source={require('./../../assets/convergys.png')} />
-                        </View>
-                        <View style={{
-                            borderWidth: 1,
-                            borderColor: '#5695f85C',
-                            width: 30
-                        }} />
-                        <TouchableOpacity style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        }}>
-                            <Image style={{ resizeMode: 'cover', width: 30, height: 30, marginLeft: 12, marginRight: 8 }} source={require('./../../assets/back.png')} />
-														<Image style={{ resizeMode: 'cover', width: 54, height: 12, marginRight: 8 }} 
-														source={require('./../../assets/text-back.png')} />
-                        </TouchableOpacity>
-                        <View style={{
-                            borderWidth: 1,
-                            borderColor: '#5695f85C',
-                            width: 114
-                        }} />
-                    </View>
-                    <TouchableOpacity
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'flex-end',
-                            justifyContent: 'center'
-                        }}>
-                        <View style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: 124, height: 124,
-                            borderWidth: 1,
-                            borderColor: '#ffff',
-                            borderRadius: 100
-                        }}>
-														<Image style={{ resizeMode: 'cover', width: 114, height: 114 }} 
-														source={require('./../../assets/perfil.png')} />
-                        </View>
-												<Image style={{ resizeMode: 'cover', width: 20, height: 20 }} 
-												source={require('./../../assets/lapiz.png')} />
-
-                    </TouchableOpacity>
-                    <View style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-
-                    }}>
-                        <Text style={{
-                            color: '#FFFF',
-                            fontStyle: 'normal',
-                            fontWeight: '500',
-                            fontSize: 17,
-                            lineHeight: 20,
-                            marginBottom: 7,
-                            marginTop: 22,
-                        }}>Michael Martinez</Text>
-                        <Text style={{
-                            color: '#FFFF',
-                            fontStyle: 'normal',
-                            fontWeight: '300',
-                            fontSize: 15,
-                            lineHeight: 17,
-
-                            marginTop: 5,
-                        }}>322 7409090</Text>
-                        <Text style={{
-                            color: '#0FE6F3',
-                            fontStyle: 'normal',
-                            fontWeight: '300',
-                            fontSize: 15,
-                            lineHeight: 17,
-                            marginTop: 15,
-                        }}>michael@estarter.co</Text>
-                    </View>
-                    <TouchableOpacity
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-
-                        }}
-                    >
-                        <Text style={{
-                            color: '#FFFF',
-                            fontStyle: 'normal',
-                            fontWeight: '300',
-                            fontSize: 13,
-                            lineHeight: 15,
-                            marginTop: 40,
-                        }}>Cambiar contraseña</Text>
-                    </TouchableOpacity> */}
-
 					{perfil &&
 						<>
 							<View style={{
@@ -391,11 +284,10 @@ export default function navigator() {
 			}>
 				<Drawer.Screen name="Mis Rutas" component={Home} />
 				<Drawer.Screen name="Vincular Ruta" component={ModalNuevaRuta} />
-				{/* <Drawer.Screen name="Onboarding" component={Onboarding} /> */}
+				<Drawer.Screen name="Onboarding" component={Onboarding} />
 				<Drawer.Screen name="Compartir mi vehículo" component={ModalQualification} />
-				{/* <Drawer.Screen name="ModalAviso" component={ModalAviso} /> */}
+				<Drawer.Screen name="Login" component={Login} />
 			</Drawer.Navigator>
-
 			<ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>
 		</NavigationContainer >
 	);
