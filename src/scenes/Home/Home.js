@@ -6,9 +6,9 @@ import MapView from 'react-native-maps';
 import styles from './Home.styles';
 import ModalNuevaRuta from './../../components/ModalNuevaRuta/ModalNuevaRuta';
 import ModalCompartirRuta from './../../components/ModalRutaCompartida/ModalRutaCompartida';
-import SlidingPanelRutes from '../../components/SlidingPanelRutes/SlidingPanelRutes';
 import { LinearGradient } from 'expo-linear-gradient';
 import ModalAviso from '../../components/ModalAviso/ModalAviso';
+import CardHome from '../../components/CardHome/CardHome';
 
 export default function Home({ navigation }) {
 
@@ -36,19 +36,24 @@ export default function Home({ navigation }) {
                     <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/menu.png')} />
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={() => { setModalrouteInactive(true) }} style={styles.route}>
+            <View style={styles.marker}>
+                <TouchableOpacity style={styles.marker__button}>
+                    <Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/ubication.png')} />
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity onPress={() => { setModalrouteActive(true) }} style={styles.route}>
                 <View style={styles.route__one}>
                     <View style={{ marginRight: 5 }}>
-                        {/* <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} /> */}
-                        <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} />
+                        <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} />
+                        {/* <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} /> */}
                     </View>
                     <View style={styles.route__label}>
                         <Text style={styles.route__text}>RE1</Text>
                     </View>
                 </View>
                 <View style={styles.route__two}>
-                    {/* <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} /> */}
-                    <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} />
+                    <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} />
+                    {/* <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} /> */}
                 </View>
             </TouchableOpacity>
             {/* <View style={styles.whatsapp}>
@@ -58,11 +63,13 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
             </View> */}
-            <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
+
+
+            <CardHome setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
             <ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
             <ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} ></ModalCompartirRuta>
             <ModalAviso hidden={modalAviso} setHidden={setModalAviso}></ModalAviso>
-            
+
             <Modal
                 animationType="fade"
                 transparent={true}
@@ -115,8 +122,8 @@ export default function Home({ navigation }) {
                     </View>
                 </Container>
             </Modal> */}
-
-            {/* <Modal
+{/* 
+            <Modal
                 animationType="fade"
                 transparent={true}
                 visible={true} >

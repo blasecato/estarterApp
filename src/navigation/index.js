@@ -50,7 +50,7 @@ export default function navigator() {
                             }}
                         />
                     </View>
-                    <TouchableOpacity style={{
+                    {/* <TouchableOpacity style={{
                         display: 'flex',
                         flexDirection: 'row',
                         alignItems: 'center',
@@ -98,7 +98,7 @@ export default function navigator() {
                             color: '#FFFF',
                             marginLeft: 13
                         }}>Código QR</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
 
                     {/* <View style={{
                         display: 'flex',
@@ -202,7 +202,7 @@ export default function navigator() {
                         }}>Cambiar contraseña</Text>
                     </TouchableOpacity> */}
 
-                    {/* <View style={{
+                    <View style={{
                         display: 'flex',
                         flexDirection: 'row',
                         alignItems: 'center',
@@ -348,7 +348,7 @@ export default function navigator() {
                             lineHeight: 15,
                             marginTop: 40,
                         }}>Cambiar contraseña</Text>
-                    </TouchableOpacity> */}
+                    </TouchableOpacity>
 
                     <TouchableOpacity style={{
                         display: 'flex',

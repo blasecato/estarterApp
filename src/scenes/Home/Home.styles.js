@@ -119,11 +119,6 @@ export default styles = StyleSheet.create({
         width: 60,
         height: 60
     },
-
-
-
-
-
     containerbg: {
         backgroundColor: 'transparent',
         width: '100%',
@@ -272,9 +267,22 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         color: '#4E4E4E',
     },
-
-
-
+    marker: {
+        height: '100%',
+        width: '100%',
+        backgroundColor: 'transparent',
+        borderRadius: 100,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        zIndex: 1,
+    },
+    marker__button: {
+        height: 39,
+        width: 39,
+        justifyContent: 'center',
+    },
     containerShared: {
         backgroundColor: 'transparent',
         width: '100%',
@@ -282,7 +290,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'flex-end',
         flex: 0.55,
         display: 'flex',
-        zIndex: 99, 
+        zIndex: 99,
         marginHorizontal: 10
     },
     routeShared: {

@@ -11,7 +11,6 @@ export default function SplashScreen({ navigation }) {
                 source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583314195/bg.png' }}
                 style={styles.container__Background}
             />
-
             <Container style={styles.content}>
                 <Image style={styles.logo} source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
                 <Text style={styles.logo__slogan}>Transporte + Tecnología + <Text>❤</Text></Text>
