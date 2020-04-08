@@ -16,7 +16,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 				colors={['#03325F00', '#1b7bd7E8', '#03325F']}
 				style={styles.container__gradient}>
 				<View style={styles.container_tab}>
-					<View style={{ width: ' 90%', flexDirection: 'flex-end', justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
+					<View style={{ width: ' 90%',  justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
 						<TouchableOpacity style={styles.button__ubication}>
 							<Image source={require('./../../../assets/marker.png')}></Image>
 						</TouchableOpacity>
