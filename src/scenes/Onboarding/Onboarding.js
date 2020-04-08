@@ -33,7 +33,7 @@ const Square = ({ isLight, selected }) => {
 const Done = ({ isLight, ...props }) => (
     <View>
         <View style={{
-            borderWidth: 1,
+            borderWidth: 0,
             borderColor: '#D9D9D9',
             marginRight: 10
         }} />
@@ -50,24 +50,25 @@ const Done = ({ isLight, ...props }) => (
 export default function DetailsScreen({ navigation }) {
     return (
 
-        <Container style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+        <Container style={{ display: 'flex', flexDirection: 'column', width: '100%', height: "100%" }}>
             <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
                 <Image style={{ resizeMode: 'contain', width: '100%', maxWidth: "80%", top: -5, position: 'absolute', zIndex: 1, display: 'flex', padding: 0 }} source={require('./images/logo.png')} />
             </View>
             < Onboarding
-                containerStyles={{ borderBottomWidth: 10, borderBottomColor: '#333' }}
+                containerStyles={{ borderBottomWidth: 10, borderBottomColor: '#333', height: "30%" }}
                 nextLabel={"Continuar"}
                 skipLabel={"Omitir"}
                 bottomBarHighlight={false}
                 DotComponent={Square}
                 DoneButtonComponent={Done}
+                flatlistProps={{ style: { backgroundColor: '#fff', borderBottomColor: '#D9D9D9', borderBottomWidth: 1 } }}
                 onDone={() =>
-                    navigation.navigate('Home')
+                    navigation.navigate('Mis Rutas')
                 }
                 pages={[
                     {
                         backgroundColor: '#fff',
-                        image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9', borderBottomWidth: 3 }}>
+                        image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9' }}>
                             <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/step1.png')} />
                             <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
                                 <Image style={{ width: '80%', height: 100, position: 'absolute', zIndex: 1, bottom: 90 }} source={require('./images/card1.png')} />
@@ -78,7 +79,7 @@ export default function DetailsScreen({ navigation }) {
                     },
                     {
                         backgroundColor: '#fff',
-                        image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9', borderBottomWidth: 3 }}>
+                        image: <View style={{ width: '100%', height: '100%', borderBottomColor: '#D9D9D9' }}>
                             <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/step2.png')} />
                             <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
                                 <Image style={{ width: '80%', height: 100, position: 'absolute', zIndex: 1, bottom: 90 }} source={require('./images/card2.png')} />
@@ -89,7 +90,7 @@ export default function DetailsScreen({ navigation }) {
                     }
                 ]}
             />
-        </Container>
+        </Container >
     );
 }
 {/* */ }

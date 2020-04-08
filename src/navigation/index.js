@@ -7,7 +7,7 @@ import Onboarding from '../scenes/Onboarding/Onboarding';
 import Home from '../scenes/Home/Home';
 import ModalCodeQr from '../components/ModalCodeQr/ModalCodeQr';
 import ModalQualification from './../components/ModalQualification/ModalQualification';
-import ModalAviso from './../components/ModalAviso/ModalAviso';
+/* import ModalAviso from './../components/ModalAviso/ModalAviso'; */
 import ModalNuevaRuta from '../components/ModalNuevaRuta/ModalNuevaRuta';
 
 import {
@@ -28,8 +28,7 @@ const tab = 1
 export default function navigator() {
 
 	const [modalCodeQr, setModalCodeQr] = useState(false)
-	const [perfil, setPerfil] = useState(true)
-	const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
+	const [perfil, setPerfil] = useState(false)
 
 	return (
 		<NavigationContainer >
@@ -108,6 +107,7 @@ export default function navigator() {
 									marginLeft: 13
 								}}>Código QR</Text>
 							</TouchableOpacity>
+							<Text>Vincular ruta</Text>
 						</>
 					}
 
@@ -394,11 +394,10 @@ export default function navigator() {
 			}>
 				<Drawer.Screen name="Mis Rutas" component={Home} />
 				<Drawer.Screen name="Vincular Ruta" component={ModalNuevaRuta} />
-				{/* <Drawer.Screen name="Onboarding" component={Onboarding} /> */}
+				<Drawer.Screen name="Onboarding" component={Onboarding} />
 				<Drawer.Screen name="Compartir mi vehículo" component={ModalQualification} />
-				{/* <Drawer.Screen name="ModalAviso" component={ModalAviso} /> */}
+				<Drawer.Screen name="Login" component={Login} />
 			</Drawer.Navigator>
-
 			<ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>
 		</NavigationContainer >
 	);
