@@ -10,10 +10,10 @@ export default styles = StyleSheet.create({
         width: '100%',
         position: 'absolute',
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
+        alignItems: 'baseline',
+        justifyContent: 'space-between',
         backgroundColor: 'transparent',
-        top: '50%'
+        bottom: '0%'
     },
     container__gradient: {
         height: '100%',
@@ -26,21 +26,27 @@ export default styles = StyleSheet.create({
     container_tab: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-end',
+        alignItems: 'center',
         display: 'flex',
-        justifyContent: 'center',
-        marginVertical: -5
+        justifyContent: 'flex-end',
+        zIndex: 3,
+        padding: 0,
+        margin: 0,
+        width: '100%'
     },
     view_tab: {
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        paddingHorizontal: 20
     },
     button__ubication: {
         width: 40,
         height: 40,
-        marginBottom: 20,
+        /* marginBottom: 20, */
         backgroundColor: '#ffff',
         alignItems: 'center',
         display: 'flex',
@@ -58,9 +64,10 @@ export default styles = StyleSheet.create({
     tab: {
         backgroundColor: 'transparent',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        width: '90%'
+        width: '90%',
+        zIndex: 2
 
     },
     activeTab: {
@@ -68,10 +75,12 @@ export default styles = StyleSheet.create({
         borderTopWidth: 5,
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
+        borderBottomWidth: 0,
+        borderBottomColor: 'transparent',
         width: '50%',
         zIndex: 99,
         elevation: 99,
-        height: 45,
+        height: 46,
         backgroundColor: '#ffff',
         alignItems: "center",
         justifyContent: "center",
@@ -123,15 +132,20 @@ export default styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 26,
     },
-    container__card:{
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        width: '90%', 
-        height: 238, 
-        borderRadius: 5
+    container__card: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '90%',
+        height: '70%',
+        borderColor: 'transparent',
+        /* borderRadius: 5, */
+        borderTopRightRadius: 5,
+        borderBottomRightRadius: 5,
+        borderBottomLeftRadius: 5,
+        marginTop: 0
     },
-    
+
     form: {
         width: '100%',
         display: 'flex',
