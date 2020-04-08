@@ -41,7 +41,7 @@ export default function navigator() {
 
 			<Drawer.Navigator drawerStyle={{
 				backgroundColor: '#001324',
-				width: 246,
+				width: 260,
 				display: 'flex',
 			}} initialRouteName="Login" drawerContent={props =>
 				<DrawerContentScrollView style={{
@@ -92,7 +92,8 @@ export default function navigator() {
 									display: 'flex',
 									flexDirection: 'row',
 									alignItems: 'center',
-									marginLeft: 36,
+									marginLeft: 38,
+									height: 46
 								}}
 								onPress={() => {
 									setModalNuevaRuta(true)
@@ -100,8 +101,6 @@ export default function navigator() {
 							>
 								<Text style={{
 									color: '#FFFF',
-									marginLeft: 13
-
 								}}>
 									Vincular ruta
 							</Text>
@@ -112,16 +111,15 @@ export default function navigator() {
 									display: 'flex',
 									flexDirection: 'row',
 									alignItems: 'center',
-									marginLeft: 36,
+									marginLeft: 38,
+									height: 46
 								}}
 								onPress={() => {
 									setModalCompartirRuta(true)
 								}}
 							>
 								<Text style={{
-									color: '#FFFF',
-									marginLeft: 13
-
+									color: '#FFFF'
 								}}>
 									Compartir mi vehículo
 							</Text>
@@ -133,6 +131,7 @@ export default function navigator() {
 									flexDirection: 'row',
 									alignItems: 'center',
 									marginLeft: 36,
+									marginBottom: 15
 								}}>
 								<Image style={{ resizeMode: 'cover', width: 53, height: 53 }} source={require('./../../assets/soporte.png')} />
 								<Text style={{
@@ -444,7 +443,7 @@ export default function navigator() {
 				{/* <Drawer.Screen name="Vincular Ruta" component={ModalNuevaRuta} /> */}
 				<Drawer.Screen name="Onboarding" component={Onboarding} />
 				{/* <Drawer.Screen name="Compartir mi vehículo" component={ModalQualification} /> */}
-				<Drawer.Screen name="Login" component={Login} />
+				<Drawer.Screen style={{ color: '#333', backgroundColor:'#333' }} name="Login" component={Login} />
 			</Drawer.Navigator>
 			<ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>
 		</NavigationContainer >
