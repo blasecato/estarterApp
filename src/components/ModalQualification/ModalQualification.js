@@ -4,9 +4,7 @@ import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalQualification.style';
 
-export default function ModalQualification({ navigation }) {
-
-    const [visibleQualification, setVisibleQualification] = useState(true)
+export default function ModalQualification({ navigation, visibleQualification, setVisibleQualification }) {
 
     return (
         <Modal
@@ -19,7 +17,6 @@ export default function ModalQualification({ navigation }) {
                 <View style={[styles.box, styles.boxOne]}>
                     <TouchableOpacity onPress={() => {
                         setVisibleQualification(false)
-                        navigation.navigate('Home')
                     }}
                     >
 

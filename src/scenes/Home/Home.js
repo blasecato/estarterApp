@@ -5,10 +5,12 @@ import { mapStyle } from './constans';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import styles from './Home.styles';
 import ModalNuevaRuta from './../../components/ModalNuevaRuta/ModalNuevaRuta';
+import ModalQualification from './../../components/ModalQualification/ModalQualification';
 import ModalCompartirRuta from './../../components/ModalRutaCompartida/ModalRutaCompartida';
 import { LinearGradient } from 'expo-linear-gradient';
 import ModalAviso from '../../components/ModalAviso/ModalAviso';
 import CardHome from '../../components/CardHome/CardHome';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 // import SlidingPanelRutes from '../../components/SlidingPanelRutes/SlidingPanelRutes';
 
 
@@ -20,18 +22,16 @@ export default function Home({ navigation, route }) {
 	const [routeActive, setModalrouteActive] = useState(false)
 	const [routeInactive, setModalrouteInactive] = useState(false)
 	const [selected, setSelected] = useState(0)
-	const [statusRute, setStatusRute] = useState(3)
+	const [statusRute, setStatusRute] = useState(0)
 	const [newRuta, setNewRuta] = useState(false)
 	const [activeTab, setActiveTab] = useState(1)
-
-
-	// useEffect(() => {
-	// 	if (route && route.name === 'Vincular Ruta')
-	// 		setActiveTab(2)
-	// }, [route])
+	const [visibleQualification, setVisibleQualification] = useState(false)
 
 	return (
-		<View style={styles.container}>
+		<View style={styles.container}
+		>
+
+
 			<MapView
 				provider={PROVIDER_GOOGLE}
 				initialRegion={{
@@ -49,26 +49,45 @@ export default function Home({ navigation, route }) {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.marker}>
-				<TouchableOpacity style={styles.marker__button}>
+				<TouchableOpacity
+					style={styles.marker__button}
+					onPress={() => {
+						if (statusRute < 3) {
+							setStatusRute(statusRute + 1)
+						} else {
+							setVisibleQualification(true)
+						}
+					}}
+				>
 					<Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/ubication.png')} />
 				</TouchableOpacity>
 			</View>
-			{statusRute != 3 &&
-				<TouchableOpacity onPress={() => { setModalrouteInactive(true) }} style={styles.route}>
-					<View style={styles.route__one}>
-						<View style={{ marginRight: 5 }}>
-							{statusRute == 0 && <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} />}
-							{statusRute == 1 && <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} />}
+			{
+				<TouchableOpacity onPress={() => {
+					if (statusRute == 1 || statusRute == 2) {
+						setModalrouteActive(true)
+					} else {
+						setModalrouteInactive(true)
+					}
+
+				}} style={styles.route}>
+					{statusRute !== 0 && <>
+						<View style={styles.route__one}>
+							<View style={{ marginRight: 5 }}>
+								{(statusRute == 1 || statusRute == 2) && <Image style={styles.route__imgOne} source={require('./../../../assets/disponible.png')} />}
+								{statusRute == 3 && <Image style={styles.route__imgOne} source={require('./../../../assets/finished.png')} />}
+							</View>
+							<View style={styles.route__label}>
+								<Text style={styles.route__text}>RE1</Text>
+							</View>
 						</View>
-						<View style={styles.route__label}>
-							<Text style={styles.route__text}>RE1</Text>
+						<View style={styles.route__two}>
+							{(statusRute == 1 || statusRute == 2) && <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} />}
+							{statusRute == 3 && <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} />}
 						</View>
-					</View>
-					<View style={styles.route__two}>
-						{statusRute == 0 && <Image style={styles.route__imgTwo} source={require('./../../../assets/activa.png')} />}
-						{statusRute == 1 && <Image style={styles.route__imgTwo} source={require('./../../../assets/inactiva.png')} />}
-					</View>
-				</TouchableOpacity>}
+					</>}
+				</TouchableOpacity>
+			}
 
 			{/* <View style={styles.whatsapp}>
                 <View style={styles.whatsapp__one}>
@@ -87,39 +106,46 @@ export default function Home({ navigation, route }) {
 			<ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
 			<ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} setNewRuta={setNewRuta}></ModalCompartirRuta>
 			<ModalAviso hidden={modalAviso} setHidden={setModalAviso}></ModalAviso>
+			<ModalQualification setVisibleQualification={setVisibleQualification} visibleQualification={visibleQualification}>
+			</ModalQualification>
 
 			<Modal
 				animationType="fade"
 				transparent={true}
 				visible={routeActive} >
-				<Container style={styles.containerbg}>
-					<View
-						style={styles.notification}>
+				<TouchableOpacity onPress={() => {
+					setModalrouteActive(false)
+					setModalrouteInactive(false)
+				}}>
+					<Container style={styles.containerbg}>
 						<View
-							style={styles.notification__img}>
-							<Image style={{ width: 102, height: 53 }} source={require('./../../../assets/30.png')} />
-						</View>
-						<View style={{ display: 'flex', flexDirection: 'column' }}>
-							<View style={styles.viewProfile}>
-								<Image style={styles.viewProfile__img} source={require('./../../../assets/profile.png')} />
-								<Text style={styles.viewProfile__text}> Yeison Jimenez</Text>
+							style={styles.notification}>
+							<View
+								style={styles.notification__img}>
+								<Image style={{ width: 102, height: 53 }} source={require('./../../../assets/30.png')} />
 							</View>
-							<Text
-								style={styles.viewProfile__rol}>Conductor</Text>
-							<View style={{ display: 'flex', flexDirection: 'row' }}>
-								<View style={styles.linearStyle} />
-								<View style={styles.viewLabel}>
-									<Text style={styles.viewLabel__placa}>DHM-170</Text>
-									<Text style={styles.viewLabel__city}>Bogotá</Text>
+							<View style={{ display: 'flex', flexDirection: 'column' }}>
+								<View style={styles.viewProfile}>
+									<Image style={styles.viewProfile__img} source={require('./../../../assets/profile.png')} />
+									<Text style={styles.viewProfile__text}> Yeison Jimenez</Text>
+								</View>
+								<Text
+									style={styles.viewProfile__rol}>Conductor</Text>
+								<View style={{ display: 'flex', flexDirection: 'row' }}>
+									<View style={styles.linearStyle} />
+									<View style={styles.viewLabel}>
+										<Text style={styles.viewLabel__placa}>DHM-170</Text>
+										<Text style={styles.viewLabel__city}>Bogotá</Text>
+									</View>
+								</View>
+								<View style={styles.viewTime}>
+									<Image style={styles.viewTime__img} source={require('./../../../assets/barras.png')} />
+									<Text style={styles.viewTime__text}> Hace 5 minutos</Text>
 								</View>
 							</View>
-							<View style={styles.viewTime}>
-								<Image style={styles.viewTime__img} source={require('./../../../assets/barras.png')} />
-								<Text style={styles.viewTime__text}> Hace 5 minutos</Text>
-							</View>
 						</View>
-					</View>
-				</Container>
+					</Container>
+				</TouchableOpacity>
 			</Modal>
 
 			<Modal
@@ -144,6 +170,7 @@ export default function Home({ navigation, route }) {
 					</TouchableOpacity>
 				</Container>
 			</Modal>
+
 			<Modal
 				animationType="fade"
 				transparent={true}
@@ -182,6 +209,8 @@ export default function Home({ navigation, route }) {
 					</View>
 				</Container>
 			</Modal>
+
+
 		</View >
 	)
 }

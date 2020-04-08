@@ -16,7 +16,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 				colors={['#03325F00', '#1b7bd7E8', '#03325F']}
 				style={styles.container__gradient}>
 				<View style={styles.container_tab}>
-					<View style={{ width: ' 90%',  justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
+					<View style={{ width: ' 90%', justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
 						<TouchableOpacity style={styles.button__ubication}>
 							<Image source={require('./../../../assets/marker.png')}></Image>
 						</TouchableOpacity>
@@ -120,7 +120,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 										<View>
 											<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', }}>
 												<List style={styles.list} >
-													<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+													<ListItem onPress={() => console.log("punto")} style={styles.listItem}>
 														<Image
 															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 														<View style={styles.viewList}>
@@ -144,7 +144,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 														</View>
 														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 													</ListItem>
-													<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+													<ListItem style={styles.listItem}>
 														<Image
 															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 														<View style={styles.viewList}>
@@ -168,7 +168,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 														</View>
 														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 													</ListItem>
-													<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+													<ListItem style={styles.listItem}>
 														<Image
 															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 														<View style={styles.viewList}>
