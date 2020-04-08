@@ -18,6 +18,7 @@ export default function Home({ navigation }) {
     const [routeActive, setModalrouteActive] = useState(false)
     const [routeInactive, setModalrouteInactive] = useState(false)
     const [selected, setSelected] = useState(0)
+    const [newRuta, setNewRuta] = useState(false)
 
     return (
         <View style={styles.container}>
@@ -60,9 +61,14 @@ export default function Home({ navigation }) {
             </View> */}
             <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setModalNuevaRuta} />
             <ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>
-            <ModalCompartirRuta hidden={modalCompartirRuta} setModalCompartirRuta={setModalCompartirRuta} ></ModalCompartirRuta>
+            <ModalCompartirRuta
+                hidden={modalCompartirRuta}
+                setModalCompartirRuta={setModalCompartirRuta}
+                setNewRuta={setNewRuta}
+            >
+            </ModalCompartirRuta>
             <ModalAviso hidden={modalAviso} setHidden={setModalAviso}></ModalAviso>
-            
+
             <Modal
                 animationType="fade"
                 transparent={true}
@@ -116,27 +122,44 @@ export default function Home({ navigation }) {
                 </Container>
             </Modal> */}
 
-            {/* <Modal
+            <Modal
                 animationType="fade"
                 transparent={true}
-                visible={true} >
+                visible={newRuta} >
                 <Container style={styles.containerShared}>
                     <View
                         style={styles.routeShared}>
                         <View style={styles.routeShared__img}>
                             <Image style={{ width: 32, height: 32 }} source={require('./../../../assets/carro.png')} />
                         </View>
-                        <View style={{ display: 'flex', flexDirection: 'column',  justifyContent: 'center', marginLeft: 17 }}>
+                        <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: 17 }}>
                             <Text style={styles.routeShared__text}>Tienes una ruta compartida</Text>
                             <Text style={styles.routeShared__info}>Usme - Convergys 127</Text>
                         </View>
                         <View style={{ width: 70, display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
-                            <Image style={{ width: 16, height: 16 }} source={require('./../../../assets/editar.png')} />
-                            <Image style={{ width: 12, height: 16 }} source={require('./../../../assets/delete.png')} />
+                            <TouchableOpacity onPress={() => {
+                                setNewRuta(false)
+                                setModalCompartirRuta(true)
+                            }}
+                            >
+                                <Image
+                                    style={{ width: 16, height: 16 }}
+                                    source={require('./../../../assets/editar.png')}
+                                />
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                setNewRuta(false)
+                            }}
+                            >
+                                <Image
+                                    style={{ width: 12, height: 16 }}
+                                    source={require('./../../../assets/delete.png')}
+                                />
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </Container>
-            </Modal> */}
+            </Modal>
 
 
         </View >
