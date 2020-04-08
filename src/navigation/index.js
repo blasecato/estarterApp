@@ -370,7 +370,7 @@ export default function navigator() {
                 <Drawer.Screen name="Login" component={Login} />
                 <Drawer.Screen name="Onboarding" component={Onboarding} />
                 <Drawer.Screen name="ModalQualification" component={ModalQualification} />
-                <Drawer.Screen name="ModalAviso" component={ModalAviso} />
+                {/* <Drawer.Screen name="ModalAviso" component={ModalAviso} /> */}
             </Drawer.Navigator>
 
             <ModalCodeQr hidden={modalCodeQr} setHidden={setModalCodeQr} ></ModalCodeQr>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
 import { Image, Modal, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -6,16 +6,25 @@ import styles from './ModalQualification.style';
 
 export default function ModalQualification({ navigation }) {
 
+    const [visibleQualification, setVisibleQualification] = useState(true)
+
     return (
         <Modal
             animationType="fade"
             transparent={false}
-            visible={true}>
+            visible={visibleQualification}>
             <LinearGradient
                 colors={['#072148D9', '#000000D9']}
                 style={styles.container}>
                 <View style={[styles.box, styles.boxOne]}>
-                    <Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
+                    <TouchableOpacity onPress={() => {
+                        setVisibleQualification(false)
+                        navigation.navigate('Home')
+                    }}
+                    >
+
+                        <Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
+                    </TouchableOpacity>
                 </View>
                 <View style={[styles.box, styles.boxTwo]}>
                     <Text style={styles.boxTwo__textBold}>La ruta ha finalizado</Text>
