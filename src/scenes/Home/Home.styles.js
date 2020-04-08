@@ -26,8 +26,8 @@ export default styles = StyleSheet.create({
         margin: 20
     },
     menú__button: {
-        height: 39,
-        width: 39,
+        height: 45,
+        width: 45,
         backgroundColor: '#FFFF',
         borderRadius: 100,
         justifyContent: 'center',

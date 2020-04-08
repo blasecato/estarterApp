@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
         height: Dimensions.get('window').height,
     },
     container: {
-        height: '50%',
+        height: '40%',
         width: '100%',
         position: 'absolute',
         display: 'flex',
@@ -137,7 +137,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '90%',
-        height: '70%',
+        height: '80%',
         borderColor: 'transparent',
         /* borderRadius: 5, */
         borderTopRightRadius: 5,
