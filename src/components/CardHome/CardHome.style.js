@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
         height: Dimensions.get('window').height,
     },
     container: {
-        height: '40%',
+        height: '32%',
         width: '100%',
         position: 'absolute',
         display: 'flex',
@@ -68,7 +68,14 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         width: '90%',
         zIndex: 2
-
+    },
+    tabShared: {
+        backgroundColor: 'transparent',
+        display: 'flex',
+        alignItems: 'center',
+        width: '90%',
+        zIndex: 2,
+        justifyContent: 'flex-end',
     },
     activeTab: {
         borderTopColor: '#044C74',
@@ -150,7 +157,20 @@ export default styles = StyleSheet.create({
         borderBottomLeftRadius: 5,
         marginTop: 0
     },
-
+    container__cardShared: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '90%',
+        height: '80%',
+        borderColor: 'transparent',
+        /* borderRadius: 5, */
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 5,
+        borderBottomLeftRadius: 5,
+        marginTop: 0
+    },
     form: {
         width: '100%',
         display: 'flex',
@@ -218,18 +238,20 @@ export default styles = StyleSheet.create({
     list: {
         display: 'flex',
         alignItems: 'center',
-        width: '90%'
+        width: '100%'
     },
     listItem: {
         borderColor: 'transparent',
-        width: '100%'
+        justifyContent: 'space-between',
+        width: '100%',
+        height: 40
     },
     imageList: {
-        marginRight: 7,
+        marginRight: 9,
     },
     viewList: {
         backgroundColor: '#044C74',
-        width: 45,
+        /* width: 45, */
         height: 20,
         borderRadius: 5,
         textAlign: 'center'
@@ -237,7 +259,7 @@ export default styles = StyleSheet.create({
     textList__routes: {
         color: '#ffff',
         width: 45,
-        height: 20,
+        /* height: 10 , */
         textAlign: 'center',
         fontWeight: 'bold',
         fontStyle: 'normal',
@@ -249,6 +271,7 @@ export default styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'normal',
         fontStyle: 'normal',
+        height: 20,
         fontSize: 16,
     },
 

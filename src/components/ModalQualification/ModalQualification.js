@@ -9,7 +9,7 @@ export default function ModalQualification({ navigation, visibleQualification, s
     return (
         <Modal
             animationType="fade"
-            transparent={false}
+            transparent={true}
             visible={visibleQualification}>
             <LinearGradient
                 colors={['#072148D9', '#000000D9']}

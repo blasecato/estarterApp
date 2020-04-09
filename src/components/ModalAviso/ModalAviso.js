@@ -8,7 +8,7 @@ export default function ModalAviso({ navigation, hidden, setHidden }) {
 	return (
 		<Modal
 			animationType="fade"
-			transparent={false}
+			transparent={true}
 			visible={hidden}>
 			<LinearGradient
 				colors={['#072148D9', '#000000D9']}

@@ -293,7 +293,7 @@ export default styles = StyleSheet.create({
         flex: 0.55,
         display: 'flex',
         zIndex: 99,
-        marginHorizontal: 10
+        marginHorizontal: 0
     },
     routeShared: {
         width: 280,

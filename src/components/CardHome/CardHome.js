@@ -29,7 +29,7 @@ export default function CardHome({
 							<Image source={require('./../../../assets/marker.png')}></Image>
 						</TouchableOpacity>
 					</View>
-					<Segment style={styles.tab} >
+					<Segment style={{}, activeTab == 1 ? styles.tab  : styles.tabShared} >
 
 						<View style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab} >
 							<TouchableOpacity style={styles.view_tab}
@@ -71,7 +71,7 @@ export default function CardHome({
 						</TouchableOpacity> */}
 					</Segment>
 				</View>
-				<Card style={styles.container__card}>
+				<Card style={activeTab == 1 ? styles.container__card : styles.container__cardShared}>
 					<CardItem>
 						<Body>
 							{activeTab == 1 &&
