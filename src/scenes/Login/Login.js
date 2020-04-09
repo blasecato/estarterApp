@@ -44,8 +44,8 @@ export default function LoginScreen({ navigation }) {
                 rules={{ required: true, minLength: 3, }}
                 defaultValue=""
               />
+            {errors.identification && <Text style={{ color: "#282828", marginLeft: 10 , marginBottom: 0,  fontFamily: 'Ubuntu', position: 'absolute', bottom: -25, left: 4}}>Ingrese el número de identificación.</Text>}
             </Item>
-            {errors.identification && <Text style={{ color: "#282828", marginLeft: 10 }}>Ingrese el número de identificación.</Text>}
             <Item style={styles.item} stackedLabel last>
               <Label style={styles.label}>Contraseña</Label>
               <Controller
@@ -56,8 +56,8 @@ export default function LoginScreen({ navigation }) {
                 rules={{ required: true, minLength: 3, }}
                 defaultValue=""
               />
+            {errors.password && <Text style={{ color: "#282828", marginLeft: 10 , marginBottom: 0,  fontFamily: 'Ubuntu', position: 'absolute', bottom: -25, left: 4}}>Ingrese la contraseña.</Text>}
             </Item>
-            {errors.password && <Text style={{ color: "#282828", marginLeft: 10 }}>Ingrese la contraseña.</Text>}
           </Form>
           <Button light
             title="Submit"

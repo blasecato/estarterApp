@@ -25,7 +25,7 @@ export default function ModalAviso({ navigation, hidden, setHidden }) {
 						<View style={[styles.box, styles.boxTwo]}>
 							<View style={styles.card}>
 								<Image style={{ marginBottom: 8 }} source={require('./images/rutas.png')} />
-								<Text style={styles.text__info}>Para un mejor experiencia <Text style={styles.text__infoBold}>ACTIVA</Text> la localización de tu celular.</Text>
+								<Text style={styles.text__info}>Para una mejor experiencia <Text style={styles.text__infoBold}>ACTIVA</Text> la localización de tu celular.</Text>
 								<LinearGradient
 									colors={['#FFA51F', '#EF940C']}
 									style={styles.linearStyle}>

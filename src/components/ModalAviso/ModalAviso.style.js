@@ -47,7 +47,8 @@ export default styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 22,
         color: '#3F3F3F',
-        width: '96%'
+        width: '96%',
+        fontFamily: 'Ubuntu'
     },
     text__infoBold: {
         textAlign: 'center', marginBottom: 20,
@@ -56,6 +57,7 @@ export default styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 22,
         color: '#3F3F3F',
+        fontFamily: 'Ubuntu_medium'
 
     },
     linearStyle: {

@@ -46,6 +46,7 @@ export default styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 14,
         lineHeight: 17,
+        fontFamily: 'Ubuntu'
     },
     imageClose: {
         height: 15,
@@ -84,6 +85,7 @@ export default styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 12,
         lineHeight: 20,
+        fontFamily: 'Ubuntu'
     },
     cards: {
         display: 'flex',
@@ -113,7 +115,8 @@ export default styles = StyleSheet.create({
         lineHeight: 16,
         width: 105,
         height: 61,
-        marginTop: 20
+        marginTop: 20,
+        fontFamily: 'Ubuntu'
 
     },
     textCard__bold: {

@@ -101,6 +101,7 @@ export default function navigator() {
 							>
 								<Text style={{
 									color: '#FFFF',
+									fontFamily: 'Ubuntu'
 								}}>
 									Vincular ruta
 							</Text>
@@ -119,7 +120,8 @@ export default function navigator() {
 								}}
 							>
 								<Text style={{
-									color: '#FFFF'
+									color: '#FFFF',
+									fontFamily: 'Ubuntu'
 								}}>
 									Compartir mi vehículo
 							</Text>
@@ -136,7 +138,8 @@ export default function navigator() {
 								<Image style={{ resizeMode: 'cover', width: 53, height: 53 }} source={require('./../../assets/soporte.png')} />
 								<Text style={{
 									color: '#FFFF',
-									marginLeft: 13
+									marginLeft: 13,
+									fontFamily: 'Ubuntu'
 								}}>Soporte</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
@@ -151,7 +154,8 @@ export default function navigator() {
 								<Image style={{ resizeMode: 'cover', width: 53, height: 53 }} source={require('./../../assets/qr.png')} />
 								<Text style={{
 									color: '#FFFF',
-									marginLeft: 13
+									marginLeft: 13,
+									fontFamily: 'Ubuntu'
 								}}>Código QR</Text>
 							</TouchableOpacity>
 						</>
@@ -362,6 +366,7 @@ export default function navigator() {
 												fontWeight: '500',
 												fontSize: 17,
 												lineHeight: 20,
+												fontFamily: 'Ubuntu'
 											}}
 											placeholderTextColor="#FFFF"
 											placeholder='Michael Martinez' />
@@ -419,6 +424,7 @@ export default function navigator() {
 									fontSize: 13,
 									lineHeight: 15,
 									marginTop: 40,
+									fontFamily: 'Ubuntu'
 								}}>Cambiar contraseña</Text>
 							</TouchableOpacity>
 

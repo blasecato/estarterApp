@@ -74,6 +74,7 @@ export default styles = StyleSheet.create({
         height: 20,
         borderRadius: 5,
         textAlign: 'center',
+        fontFamily: 'Ubuntu'
     },
     route__text: {
         color: '#ffff',
@@ -84,6 +85,7 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontSize: 14,
         textAlign: 'center',
+        fontFamily: 'Ubuntu'
     },
     route__two: {
         display: 'flex',
@@ -164,6 +166,7 @@ export default styles = StyleSheet.create({
         fontSize: 18,
         textAlign: 'left',
         color: '#ffff',
+        fontFamily: 'Ubuntu'
     },
     viewProfile__rol: {
         fontStyle: 'normal',
@@ -172,7 +175,8 @@ export default styles = StyleSheet.create({
         lineHeight: 14,
         textAlign: 'left',
         color: '#0FE6F3',
-        marginLeft: '18%'
+        marginLeft: '18%',
+        fontFamily: 'Ubuntu'
     },
     linearStyle: {
         borderWidth: 1,
@@ -195,6 +199,7 @@ export default styles = StyleSheet.create({
         lineHeight: 13,
         textAlign: 'center',
         color: '#ffff',
+        fontFamily: 'Ubuntu'
     },
     viewLabel__city: {
         fontStyle: 'normal',
@@ -203,6 +208,7 @@ export default styles = StyleSheet.create({
         lineHeight: 13,
         textAlign: 'center',
         color: '#ffff',
+        fontFamily: 'Ubuntu'
     },
     viewTime: {
         display: 'flex',
@@ -223,7 +229,8 @@ export default styles = StyleSheet.create({
         textAlign: 'left',
         color: '#ffff',
         alignItems: 'center',
-        marginLeft: 5
+        marginLeft: 5,
+        fontFamily: 'Ubuntu'
     },
     routeInactive: {
         width: 370,
@@ -254,7 +261,8 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         color: '#4E4E4E',
-        marginBottom: 10
+        marginBottom: 10,
+        fontFamily: 'Ubuntu'
     },
     routeInactive__info: {
         textAlign: 'left',
@@ -266,6 +274,7 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         color: '#4E4E4E',
+        fontFamily: 'Ubuntu'
     },
     marker: {
         height: 50,
@@ -326,6 +335,7 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         color: '#4E4E4E',
+        fontFamily: 'Ubuntu'
     },
     routeShared__info: {
         textAlign: 'left',
@@ -337,5 +347,6 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         color: '#4E4E4E',
+        fontFamily: 'Ubuntu'
     }
 })

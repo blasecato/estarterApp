@@ -98,6 +98,7 @@ export default styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 16,
+        fontFamily: 'Ubuntu'
     },
     activeTab__img: {
         width: 0,
@@ -120,7 +121,8 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '500',
         fontSize: 14,
-        marginRight: 10
+        marginRight: 10,
+        fontFamily: 'Ubuntu'
 
     },
     inactiveTab__img: {
@@ -143,6 +145,7 @@ export default styles = StyleSheet.create({
         width: "100%",
         textAlign: 'center',
         marginTop: 26,
+        fontFamily: 'Ubuntu'
     },
     container__card: {
         display: 'flex',
@@ -202,6 +205,7 @@ export default styles = StyleSheet.create({
         fontSize: 19,
         fontStyle: 'normal',
         fontWeight: '500',
+        fontFamily: 'Ubuntu'
     },
     item: {
         borderWidth: 0,
@@ -234,6 +238,7 @@ export default styles = StyleSheet.create({
         fontSize: 17,
         fontStyle: 'normal',
         fontWeight: '500',
+        fontFamily: 'Ubuntu'
     },
     list: {
         display: 'flex',
@@ -264,6 +269,7 @@ export default styles = StyleSheet.create({
         fontWeight: 'bold',
         fontStyle: 'normal',
         fontSize: 14,
+        fontFamily: 'Ubuntu'
     },
     textList__info: {
         color: '#565656',
@@ -273,6 +279,7 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         height: 20,
         fontSize: 16,
+        fontFamily: 'Ubuntu'
     },
 
 
