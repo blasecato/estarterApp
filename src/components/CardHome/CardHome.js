@@ -120,7 +120,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 										<View>
 											<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', }}>
 												<List style={styles.list} >
-													<ListItem onPress={() => console.log("punto")} style={styles.listItem}>
+													<ListItem style={styles.listItem}>
 														<Image
 															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 														<View style={styles.viewList}>
@@ -194,9 +194,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 													</ListItem>
 												</List>
 											</ScrollView>
-											<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: -30 }}>
-												<Image style={{ width: 40, height: 40, resizeMode: 'contain' }} source={require('./../../../assets/add.png')}></Image>
-											</View>
+
 										</View>
 									}
 
@@ -254,7 +252,7 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 											</ListItem>
 										</List>
 									</ScrollView>
-									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: -30 }}>
+									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: 0, position: "absolute", bottom: 10, right: 0}}>
 										<TouchableOpacity onPress={() => { setModalCompartirRuta(true) }} style={[styles.box, styles.boxOne]}>
 											<Image style={{ width: 40, height: 40, resizeMode: 'contain' }}
 												source={require('./../../../assets/add.png')}>

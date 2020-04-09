@@ -71,7 +71,7 @@ export default function DetailsScreen({ navigation }) {
                         image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9' }}>
                             <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/step1.png')} />
                             <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>
-                                <Image style={{ width: '80%', height: 100, position: 'absolute', zIndex: 1, bottom: 90 }} source={require('./images/card1.png')} />
+                                <Image style={{ width: '80%', height: 10, position: 'absolute', zIndex: 1, bottom: 90 }} source={require('./images/card1.png')} />
                             </View>
                         </View>,
                         title: '',

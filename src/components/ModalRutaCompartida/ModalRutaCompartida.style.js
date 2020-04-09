@@ -4,6 +4,7 @@ export default styles = StyleSheet.create({
     container_background: {
         height: '100%',
         width: '100%',
+        justifyContent: 'center'
     },
     container: {
         flex: 4,
@@ -14,7 +15,7 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
-        marginTop: '20%'
+        marginTop: '20%',
     },
     imageClose: {
         margin: 20,
@@ -32,10 +33,10 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 20
+        marginBottom: 0
     },
     card: {
-        height: 550,
+        height: 570,
         width: '90%',
         flexDirection: 'column',
         backgroundColor: '#ffff',
@@ -53,7 +54,7 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         width: '90%',
     },
     cardBoxTwo: {

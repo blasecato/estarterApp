@@ -9,7 +9,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 	return (
 		<Modal
 			animationType="fade"
-			transparent={false}
+			transparent={true}
 			visible={hidden}>
 			<LinearGradient
 				colors={['#072148D9', '#000000D9']}
@@ -61,7 +61,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 												placeholder='Ejemplo: Ejemplo: Hola, salgo todos los dias a las 7am y me regreso a las 6pm, los dias de pico y placa no llevo vehículo...' />
 										</Item>
 									</Form>
-									<TouchableOpacity>
+									<TouchableOpacity style={{ marginBottom: 40 }}>
 										<LinearGradient
 											colors={['#044C74', '#348AC7']}
 											start={{ x: 0.0, y: 0.2 }}

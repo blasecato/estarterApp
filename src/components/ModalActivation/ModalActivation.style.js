@@ -77,7 +77,7 @@ export default styles = StyleSheet.create({
         backgroundColor: 'transparent'
     },
     text__info: {
-        width: '80%',
+        width: '100%',
         marginTop: 14,
         marginBottom: 17,
         color: '#282828',
