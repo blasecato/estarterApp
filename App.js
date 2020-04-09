@@ -37,8 +37,10 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      Roboto: require('native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      Roboto: require('./assets/Ubuntu-Regular.ttf'),
+      Roboto_medium: require('./assets/Ubuntu-Medium.ttf'),
+      Ubuntu: require('./assets/Ubuntu-Regular.ttf'),
+      Ubuntu_medium: require('./assets/Ubuntu-Medium.ttf'),
       ...Ionicons.font,
     });
     setTimeout(() => {

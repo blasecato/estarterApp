@@ -43,7 +43,7 @@ export default styles = StyleSheet.create({
         marginRight: 0,
         marginLeft: 0,
         paddingLeft: 0,
-        marginBottom: 13
+        marginBottom: 20
     },
     label: {
         marginBottom: 18,
@@ -52,7 +52,8 @@ export default styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 14,
         lineHeight: 16,
-        maxWidth: '100%'
+        maxWidth: '100%',
+        fontFamily: 'Ubuntu'
     },
     input: {
         borderWidth: 1,
@@ -61,7 +62,9 @@ export default styles = StyleSheet.create({
         padding: 11,
         color: '#ffff',
         backgroundColor: '#FFFFFF1A',
-        maxWidth: '100%'
+        maxWidth: '100%',
+        marginBottom: 0,
+        fontFamily: 'Ubuntu'
     },
     buttonSignin: {
         marginTop: 20,
@@ -71,6 +74,7 @@ export default styles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
+        fontFamily: 'Ubuntu_medium',
         height: 60,
     },
     buttonSignin__text: {
