@@ -18,7 +18,7 @@ export default function Home({ navigation, route }) {
 
 	const [modalNuevaRuta, setModalNuevaRuta] = useState(false)
 	const [modalCompartirRuta, setModalCompartirRuta] = useState(false)
-	const [modalAviso, setModalAviso] = useState(false);
+	const [modalAviso, setModalAviso] = useState(true);
 	const [routeActive, setModalrouteActive] = useState(false)
 	const [routeInactive, setModalrouteInactive] = useState(false)
 	const [selected, setSelected] = useState(0)
