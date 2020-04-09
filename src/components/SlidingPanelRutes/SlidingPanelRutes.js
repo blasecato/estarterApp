@@ -36,10 +36,10 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 			draggableRange={draggableRange}
 			allowDragging={false}
 			ref={c => _panel = c}
-			/* onDragEnd={c => {
-				let positio = (draggableRange.start + height / 10 < c) ? height : (draggableRange.start > c + height / 8) ? 230 : 230;
-				_panel.show(positio)
-			}} */
+		/* onDragEnd={c => {
+			let positio = (draggableRange.start + height / 10 < c) ? height : (draggableRange.start > c + height / 8) ? 230 : 230;
+			_panel.show(positio)
+		}} */
 		>
 			<LinearGradient
 				colors={['#f5f5f500', '#1b7bd7E8', '#03325F']}
@@ -289,6 +289,10 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 					}
 				</View>
 			</LinearGradient>
+			<Image
+				source={require('./../../../assets/instructions.png')}
+				style={{ flex: 1, height: '100%', width: '100%', resizeMode: 'cover', position: 'absolute' }}
+			/>
 		</SlidingUpPanel >
 	)
 }

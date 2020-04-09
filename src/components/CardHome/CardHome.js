@@ -5,7 +5,15 @@ import { Button, Text, View, Form, Item, Input, Segment, List, ListItem, Drawer,
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './CardHome.style';
 
-export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, activeTab, setActiveTab }) {
+export default function CardHome({
+	setModalNuevaRuta,
+	setModalCompartirRuta,
+	activeTab,
+	setActiveTab,
+	setInstruction,
+	whatsapp,
+	setWhatsapp
+}) {
 
 	const [loading, setLoading] = useState(false)
 	const [succes, setSucces] = useState(false)
@@ -205,47 +213,110 @@ export default function CardHome({ setModalNuevaRuta, setModalCompartirRuta, act
 								<View style={{ width: '100%' }} >
 									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', width: '100%' }}>
 										<List style={styles.list} >
-											<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem onPress={() => setModalNuevaRuta(true)} style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
 											</ListItem>
-											<ListItem style={styles.listItem}>
+											<ListItem onPress={() => {
+												setInstruction(true)
+												setTimeout(() => {
+													setInstruction(false)
+													setWhatsapp(true)
+												}, 1500);
+											}}
+												style={styles.listItem}>
 												<Image
 													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
 												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
