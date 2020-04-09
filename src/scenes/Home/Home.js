@@ -109,6 +109,7 @@ export default function Home({ navigation, route }) {
 					setInstruction={setInstruction}
 					whatsapp={whatsapp}
 					setWhatsapp={setWhatsapp}
+					setModalAviso={setModalAviso}
 				/>
 				{/* <SlidingPanelRutes setModalCompartirRuta={setModalCompartirRuta} setModalNuevaRuta={setStatusRute} /> */}
 				<ModalNuevaRuta hidden={modalNuevaRuta} setHidden={setModalNuevaRuta}></ModalNuevaRuta>

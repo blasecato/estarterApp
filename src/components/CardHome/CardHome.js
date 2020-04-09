@@ -12,7 +12,8 @@ export default function CardHome({
 	setActiveTab,
 	setInstruction,
 	whatsapp,
-	setWhatsapp
+	setWhatsapp,
+	setModalAviso
 }) {
 
 	const [loading, setLoading] = useState(false)
@@ -25,7 +26,8 @@ export default function CardHome({
 				style={styles.container__gradient}>
 				<View style={styles.container_tab}>
 					<View style={{ width: ' 90%', justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
-						<TouchableOpacity style={styles.button__ubication}>
+						<TouchableOpacity style={styles.button__ubication}
+							onPress={() => { setModalAviso(true) }}>
 							<Image source={require('./../../../assets/marker.png')}></Image>
 						</TouchableOpacity>
 					</View>
