@@ -115,7 +115,7 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 									}
 
 									<Button full style={styles.buttonPass}>
-										<Text style={{ color: '#FFFFFF' }}> Iniciar sesión </Text>
+										<Text uppercase={false} style={styles.buttonPass__text}> Iniciar sesión </Text>
 									</Button>
 								</LinearGradient>
 								<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>

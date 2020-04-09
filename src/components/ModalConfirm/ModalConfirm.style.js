@@ -63,13 +63,14 @@ export default styles = StyleSheet.create({
     },
     linearGradient: {
         width: '100%',
+        height: 360,
         alignItems: 'center',
         borderRadius: 5,
     },
     logo: {
-        marginTop: 10,
-        width: '90%',
-        height: 100,
+        marginTop: 29,
+        width: 268,
+        height: 61,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },

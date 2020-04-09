@@ -6,7 +6,7 @@ import {
 var { width, height } = Dimensions.get('window');
 
 var box_width = width / 1.3;
-var box_height = height ;
+var box_height = height;
 
 export default styles = StyleSheet.create({
     container: {
@@ -70,21 +70,20 @@ export default styles = StyleSheet.create({
         borderTopRightRadius: 5
     },
     logo: {
-        marginTop: 10,
-        width: '90%',
-        height: 100,
+        marginTop: 29,
+        width: 268,
+        height: 61,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },
     text__info: {
-        width: '100%',
-        marginTop: 14,
-        marginBottom: 17,
+        width: '90%',
+        padding: 20,
         color: '#282828',
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 14,
+        fontSize: 12,
         lineHeight: 20,
     },
     content__info: {
@@ -136,5 +135,11 @@ export default styles = StyleSheet.create({
         elevation: 0,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10
+    },
+    buttonPass__text: {
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: 19,
+        lineHeight: 22,
     }
 });

@@ -221,7 +221,7 @@ export default styles = StyleSheet.create({
         flex: 0,
     },
     buttonVinc: {
-        minWidth: '70%',
+        minWidth: '60%',
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',

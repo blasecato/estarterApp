@@ -31,7 +31,7 @@ export default function CardHome({
 							<Image source={require('./../../../assets/marker.png')}></Image>
 						</TouchableOpacity>
 					</View>
-					<Segment style={{}, activeTab == 1 ? styles.tab  : styles.tabShared} >
+					<Segment style={{}, activeTab == 1 ? styles.tab : styles.tabShared} >
 
 						<View style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab} >
 							<TouchableOpacity style={styles.view_tab}
@@ -93,6 +93,8 @@ export default function CardHome({
 												</View>
 												<LinearGradient
 													colors={['#044C74', '#348AC7']}
+													start={{ x: 0.0, y: 0.2 }}
+													end={{ x: 0.8, y: 2.8 }}
 													style={{ width: '40%' }}>
 													<Button onPress={() => {
 														setLoading(true)
@@ -118,11 +120,10 @@ export default function CardHome({
 
 									{/* {succes &&
 										<>
-											<Image
-												style={styles.imageList} source={require('./../../../assets/msg.png')}></Image>
-											<Text style={styles.text__info}>
+											<Image style={styles.imageList} source={require('./../../../assets/msg.png')}></Image>											
+												<Text style={styles.text__info}>
 												Tu código no coincide con nuestras bases de datos por favor contacta con soporte técnico.
-                  		</Text>
+                  		                       </Text>
 										</>
 									} */}
 
@@ -325,7 +326,7 @@ export default function CardHome({
 											</ListItem>
 										</List>
 									</ScrollView>
-									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: 0, position: "absolute", bottom: 10, right: 0}}>
+									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: 0, position: "absolute", bottom: 10, right: 0 }}>
 										<TouchableOpacity onPress={() => { setModalCompartirRuta(true) }} style={[styles.box, styles.boxOne]}>
 											<Image style={{ width: 40, height: 40, resizeMode: 'contain' }}
 												source={require('./../../../assets/add.png')}>
@@ -340,6 +341,8 @@ export default function CardHome({
 								//     <View style={styles.viewButton}>
 								//         <LinearGradient
 								//             colors={['#044C74', '#348AC7']}>
+								//             start={{ x: 0.0, y: 0.2 }}
+								//             end={{ x: 0.8, y: 2.8 }}
 								//             <Button style={styles.buttonAna}>
 								//                 <Text uppercase={false} onPress={() => setModalCompartirRuta(true)} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
 								//             </Button>

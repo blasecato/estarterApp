@@ -51,9 +51,7 @@ export default function ModalConfirm({ navigation, hidden, setHidden, setModalAc
 														<Input style={styles.input} />
 													</Item>
 												</Form>
-												<Button onPress={() => { setModalActivation(1) }} full style={styles.buttonPass} >
-													<Text uppercase={false} style={styles.buttonPass__text}> Restablecer contraseña </Text>
-												</Button>
+
 											</>
 											:
 											<>
@@ -67,12 +65,13 @@ export default function ModalConfirm({ navigation, hidden, setHidden, setModalAc
 														<Input style={styles.input} />
 													</Item>
 												</Form>
-												<Button onPress={() => { setModalActivation(2) }} full style={styles.buttonPass} >
-													<Text uppercase={false} style={styles.buttonPass__text}> Restablecer contraseña </Text>
-												</Button>
+
 											</>
 									}
 								</LinearGradient>
+								<Button onPress={() => { setModalActivation(2) }} full style={styles.buttonPass} >
+									<Text uppercase={false} style={styles.buttonPass__text}> Restablecer contraseña </Text>
+								</Button>
 							</View>
 						</ScrollView>
 					</LinearGradient>

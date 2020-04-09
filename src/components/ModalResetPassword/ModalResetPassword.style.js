@@ -63,33 +63,34 @@ export default styles = StyleSheet.create({
     },
     linearGradient: {
         width: '100%',
+        height: 395,
         alignItems: 'center',
         borderRadius: 5,
     },
     logo: {
-        marginTop: 10,
-        width: '90%',
-        height: 100,
+        marginTop: 29,
+        width: 268,
+        height: 61,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },
     textPass: {
         width: '80%',
-        marginTop: 14,
-        marginBottom: 17,
+        marginTop: 19,
+        marginBottom: 29,
         color: '#282828',
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 14,
+        fontSize: 12,
         lineHeight: 20,
     },
     cards: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'flex-end',
-        marginBottom: 8,
+        justifyContent: 'center',
+        marginBottom: 39,
         backgroundColor: 'transparent'
     },
     card: {
