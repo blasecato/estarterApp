@@ -26,10 +26,10 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 								<View style={[styles.cardBox, styles.cardBoxOne]}>
 									<Image style={{ height: 77, width: 77, resizeMode: 'cover' }} source={require('./../../../assets/carro.png')} />
 									<Text style={{
-										textAlign: 'left', width: 200, marginLeft: 10, fontStyle: 'normal',
+										textAlign: 'left', width: 240, marginLeft: 15, fontStyle: 'normal',
 										fontWeight: 'normal',
-										fontSize: 12,
-										lineHeight: 16,
+										fontSize: 14,
+										lineHeight: 16, fontFamily: 'Ubuntu'
 									}}>
 										Al crear esta ruta, sera compartida unicamente con tus compañeros de trabajo.</Text>
 								</View>
@@ -68,7 +68,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 											end={{ x: 0.8, y: 2.8 }}
 											style={{
 												padding: 15,
-												width: 200,
+												width: 220,
 												marginLeft: 60,
 												marginTop: 60,
 												marginRight: 60,
@@ -79,9 +79,10 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 											}}>
 											<Text style={{
 												color: '#FFFF',
-												fontSize: 14,
+												fontSize: 15,
 												fontStyle: 'normal',
 												fontWeight: '500',
+												fontFamily: 'Ubuntu'
 											}}
 												onPress={() => {
 													setNewRuta(true)
@@ -102,6 +103,6 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 					</View>
 				</ScrollView>
 			</LinearGradient>
-		</Modal>
+		</Modal >
 	);
 }

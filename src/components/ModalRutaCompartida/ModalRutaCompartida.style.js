@@ -36,7 +36,7 @@ export default styles = StyleSheet.create({
         marginBottom: 0
     },
     card: {
-        height: 570,
+        height: 550,
         width: '90%',
         flexDirection: 'column',
         backgroundColor: '#ffff',
@@ -56,6 +56,7 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         width: '90%',
+        marginTop: 20,
     },
     cardBoxTwo: {
         display: 'flex',
@@ -63,8 +64,8 @@ export default styles = StyleSheet.create({
         justifyContent: 'center'
     },
     form: {
-        width: '90%',
-        marginTop: 23
+        width: '88%',
+        marginTop: 20
     },
     item: {
         borderWidth: 0,
@@ -84,6 +85,7 @@ export default styles = StyleSheet.create({
         fontSize: 14,
         maxWidth: '100%',
         lineHeight: 16,
+        fontFamily: 'Ubuntu'
     },
     input: {
         borderWidth: 1,
@@ -93,10 +95,11 @@ export default styles = StyleSheet.create({
         maxWidth: '102%',
         flex: 0,
         color: '#FFFF',
-        fontSize: 13,
+        fontSize: 14,
         lineHeight: 16,
         fontStyle: 'normal',
         fontWeight: 'normal',
+        fontFamily: 'Ubuntu'
     },
     cardBoxThree: {
         display: 'flex',

@@ -58,7 +58,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center'
     },
     form: {
-        width: '65%',
+        width: '70%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -87,6 +87,7 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         lineHeight: 20,
         fontWeight: 'normal',
+        fontFamily: 'Ubuntu'
     },
     buttonVinc: {
         minWidth: '40%',
@@ -102,6 +103,7 @@ export default styles = StyleSheet.create({
         fontSize: 16,
         fontStyle: 'normal',
         fontWeight: '500',
+        fontFamily: 'Ubuntu'
     },
     cardBoxThree: {
         display: 'flex',
