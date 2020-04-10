@@ -94,7 +94,7 @@ export default styles = StyleSheet.create({
         padding: 11,
         maxWidth: '102%',
         flex: 0,
-        color: '#FFFF',
+        color: '#BEBEBE',
         fontSize: 14,
         lineHeight: 16,
         fontStyle: 'normal',

@@ -28,7 +28,7 @@ export default styles = StyleSheet.create({
         flexDirection: 'column'
     },
     touchClose: {
-        width: '86%',
+        width: '82%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-end',
@@ -61,6 +61,7 @@ export default styles = StyleSheet.create({
     },
     content: {
         width: '90%',
+        maxWidth: 328,
         backgroundColor: 'transparent',
     },
     linearGradient: {
@@ -78,7 +79,7 @@ export default styles = StyleSheet.create({
         backgroundColor: 'transparent'
     },
     text__info: {
-        width: '90%',
+        width: 267,
         marginTop: 19,
         marginBottom: 25,
         color: '#282828',
@@ -130,6 +131,7 @@ export default styles = StyleSheet.create({
         backgroundColor: '#FFFFFF1A',
         textAlign: 'center',
         paddingRight: 0,
+        minHeight: 50,
     },
     buttonPass: {
         backgroundColor: '#417CCA',
@@ -137,7 +139,8 @@ export default styles = StyleSheet.create({
         borderColor: 'transparent',
         elevation: 0,
         borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10
+        borderBottomRightRadius: 10,
+        height: 50
     },
     buttonPass__text: {
         fontStyle: 'normal',
@@ -177,7 +180,6 @@ export default styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: 'bold',
         fontSize: 30,
-        lineHeight: 26,
         fontStyle: 'normal',
         fontFamily: 'Ubuntu'
     }

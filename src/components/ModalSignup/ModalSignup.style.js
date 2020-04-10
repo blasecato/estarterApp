@@ -58,6 +58,7 @@ export default styles = StyleSheet.create({
     },
     content: {
         width: '90%',
+        minWidth: 328,
         backgroundColor: 'transparent',
         display: 'flex',
         alignItems: 'center',
@@ -113,17 +114,19 @@ export default styles = StyleSheet.create({
         padding: 11,
         color: '#ffff',
         backgroundColor: '#FFFFFF1A',
-        width: box_width
+        width: box_width,
+        minHeight: 50, 
+        minWidth: 288
     },
     button: {
         backgroundColor: '#417CCA',
         color: '#162CA3',
         borderColor: 'transparent',
         elevation: 0,
-        height: 58,
+        height: 50,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
-        marginBottom: 40,
+        
     },
     textButton: {
         color: '#FFFFFF',

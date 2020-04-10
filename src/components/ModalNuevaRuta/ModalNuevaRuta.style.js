@@ -45,6 +45,7 @@ export default styles = StyleSheet.create({
     card: {
         height: 143,
         width: '90%',
+        maxWidth: 315,
         backgroundColor: '#fff',
         borderRadius: 5,
         alignItems: 'center',

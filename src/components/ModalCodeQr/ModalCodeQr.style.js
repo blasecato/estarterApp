@@ -35,7 +35,7 @@ export default styles = StyleSheet.create({
         marginBottom: 20
     },
     card: {
-        height: 470,
+        height: 500,
         width: '90%',
         flexDirection: 'column',
         backgroundColor: '#ffff',

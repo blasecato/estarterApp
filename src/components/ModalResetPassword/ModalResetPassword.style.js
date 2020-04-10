@@ -57,6 +57,7 @@ export default styles = StyleSheet.create({
     },
     content: {
         width: '90%',
+        maxWidth: 328,
         backgroundColor: 'transparent',
         display: 'flex',
         alignItems: 'center',
@@ -111,7 +112,7 @@ export default styles = StyleSheet.create({
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 10,
+        fontSize: 12,
         lineHeight: 16,
         width: '90%',
         height: 61,
@@ -123,7 +124,7 @@ export default styles = StyleSheet.create({
         color: '#FFFF',
         fontWeight: 'bold',
         fontStyle: 'normal',
-        fontSize: 10,
+        fontSize: 12,
         lineHeight: 16,
     }
 });
