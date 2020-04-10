@@ -45,7 +45,8 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: 14,
-        lineHeight: 17,
+        lineHeight: 20,
+        fontFamily: 'Ubuntu'
     },
     imageClose: {
         height: 15,
@@ -99,6 +100,7 @@ export default styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 14,
         lineHeight: 20,
+        fontFamily: 'Ubuntu'
     },
     form: {
         paddingRight: 15,
@@ -117,7 +119,8 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: 14,
-        lineHeight: 16,
+        lineHeight: 20,
+        fontFamily: 'Ubuntu'
     },
     input: {
         borderWidth: 1,
@@ -141,5 +144,6 @@ export default styles = StyleSheet.create({
         fontWeight: '500',
         fontSize: 19,
         lineHeight: 22,
+        fontFamily: 'Ubuntu'
     }
 });

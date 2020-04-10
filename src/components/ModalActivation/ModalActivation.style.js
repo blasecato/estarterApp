@@ -16,7 +16,7 @@ export default styles = StyleSheet.create({
     },
     box: {
         height: '100%',
-
+        width: '100%'
     },
     box1: {
         backgroundColor: 'transparent',
@@ -49,7 +49,8 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: 14,
-        lineHeight: 17,
+        lineHeight: 20,
+        fontFamily: 'Ubuntu'
     },
     imageClose: {
         height: 15,
@@ -78,13 +79,15 @@ export default styles = StyleSheet.create({
     },
     text__info: {
         width: '90%',
-        padding: 20,
+        marginTop: 19,
+        marginBottom: 25,
         color: '#282828',
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: 20,
+        fontFamily: 'Ubuntu'
     },
     content__info: {
         color: '#282828',
@@ -141,5 +144,41 @@ export default styles = StyleSheet.create({
         fontWeight: '500',
         fontSize: 19,
         lineHeight: 22,
+        fontFamily: 'Ubuntu'
+    },
+    button__send: {
+        color: '#FFFFFF',
+        marginTop: 16,
+        fontWeight: 'normal',
+        fontSize: 15,
+        lineHeight: 17,
+        fontStyle: 'normal',
+        fontFamily: 'Ubuntu'
+    },
+    text__activation: {
+        color: '#FFFFFF',
+        marginBottom: 10,
+        fontWeight: 'normal',
+        fontSize: 16,
+        lineHeight: 18,
+        fontStyle: 'normal',
+        fontFamily: 'Ubuntu'
+    },
+    text__email: {
+        color: '#FFFFFF',
+        marginBottom: 10,
+        fontWeight: 'normal',
+        fontSize: 16,
+        lineHeight: 18,
+        fontStyle: 'normal',
+        fontFamily: 'Ubuntu'
+    },
+    text__data: {
+        color: '#FFFFFF',
+        fontWeight: 'bold',
+        fontSize: 30,
+        lineHeight: 26,
+        fontStyle: 'normal',
+        fontFamily: 'Ubuntu'
     }
 });

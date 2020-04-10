@@ -57,7 +57,6 @@ export default styles = StyleSheet.create({
         marginLeft: 15
     },
     content: {
-        height: '90%',
         width: '90%',
         backgroundColor: 'transparent',
         display: 'flex',
@@ -67,21 +66,21 @@ export default styles = StyleSheet.create({
     linearGradient: {
         flex: 1,
         width: '100%',
+        height: 635,
         alignItems: 'center',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5
     },
     logo: {
-        marginTop: 10,
-        width: '90%',
-        height: 100,
+        marginTop: 29,
+        width: 267,
+        height: 61,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },
     textRegister: {
-        width: '80%',
-        marginTop: 14,
-        marginBottom: 17,
+        width: '90%',
+        margin: 24,
         color: '#282828',
         textAlign: 'center',
         fontStyle: 'normal',
@@ -97,7 +96,7 @@ export default styles = StyleSheet.create({
         borderWidth: 0,
         borderColor: 'transparent',
         height: 85,
-        marginBottom: 10
+        marginBottom: 22
     },
     label: {
         marginBottom: 15,
@@ -133,5 +132,18 @@ export default styles = StyleSheet.create({
         fontSize: 19,
         lineHeight: 22,
         fontFamily: 'Ubuntu'
-    }
+    },
+    text__warning: {
+        color: "#160F6B",
+        marginLeft: 10,
+        marginBottom: 0,
+        fontFamily: 'Ubuntu',
+        position: 'absolute',
+        bottom: -25,
+        left: 4,
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 12,
+        lineHeight: 13
+    },
 });

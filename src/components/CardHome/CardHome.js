@@ -80,10 +80,10 @@ export default function CardHome({
 
 								<View style={{ width: '100%' }} >
 									{!loading &&
-										<>
-											<Text style={[styles.text__info, { marginBottom: 20, marginTop: 15 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
+										<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+											<Text style={[styles.text__info, { marginBottom: 19, marginTop: 5 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
 											<Form style={styles.form}>
-												<View style={{ width: '60%', maxWidth: '100%', }}>
+												<View style={{ width: '90%', maxWidth: '100%', }}>
 													<Item regular style={styles.item} last>
 														<Input
 															style={styles.input}
@@ -91,22 +91,22 @@ export default function CardHome({
 															placeholder='Ejemplo: EST4RT3' />
 													</Item>
 												</View>
-												<LinearGradient
-													colors={['#044C74', '#348AC7']}
-													start={{ x: 0.0, y: 0.2 }}
-													end={{ x: 0.8, y: 2.8 }}
-													style={{ width: '40%' }}>
-													<Button onPress={() => {
-														setLoading(true)
-														setTimeout(() => {
-															setSucces(true)
-														}, 2000);
-													}} style={styles.buttonVinc}>
-														<Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
-													</Button>
-												</LinearGradient>
 											</Form>
-										</>
+											<LinearGradient
+												colors={['#044C74', '#348AC7']}
+												start={{ x: 0.0, y: 0.2 }}
+												end={{ x: 0.8, y: 2.8 }}
+												style={[styles.buttonVinc, { width: '60%', marginTop: 10 }]}>
+												<TouchableOpacity onPress={() => {
+													setLoading(true)
+													setTimeout(() => {
+														setSucces(true)
+													}, 2000);
+												}}>
+													<Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
+												</TouchableOpacity>
+											</LinearGradient>
+										</View>
 									}
 
 									{loading && !succes &&
@@ -214,7 +214,7 @@ export default function CardHome({
 							{activeTab == 2 &&
 
 								<View style={{ width: '100%' }} >
-									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', width: '100%' }}>
+									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', width: '90%' }}>
 										<List style={styles.list} >
 											<ListItem onPress={() => {
 												setInstruction(true)

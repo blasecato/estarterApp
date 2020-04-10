@@ -57,8 +57,8 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												rules={{ required: true, minLength: 3, }}
 												defaultValue=""
 											/>
+											{errors.identification && <Text style={styles.text__warning}>Ingrese el número de identificación.</Text>}
 										</Item>
-										{errors.identification && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el número de identificación.</Text>}
 
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
@@ -72,8 +72,8 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												rules={{ required: true, minLength: 3, }}
 												defaultValue=""
 											/>
+											{errors.name && <Text style={styles.text__warning}>Ingrese el nombre del usuario.</Text>}
 										</Item>
-										{errors.name && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el nombre del usuario.</Text>}
 
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
@@ -87,8 +87,8 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												rules={{ required: true, minLength: 3 }}
 												defaultValue=""
 											/>
+											{errors.email && <Text style={styles.text__warning}>Ingrese el correo del usuario.</Text>}
 										</Item>
-										{errors.email && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el correo del usuario.</Text>}
 										<Item style={styles.item} stackedLabel last>
 											<Label style={styles.label}>
 												Número de celular
@@ -101,8 +101,8 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 												rules={{ required: true, minLength: 3, }}
 												defaultValue=""
 											/>
+											{errors.phone && <Text style={[styles.text__warning, { marginLeft: 25 }]}>Ingrese el telefono del usuario.</Text>}
 										</Item>
-										{errors.phone && <Text style={{ color: "#282828", marginLeft: 20 }}>Ingrese el telefono del usuario.</Text>}
 
 									</Form>
 								</LinearGradient>

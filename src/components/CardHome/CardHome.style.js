@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
         height: Dimensions.get('window').height,
     },
     container: {
-        height: '32%',
+        height: '35%',
         width: '100%',
         position: 'absolute',
         display: 'flex',
@@ -46,7 +46,7 @@ export default styles = StyleSheet.create({
     button__ubication: {
         width: 40,
         height: 40,
-        /* marginBottom: 20, */
+        marginBottom: 8, 
         backgroundColor: '#ffff',
         alignItems: 'center',
         display: 'flex',
@@ -135,9 +135,9 @@ export default styles = StyleSheet.create({
     text__info: {
         fontStyle: 'normal',
         fontWeight: 'normal',
-        maxWidth: 300,
+        maxWidth: '90%',
         lineHeight: 20,
-        fontSize: 18,
+        fontSize: 17,
         justifyContent: 'center',
         alignItems: 'center',
         display: "flex",
@@ -152,7 +152,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '90%',
-        height: '80%',
+        height: 208,
         borderColor: 'transparent',
         /* borderRadius: 5, */
         borderTopRightRadius: 5,
@@ -165,7 +165,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '90%',
-        height: '80%',
+        height: 208,
         borderColor: 'transparent',
         /* borderRadius: 5, */
         borderTopLeftRadius: 5,
@@ -180,7 +180,7 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 10,
         alignItems: 'center',
-
+        justifyContent: 'center',
     },
     viewButton: {
         width: '100%',
@@ -213,16 +213,24 @@ export default styles = StyleSheet.create({
         height: 40,
         paddingRight: 0,
         paddingLeft: 0,
-        marginRight: 14
+ 
     },
     input: {
         borderWidth: 1,
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
-        padding: 11,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 15,
         width: '100%',
+        height: 50,
         maxWidth: '100%',
         flex: 0,
+        fontFamily: 'Ubuntu',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 16,
+        lineHeight: 20,
     },
     buttonVinc: {
         minWidth: '60%',

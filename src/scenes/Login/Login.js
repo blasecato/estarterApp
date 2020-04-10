@@ -44,7 +44,7 @@ export default function LoginScreen({ navigation }) {
                 rules={{ required: true, minLength: 3, }}
                 defaultValue=""
               />
-            {errors.identification && <Text style={{ color: "#282828", marginLeft: 10 , marginBottom: 0,  fontFamily: 'Ubuntu', position: 'absolute', bottom: -25, left: 4}}>Ingrese el número de identificación.</Text>}
+              {errors.identification && <Text style={styles.text__warning}>Ingrese el número de identificación.</Text>}
             </Item>
             <Item style={styles.item} stackedLabel last>
               <Label style={styles.label}>Contraseña</Label>
@@ -56,7 +56,7 @@ export default function LoginScreen({ navigation }) {
                 rules={{ required: true, minLength: 3, }}
                 defaultValue=""
               />
-            {errors.password && <Text style={{ color: "#282828", marginLeft: 10 , marginBottom: 0,  fontFamily: 'Ubuntu', position: 'absolute', bottom: -25, left: 4}}>Ingrese la contraseña.</Text>}
+              {errors.password && <Text style={styles.text__warning}>Ingrese la contraseña.</Text>}
             </Item>
           </Form>
           <Button light

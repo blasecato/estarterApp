@@ -15,6 +15,8 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
+      "width": "100%",
+      "height": "100%",
       "backgroundColor": "#ffffff"
     },
     "updates": {

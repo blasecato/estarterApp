@@ -42,10 +42,10 @@ export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
 										colors={['#044C74', '#348AC7']}
 										start={{ x: 0.0, y: 0.2 }}
 										end={{ x: 0.8, y: 2.8 }}
-										style={{ marginLeft: 7 }}>
-										<Button style={styles.buttonVinc}>
+										style={{ marginLeft: 7, width: '70%' }}>
+										<TouchableOpacity style={styles.buttonVinc}>
 											<Text uppercase={false} style={styles.buttonVinc__text}>VINCULAR</Text>
-										</Button>
+										</TouchableOpacity>
 									</LinearGradient>
 								</Form>
 								<LinearGradient

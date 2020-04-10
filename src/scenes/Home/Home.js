@@ -64,6 +64,12 @@ export default function Home({ navigation, route }) {
 						<Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/ubication.png')} />
 					</TouchableOpacity>
 				</View>
+				<View style={styles.routes}>
+					<TouchableOpacity style={styles.routes__button}>
+						<Image style={{ resizeMode: 'cover' }} source={require('./../../../assets/red.png')} />
+					</TouchableOpacity>
+				</View>
+
 				{
 					<TouchableOpacity onPress={() => {
 						if (statusRute == 1 || statusRute == 2) {
@@ -95,7 +101,7 @@ export default function Home({ navigation, route }) {
 					<View style={styles.whatsapp}>
 						<View style={styles.whatsapp__one}>
 							<View style={{ marginRight: 5 }}>
-								<Image style={styles.route__imgOne} source={require('./../../../assets/wa.png')} />
+								<Image style={styles.whatsapp__imgOne} source={require('./../../../assets/wa.png')} />
 							</View>
 						</View>
 					</View>

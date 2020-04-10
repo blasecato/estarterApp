@@ -66,6 +66,19 @@ export default styles = StyleSheet.create({
         marginBottom: 0,
         fontFamily: 'Ubuntu'
     },
+    text__warning: {
+        color: "#160F6B",
+        marginLeft: 10,
+        marginBottom: 0,
+        fontFamily: 'Ubuntu',
+        position: 'absolute',
+        bottom: -25,
+        left: 4,
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 12,
+        lineHeight: 13
+    },
     buttonSignin: {
         marginTop: 20,
         marginBottom: 23,
@@ -80,10 +93,13 @@ export default styles = StyleSheet.create({
     buttonSignin__text: {
         color: '#19439F',
         fontWeight: '500',
-        fontSize: 19
+        fontSize: 19,
+        fontStyle: 'normal',
+        lineHeight: 22
     },
     buttonForgot__text: {
         fontStyle: 'normal',
+        color: '#162CA3',
         fontWeight: 'normal',
         fontSize: 15,
         lineHeight: 17

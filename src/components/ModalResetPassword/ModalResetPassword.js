@@ -51,7 +51,7 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
                                         <TouchableOpacity onPress={() => { setModalCode(2) }} style={[styles.card, { marginLeft: 15, marginBottom: 20 }]}>
                                             <Image
                                                 source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/msj.png' }}
-                                                style={{ height: 68, width: 54, resizeMode: 'contain', marginTop: 40 }}
+                                                style={{ height: 68, width: 54, resizeMode: 'contain', marginTop: 45, marginBottom: 3 }}
                                             />
                                             <Text style={styles.textCard}>Enviar código a mi <Text style={styles.textCard__bold}>correo electrónico</Text></Text>
                                         </TouchableOpacity>

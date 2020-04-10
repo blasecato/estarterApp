@@ -68,6 +68,11 @@ export default styles = StyleSheet.create({
         width: 18,
         height: 18
     },
+    route__whatsapp: {
+        resizeMode: 'cover',
+        width: 48,
+        height: 48
+    },
     route__label: {
         backgroundColor: '#044C74',
         width: 45,
@@ -108,7 +113,7 @@ export default styles = StyleSheet.create({
         zIndex: 1,
         margin: 20,
         top: 25,
-        left: '75%'
+        left: '78%'
     },
     whatsapp__one: {
         display: 'flex',
@@ -292,6 +297,24 @@ export default styles = StyleSheet.create({
     marker__button: {
         height: 39,
         width: 39,
+        justifyContent: 'center',
+    },
+    routes: {
+        height: 50,
+        width: 50,
+        top: '30%',
+        left: '45%',
+        backgroundColor: 'transparent',
+        borderRadius: 100,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        zIndex: 1,
+    },
+    routes__button: {
+        height: 15,
+        width: 33,
         justifyContent: 'center',
     },
     containerShared: {

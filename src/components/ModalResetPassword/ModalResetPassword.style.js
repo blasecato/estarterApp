@@ -45,7 +45,7 @@ export default styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: 14,
-        lineHeight: 17,
+        lineHeight: 20,
         fontFamily: 'Ubuntu'
     },
     imageClose: {
@@ -64,7 +64,7 @@ export default styles = StyleSheet.create({
     },
     linearGradient: {
         width: '100%',
-        height: 395,
+        height: 382,
         alignItems: 'center',
         borderRadius: 5,
     },
@@ -76,14 +76,14 @@ export default styles = StyleSheet.create({
         backgroundColor: 'transparent'
     },
     textPass: {
-        width: '80%',
+        width: '60%',
         marginTop: 19,
         marginBottom: 29,
         color: '#282828',
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: 20,
         fontFamily: 'Ubuntu'
     },
@@ -106,14 +106,14 @@ export default styles = StyleSheet.create({
     },
     textCard: {
         marginTop: 7,
-        marginBottom: 13,
+        marginBottom: 15,
         color: '#FFFF',
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 12,
+        fontSize: 10,
         lineHeight: 16,
-        width: 105,
+        width: '90%',
         height: 61,
         marginTop: 20,
         fontFamily: 'Ubuntu'
@@ -123,7 +123,7 @@ export default styles = StyleSheet.create({
         color: '#FFFF',
         fontWeight: 'bold',
         fontStyle: 'normal',
-        fontSize: 12,
+        fontSize: 10,
         lineHeight: 16,
     }
 });

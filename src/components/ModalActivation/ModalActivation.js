@@ -45,15 +45,15 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 											<Text style={styles.text__info}>Hemos enviado el código de activación al número de celular</Text>
 											<View style={styles.content__info}>
 												{phone &&
-													<Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 30 }}>
+													<Text style={styles.text__data}>
 														{phone}
 													</Text>
 												}
 											</View>
 											<View style={styles.lineStyle} />
-											<Text style={{ color: '#FFFFFF' }}> Código de activación </Text>
+											<Text style={styles.text__activation}> Código de activación </Text>
 											<Form style={styles.form}>
-												<Item style={styles.item} stackedLabel last>
+												<Item style={[styles.item, { marginBottom: 25 }]} stackedLabel last>
 													<Input style={[styles.input, { marginRight: 17 }]} />
 													<Input style={[styles.input, { marginRight: 17 }]} />
 													<Input style={[styles.input, { marginRight: 17 }]} />
@@ -68,15 +68,15 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 											<Text style={styles.text__info}>Hemos enviado un código de activación a tu correo electrónico</Text>
 											<View style={styles.content__info}>
 												{email &&
-													<Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 30 }}>
+													<Text style={styles.text__data}>
 														{email}
 													</Text>
 												}
 											</View>
 											<View style={styles.lineStyle} />
-											<Text style={{ color: '#FFFFFF' }}> Código de activación </Text>
+											<Text style={styles.text__activation}> Código de activación </Text>
 											<Form style={styles.form}>
-												<Item style={styles.item} stackedLabel last>
+												<Item style={[styles.item, { marginBottom: 25 }]} stackedLabel last>
 													<Input style={[styles.input, { marginRight: 17 }]} />
 													<Input style={[styles.input, { marginRight: 17 }]} />
 													<Input style={[styles.input, { marginRight: 17 }]} />
@@ -91,13 +91,13 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 											<Text style={styles.text__info}>Hemos enviado un código de activación al número de celular</Text>
 											<View style={styles.content__info}>
 												{phone &&
-													<Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 30 }}>
+													<Text style={styles.text__data}>
 														{phone}
 													</Text>
 												}
 											</View>
 											<View style={styles.lineStyle} />
-											<Text style={{ color: '#FFFFFF' }}> Código de activación </Text>
+											<Text style={styles.text__activation}> Código de activación </Text>
 											<Form style={styles.form}>
 												<Item style={styles.item} stackedLabel last>
 													<Input style={[styles.input, { marginRight: 17 }]} />
@@ -106,7 +106,7 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 													<Input style={styles.input} />
 												</Item>
 											</Form>
-											<Text style={{ color: '#FFFFFF', marginBottom: 10 }}
+											<Text style={styles.text__email}
 												onPress={() => setHidden(2)}
 											>
 												Enviar al correo electrónico
@@ -119,7 +119,7 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 									</Button>
 								</LinearGradient>
 								<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>
-									<Text style={{ color: '#FFFFFF' }}> Volver a enviar </Text>
+									<Text style={styles.button__send}> Volver a enviar </Text>
 								</View>
 							</View>
 						</ScrollView>

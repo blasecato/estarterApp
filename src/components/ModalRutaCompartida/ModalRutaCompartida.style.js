@@ -15,7 +15,7 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
-        marginTop: '20%',
+        marginTop: 20,
     },
     imageClose: {
         margin: 20,
