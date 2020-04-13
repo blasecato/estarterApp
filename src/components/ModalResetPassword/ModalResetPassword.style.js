@@ -65,12 +65,12 @@ export default styles = StyleSheet.create({
     },
     linearGradient: {
         width: '100%',
-        height: 382,
+        height: 410,
         alignItems: 'center',
         borderRadius: 5,
     },
     logo: {
-        marginTop: 29,
+        marginTop: 39,
         width: 268,
         height: 61,
         resizeMode: 'contain',
@@ -93,7 +93,7 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 39,
+        marginBottom: 49,
         backgroundColor: 'transparent'
     },
     card: {
