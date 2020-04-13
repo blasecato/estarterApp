@@ -26,7 +26,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 								<View style={[styles.cardBox, styles.cardBoxOne]}>
 									<Image style={{ height: 77, width: 77, resizeMode: 'cover' }} source={require('./../../../assets/carro.png')} />
 									<Text style={{
-										textAlign: 'left', width: 185, marginLeft: 15, fontStyle: 'normal',
+										textAlign: 'left', width: "65%", maxWidth: 240, marginLeft: 15, fontStyle: 'normal',
 										fontWeight: 'normal',
 										fontSize: 14,
 										lineHeight: 16, fontFamily: 'Ubuntu'
@@ -36,7 +36,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 								<View style={[styles.cardBox, styles.cardBoxTwo]}>
 									<Form style={styles.form}>
 										<Item style={styles.item} stackedLabel>
-											<Label style={styles.label}>Lugar de origen</Label>
+											<Label style={styles.labelTwo}>Lugar de origen</Label>
 											<View style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
 												<Input style={[styles.input, { width: '81%', paddingLeft: 13 }]}
 													placeholderTextColor="#BEBEBE"
@@ -46,7 +46,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 											</View>
 										</Item>
 										<Item style={styles.item} stackedLabel>
-											<Label style={styles.label}>Whatsapp</Label>
+											<Label style={styles.labelTwo}>Whatsapp</Label>
 											<View style={{ display: 'flex', flexDirection: 'row', width: '100%', backgroundColor: '#079E04' }}>
 												<Image style={{ height: 50, width: 52, resizeMode: 'cover' }} source={require('./../../../assets/wa.png')} />
 												<Input style={[styles.input, { width: '84%', paddingLeft: 13 }]}

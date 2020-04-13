@@ -68,6 +68,7 @@ export default function DetailsScreen({ navigation }) {
                 pages={[
                     {
                         backgroundColor: '#fff',
+                        color: "#162CA3",
                         image: <View style={{ resizeMode: 'cover', width: '100%', height: '100%', borderBottomColor: '#D9D9D9' }}>
                             <Image style={{ resizeMode: 'cover', width: '100%', height: '100%' }} source={require('./images/step1.png')} />
                             <View style={{ width: '100%', zIndex: 1, alignItems: "center" }}>

@@ -41,12 +41,13 @@ export default styles = StyleSheet.create({
         maxWidth: 315,
         flexDirection: 'column',
         backgroundColor: '#ffff',
+        paddingRight:10,
+        paddingLeft:10,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
-
     },
     cardBox: {
         flexDirection: 'column',
@@ -84,6 +85,15 @@ export default styles = StyleSheet.create({
         marginBottom: 7,
         color: '#454545',
         fontSize: 14,
+        maxWidth: '100%',
+        lineHeight: 16,
+        fontFamily: 'Ubuntu'
+    },
+    labelTwo: {
+        marginBottom: 7,
+        color: '#454545',
+        fontSize: 14,
+        marginBottom: 15,
         maxWidth: '100%',
         lineHeight: 16,
         fontFamily: 'Ubuntu'
