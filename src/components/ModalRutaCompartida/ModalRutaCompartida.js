@@ -26,7 +26,7 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 								<View style={[styles.cardBox, styles.cardBoxOne]}>
 									<Image style={{ height: 77, width: 77, resizeMode: 'cover' }} source={require('./../../../assets/carro.png')} />
 									<Text style={{
-										textAlign: 'left', width: 240, marginLeft: 15, fontStyle: 'normal',
+										textAlign: 'left', width: 185, marginLeft: 15, fontStyle: 'normal',
 										fontWeight: 'normal',
 										fontSize: 14,
 										lineHeight: 16, fontFamily: 'Ubuntu'

@@ -152,7 +152,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '90%',
-        height: 208,
+        height: 238,
         borderColor: 'transparent',
         /* borderRadius: 5, */
         borderTopRightRadius: 5,
@@ -165,7 +165,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '90%',
-        height: 208,
+        height: 238,
         borderColor: 'transparent',
         /* borderRadius: 5, */
         borderTopLeftRadius: 5,

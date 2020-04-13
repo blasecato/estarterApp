@@ -67,7 +67,8 @@ export default styles = StyleSheet.create({
         width: '100%',
         height: 360,
         alignItems: 'center',
-        borderRadius: 5,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
     },
     logo: {
         marginTop: 29,
@@ -131,8 +132,8 @@ export default styles = StyleSheet.create({
         color: '#ffff',
         backgroundColor: '#FFFFFF1A',
         width: box_width,
-        minHeight: 50, 
-        minWidth: 288
+        maxHeight: 50, 
+        maxWidth: 288
     },
     buttonPass: {
         backgroundColor: '#417CCA',

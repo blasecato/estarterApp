@@ -96,6 +96,7 @@ export default styles = StyleSheet.create({
         backgroundColor: '#03173A36',
         width: box_width,
         height: 56,
+        maxWidth: 280,
         alignItems: 'center',
         justifyContent: 'center',
         borderColor: '#3866A8',
@@ -131,7 +132,8 @@ export default styles = StyleSheet.create({
         backgroundColor: '#FFFFFF1A',
         textAlign: 'center',
         paddingRight: 0,
-        minHeight: 50,
+        maxHeight: 50, 
+        maxWidth: 288
     },
     buttonPass: {
         backgroundColor: '#417CCA',

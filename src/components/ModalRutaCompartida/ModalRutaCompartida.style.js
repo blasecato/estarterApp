@@ -38,6 +38,7 @@ export default styles = StyleSheet.create({
     card: {
         height: 550,
         width: '90%',
+        maxWidth: 315,
         flexDirection: 'column',
         backgroundColor: '#ffff',
         display: 'flex',
@@ -109,6 +110,7 @@ export default styles = StyleSheet.create({
     linearStyle: {
         height: 8,
         width: '90%',
+        maxWidth: 315,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },
