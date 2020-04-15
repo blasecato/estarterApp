@@ -4,11 +4,16 @@ export default styles = StyleSheet.create({
     container_background: {
         height: '100%',
         width: '100%',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'column',
+        
     },
     container: {
         flex: 4,
         flexDirection: 'column',
+        justifyContent: "center",
+        alignItems: "center"
     },
     viewClose: {
         width: '95%',
@@ -25,6 +30,10 @@ export default styles = StyleSheet.create({
     },
     box: {
         height: '100%',
+        display: 'flex',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
 
     },
     boxOne: {
@@ -39,10 +48,11 @@ export default styles = StyleSheet.create({
         height: 550,
         width: '90%',
         maxWidth: 315,
+        marginTop:20,
         flexDirection: 'column',
         backgroundColor: '#ffff',
-        paddingRight:10,
-        paddingLeft:10,
+        
+        paddingLeft:15,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

@@ -15,7 +15,7 @@ export default styles = StyleSheet.create({
     menu: {
         height: 39,
         width: 39,
-        top: 30,
+        top: 0,
         backgroundColor: 'transparent',
         borderRadius: 100,
         display: 'flex',
@@ -320,7 +320,7 @@ export default styles = StyleSheet.create({
     containerShared: {
         backgroundColor: 'transparent',
         width: '100%',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'flex-end',
         flex: 0.55,
         display: 'flex',
