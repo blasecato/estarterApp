@@ -42,7 +42,7 @@ export default function ModalNuevaRuta({ navigation, hidden, setHidden }) {
 										colors={['#044C74', '#348AC7']}
 										start={{ x: 0.0, y: 0.2 }}
 										end={{ x: 0.8, y: 2.8 }}
-										style={{ marginLeft: 7, width: '70%' }}>
+										style={{ marginLeft: 7, width: '38%' }}>
 										<TouchableOpacity style={styles.buttonVinc}>
 											<Text uppercase={false} style={styles.buttonVinc__text}>VINCULAR</Text>
 										</TouchableOpacity>

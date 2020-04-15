@@ -45,6 +45,7 @@ export default styles = StyleSheet.create({
     card: {
         height: 143,
         width: '90%',
+        maxWidth: 315,
         backgroundColor: '#fff',
         borderRadius: 5,
         alignItems: 'center',
@@ -68,11 +69,10 @@ export default styles = StyleSheet.create({
         fontFamily: 'Ubuntu'
     },
     form: {
-        width: '70%',
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
         padding: 25,
         marginVertical: -5
     },
@@ -81,16 +81,15 @@ export default styles = StyleSheet.create({
         borderColor: 'transparent',
         height: 40,
         paddingRight: 0,
-        paddingLeft: 0
+        paddingLeft: 0,
+        marginRight: 14
     },
     input: {
         borderWidth: 1,
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
         padding: 11,
-        minWidth: '80%',
-        width: '80%',
-        flex: 0,
+        width: "100%",
         fontSize: 14,
         fontStyle: 'normal',
         lineHeight: 20,

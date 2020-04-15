@@ -73,7 +73,7 @@ export default styles = StyleSheet.create({
         height: 98,
         maxWidth: '100%',
         width: '100%',
-        marginRight: 0,
+        marginRight: 14,
         marginLeft: 0,
         paddingLeft: 0,
         paddingRight: 0,

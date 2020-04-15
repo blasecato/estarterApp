@@ -111,7 +111,7 @@ export default styles = StyleSheet.create({
         textAlign: 'center',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 10,
+        fontSize: 12,
         lineHeight: 16,
         width: '90%',
         height: 61,

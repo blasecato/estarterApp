@@ -10,7 +10,7 @@ export default function ModalActivation({ navigation, hidden, setHidden, phone, 
 	return (
 		<Modal
 			animationType="slide"
-			transparent={false}
+			transparent={true}
 			visible={hidden > 0}>
 			<View style={styles.container}>
 				<View style={[styles.box, styles.box1]}>
