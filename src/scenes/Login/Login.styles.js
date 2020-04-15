@@ -72,7 +72,7 @@ export default styles = StyleSheet.create({
         marginBottom: 0,
         fontFamily: 'Ubuntu',
         position: 'absolute',
-        bottom: -25,
+        bottom: -20,
         left: 4,
         fontStyle: 'normal',
         fontWeight: 'normal',
