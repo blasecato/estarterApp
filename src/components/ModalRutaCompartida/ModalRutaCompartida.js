@@ -10,18 +10,21 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 		<Modal
 			animationType="fade"
 			transparent={true}
-			visible={hidden}>
+			visible={hidden}
+			>
 			<LinearGradient
 				colors={['#072148D9', '#000000D9']}
 				start={{ x: 0.0, y: 0.5 }}
 				end={{ x: 0.0, y: 0.9 }}
 				style={styles.container_background}>
-				<ScrollView >
+					
 					<View style={styles.container}>
 						<View style={[styles.box, styles.boxOne]}>
-							<TouchableOpacity onPress={() => setModalCompartirRuta(false)} style={styles.viewClose}>
-								<Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
-							</TouchableOpacity>
+							<View style={{position:"absolute",top:0,right:0}}>
+								<TouchableOpacity onPress={() => setModalCompartirRuta(false)} style={styles.viewClose}>
+									<Image style={styles.imageClose} source={require('./../../../assets/cerrar.png')} />
+								</TouchableOpacity>
+							</View>
 							<View style={styles.card}>
 								<View style={[styles.cardBox, styles.cardBoxOne]}>
 									<Image style={{ height: 77, width: 77, resizeMode: 'cover' }} source={require('./../../../assets/carro.png')} />
@@ -101,7 +104,6 @@ export default function ModalRutaCompartida({ navigation, hidden, setModalCompar
 							</LinearGradient>
 						</View>
 					</View>
-				</ScrollView>
 			</LinearGradient>
 		</Modal >
 	);
