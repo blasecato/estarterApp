@@ -110,12 +110,12 @@ export default function CardHome({
 									}
 
 									{loading && !succes &&
-										<>
+										<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 											<ActivityIndicator size="large" color="#00ff00" />
 											<Text style={styles.text__info}>
 												Estamos validando tu código por favor espera unos segundos.
 											</Text>
-										</>
+										</View>
 									}
 
 									{/* {succes &&

@@ -38,14 +38,16 @@ export default styles = StyleSheet.create({
     card: {
         height: 550,
         width: '90%',
+        maxWidth: 315,
         flexDirection: 'column',
         backgroundColor: '#ffff',
+        paddingRight:10,
+        paddingLeft:10,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
-
     },
     cardBox: {
         flexDirection: 'column',
@@ -87,6 +89,15 @@ export default styles = StyleSheet.create({
         lineHeight: 16,
         fontFamily: 'Ubuntu'
     },
+    labelTwo: {
+        marginBottom: 7,
+        color: '#454545',
+        fontSize: 14,
+        marginBottom: 15,
+        maxWidth: '100%',
+        lineHeight: 16,
+        fontFamily: 'Ubuntu'
+    },
     input: {
         borderWidth: 1,
         borderColor: '#D5D5D5',
@@ -94,7 +105,7 @@ export default styles = StyleSheet.create({
         padding: 11,
         maxWidth: '102%',
         flex: 0,
-        color: '#FFFF',
+        color: '#BEBEBE',
         fontSize: 14,
         lineHeight: 16,
         fontStyle: 'normal',
@@ -109,6 +120,7 @@ export default styles = StyleSheet.create({
     linearStyle: {
         height: 8,
         width: '90%',
+        maxWidth: 315,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },

@@ -43,7 +43,7 @@ export default styles = StyleSheet.create({
         flex: 1
     },
     card: {
-        height: 143,
+        height: 155,
         width: '90%',
         maxWidth: 315,
         backgroundColor: '#fff',
@@ -89,7 +89,10 @@ export default styles = StyleSheet.create({
         borderColor: '#D5D5D5',
         backgroundColor: '#FFFFFF',
         padding: 11,
-        width: "100%",
+        minWidth: 152,
+        maxWidth: 152,
+        width: '80%',
+        flex: 0,
         fontSize: 14,
         fontStyle: 'normal',
         lineHeight: 20,

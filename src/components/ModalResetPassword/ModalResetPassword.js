@@ -10,7 +10,7 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
     return (
         <Modal
             animationType="fade"
-            transparent={false}
+            transparent={true}
             visible={hidden}>
             <View style={styles.container}>
                 <View style={[styles.box, styles.box1]}>

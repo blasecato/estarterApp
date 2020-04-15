@@ -89,6 +89,7 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         fontFamily: 'Ubuntu_medium',
         height: 60,
+        
     },
     buttonSignin__text: {
         color: '#19439F',
@@ -109,7 +110,8 @@ export default styles = StyleSheet.create({
         color: '#162CA3',
         borderColor: 'transparent',
         elevation: 0,
-        height: 60
+        height: 60,
+        
     },
     buttonSignup__text: {
         color: '#162CA3',

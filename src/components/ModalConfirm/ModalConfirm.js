@@ -9,7 +9,7 @@ export default function ModalConfirm({ navigation, hidden, setHidden, setModalAc
 	return (
 		<Modal
 			animationType="fade"
-			transparent={false}
+			transparent={true}
 			visible={hidden != 0}>
 			<View style={styles.container}>
 				<View style={[styles.box, styles.box1]}>

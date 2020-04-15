@@ -57,6 +57,7 @@ export default styles = StyleSheet.create({
     },
     content: {
         width: '90%',
+        maxWidth: 328,
         backgroundColor: 'transparent',
         display: 'flex',
         alignItems: 'center',
@@ -66,7 +67,8 @@ export default styles = StyleSheet.create({
         width: '100%',
         height: 360,
         alignItems: 'center',
-        borderRadius: 5,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
     },
     logo: {
         marginTop: 29,
@@ -129,7 +131,9 @@ export default styles = StyleSheet.create({
         padding: 11,
         color: '#ffff',
         backgroundColor: '#FFFFFF1A',
-        width: box_width
+        width: box_width,
+        maxHeight: 50, 
+        maxWidth: 288
     },
     buttonPass: {
         backgroundColor: '#417CCA',
@@ -137,7 +141,8 @@ export default styles = StyleSheet.create({
         borderColor: 'transparent',
         elevation: 0,
         borderBottomLeftRadius: 5,
-        borderBottomRightRadius: 5
+        borderBottomRightRadius: 5,
+        height: 50
     },
     buttonPass__text: {
         fontStyle: 'normal',

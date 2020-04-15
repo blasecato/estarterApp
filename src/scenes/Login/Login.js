@@ -67,7 +67,7 @@ export default function LoginScreen({ navigation }) {
           >
             <Text uppercase={false} style={styles.buttonSignin__text}> Iniciar sesión </Text>
           </Button>
-          <Button onPress={() => { setModalPassword(!modalPassword) }} transparent>
+          <Button style={{ marginBottom: 23, }} onPress={() => { setModalPassword(!modalPassword) }} transparent>
             <Text uppercase={false} style={styles.buttonForgot__text}> Olvide mi contraseña </Text>
           </Button>
         </ScrollView>
