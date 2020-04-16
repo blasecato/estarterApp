@@ -101,7 +101,7 @@ export default function Home({ navigation, route }) {
 					<View style={styles.whatsapp}>
 						<View style={styles.whatsapp__one}>
 							<View style={{ marginRight: 5 }}>
-								<Image style={styles.whatsapp__imgOne} source={require('./../../../assets/wa.png')} />
+								<Image style={styles.whatsapp__imgOne} source={require('./../../../assets/whatsapp.png')} />
 							</View>
 						</View>
 					</View>
@@ -227,10 +227,28 @@ export default function Home({ navigation, route }) {
 
 			</View >
 			{instruction &&
-				<Image
-					source={require('./../../../assets/instructions.png')}
-					style={{ flex: 1, height: '100%', width: '100%', resizeMode: 'cover', position: 'absolute' }}
-				/>
+				<LinearGradient
+					colors={['#072148D9', '#000000D9']}
+					start={{ x: 0.0, y: 0.5 }}
+					end={{ x: 0.0, y: 0.9 }}
+					style={{ flex: 1, height: '100%', width: '100%', resizeMode: 'cover', position: 'absolute' }}>
+					<View style={styles.instructions}>
+						<View style={[styles.box, styles.box1]}>
+							<Image
+								source={require('./../../../assets/instructionsWa.png')}
+							/>
+						</View>
+						<View style={[styles.box, styles.box2]}></View>
+						<View style={[styles.box, styles.box3]}>
+							<Image
+								source={require('./../../../assets/instructionsAdd.png')}
+							/>
+						</View>
+					</View>
+
+
+				</LinearGradient>
+
 			}
 		</>
 	)

@@ -47,11 +47,11 @@ export default styles = StyleSheet.create({
     card: {
         height: 550,
         width: '90%',
-        maxWidth: 315,
+        // maxWidth: 315,
         marginTop:20,
         flexDirection: 'column',
         backgroundColor: '#ffff',
-        
+        marginTop: 80,
         paddingLeft:15,
         display: 'flex',
         alignItems: 'center',
@@ -130,7 +130,7 @@ export default styles = StyleSheet.create({
     linearStyle: {
         height: 8,
         width: '90%',
-        maxWidth: 315,
+        // maxWidth: 315,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },

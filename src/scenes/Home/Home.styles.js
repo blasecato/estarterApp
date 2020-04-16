@@ -1,5 +1,10 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
+var { height } = Dimensions.get('window');
+
+var box_count = 3;
+var box_height = height / box_count;
+
 export default styles = StyleSheet.create({
     mapStyle: {
         width: Dimensions.get('window').width,
@@ -112,7 +117,6 @@ export default styles = StyleSheet.create({
         position: 'absolute',
         zIndex: 1,
         margin: 20,
-        top: 25,
         left: '78%'
     },
     whatsapp__one: {
@@ -125,6 +129,12 @@ export default styles = StyleSheet.create({
         resizeMode: 'cover',
         width: 60,
         height: 60
+    },
+    whatsapp__imgTwo: {
+        resizeMode: 'cover',
+        width: 42,
+        height: 43,
+
     },
     containerbg: {
         backgroundColor: 'transparent',
@@ -371,5 +381,27 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         color: '#4E4E4E',
         fontFamily: 'Ubuntu'
+    },
+    instructions: {
+        flex: 1,
+        flexDirection: 'column'
+    },
+    box: {
+        height: box_height
+    },
+    box1: {
+        backgroundColor: 'transparent',
+        alignItems: 'flex-end',
+        padding: 20
+
+    },
+    box2: {
+        backgroundColor: 'transparent'
+    },
+    box3: {
+        backgroundColor: 'transparent',
+        alignItems: 'flex-end',
+        paddingBottom: 40,
+        paddingRight: 40
     }
 })

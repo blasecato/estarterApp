@@ -14,10 +14,11 @@ export default styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
-        marginTop: '20%'
+        marginTop: '10%'
     },
     imageClose: {
-        margin: 20,
+        marginRight: 20,
+        marginBottom: 24,
         height: 32,
         width: 32,
         resizeMode: 'contain',
@@ -35,7 +36,7 @@ export default styles = StyleSheet.create({
         marginBottom: 20
     },
     card: {
-        height: 500,
+        height: 490,
         width: '90%',
         flexDirection: 'column',
         backgroundColor: '#ffff',
