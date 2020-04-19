@@ -19,6 +19,7 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         maxWidth: 330,
         width: '100%',
+        minHeight: 600,
         position: 'relative'
     },
     logo: {
@@ -111,7 +112,6 @@ export default styles = StyleSheet.create({
         borderColor: 'transparent',
         elevation: 0,
         height: 60,
-        
     },
     buttonSignup__text: {
         color: '#162CA3',

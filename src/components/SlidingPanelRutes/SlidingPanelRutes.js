@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SlidingUpPanel from 'rn-sliding-up-panel';
+/* import SlidingUpPanel from 'rn-sliding-up-panel'; */
 import { Image, TouchableOpacity, Animated, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
 import { Button, Text, View, Form, Item, Input, Segment, List, ListItem, Drawer } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -20,7 +20,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 	}
 	let _panel;
 
-	return (
+/* 	return (
 		<SlidingUpPanel
 			style
 			visible
@@ -36,10 +36,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 			draggableRange={draggableRange}
 			allowDragging={false}
 			ref={c => _panel = c}
-		/* onDragEnd={c => {
-			let positio = (draggableRange.start + height / 10 < c) ? height : (draggableRange.start > c + height / 8) ? 230 : 230;
-			_panel.show(positio)
-		}} */
+
 		>
 			<LinearGradient
 				colors={['#f5f5f500', '#1b7bd7E8', '#03325F']}
@@ -48,8 +45,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 					<Segment style={styles.tab} >
 						<TouchableOpacity
 							style={{
-								/*     position: 'absolute',
-										left: 10, */
+
 							}, activeTab == 2 ? styles.inactiveTab : styles.activeTab}
 							first onPress={() => {
 								setTimeout(() => {
@@ -167,15 +163,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 								</>
 							}
 
-							{/* {succes &&
-								<>
-									<Image
-										style={styles.imageList} source={require('./../../../assets/msg.png')}></Image>
-									<Text style={styles.text__info}>
-										Tu código no coincide con nuestras bases de datos por favor contacta con soporte técnico.
-									</Text>
-								</>
-							} */}
+
 
 							{succes &&
 								<>
@@ -246,15 +234,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 					}
 					{activeTab == 2 &&
 						<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-							{/* <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
-							<View style={styles.viewButton}>
-								<LinearGradient
-									colors={['#044C74', '#348AC7']}>
-									<Button style={styles.buttonAna}>
-										<Text uppercase={false} onPress={() => setModalCompartirRuta(true)} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
-									</Button>
-								</LinearGradient>
-							</View> */}
+
 							<View>
 								<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
 									<List style={styles.list} >
@@ -281,8 +261,7 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 										<Image style={{ width: 40, height: 40, resizeMode: 'contain' }}
 											source={require('./../../../assets/add.png')}></Image>
 									</TouchableOpacity>
-									{/* <View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 20, marginTop: -30 }}> */}
-									{/* </View> */}
+
 								</ScrollView>
 							</View>
 						</View>
@@ -294,5 +273,10 @@ export default function SlidingPanelRutes({ setModalNuevaRuta, setModalCompartir
 				style={{ flex: 1, height: '100%', width: '100%', resizeMode: 'cover', position: 'absolute' }}
 			/>
 		</SlidingUpPanel >
+	) */
+	return (
+		<View>
+			
+		</View>
 	)
 }

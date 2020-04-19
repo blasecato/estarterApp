@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
-import { Image, Modal, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { Image, Modal, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalResetPassword.style';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -12,14 +12,14 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
             animationType="fade"
             transparent={true}
             visible={hidden}>
-            <View style={styles.container}>
+            <TouchableWithoutFeedback style={styles.container} onPress={() => { setHidden(false) }}>
                 <View style={[styles.box, styles.box1]}>
                     <LinearGradient
                         colors={['#072148D9', '#000000D9']}
                         start={{ x: 0.0, y: 0.5 }}
                         end={{ x: 0.0, y: 0.9 }}
                         style={styles.container__background}>
-                        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}> 
+                        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <View style={styles.content}>
                                 <TouchableOpacity
                                     style={styles.touchClose}
@@ -41,14 +41,14 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
                                         source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
                                     <Text style={styles.textPass}>¿Cómo deseas reestablecer tu contraseña?</Text>
                                     <View style={styles.cards}>
-                                        <TouchableOpacity onPress={() => { setModalCode(1) }} style={[styles.card, { marginRight: 15, marginBottom: 20 }]}>
+                                        <TouchableOpacity onPress={() => { setModalCode(1); setHidden(false) }} style={[styles.card, { marginRight: 15, marginBottom: 20 }]}>
                                             <Image
                                                 source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/celular.png' }}
                                                 style={{ height: 75, width: 47, resizeMode: 'contain', marginTop: 40 }}
                                             />
                                             <Text style={styles.textCard}>Enviar código a mi <Text style={styles.textCard__bold}>número celular</Text></Text>
                                         </TouchableOpacity>
-                                        <TouchableOpacity onPress={() => { setModalCode(2) }} style={[styles.card, { marginLeft: 15, marginBottom: 20 }]}>
+                                        <TouchableOpacity onPress={() => { setModalCode(2); setHidden(false) }} style={[styles.card, { marginLeft: 15, marginBottom: 20 }]}>
                                             <Image
                                                 source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583893414/msj.png' }}
                                                 style={{ height: 68, width: 54, resizeMode: 'contain', marginTop: 45, marginBottom: 3 }}
@@ -61,7 +61,7 @@ export default function ModalResetPassword({ navigation, hidden, setHidden, setM
                         </ScrollView>
                     </LinearGradient>
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
 
         </Modal>
     );

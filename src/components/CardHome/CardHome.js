@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SlidingUpPanel from 'rn-sliding-up-panel';
+/* import SlidingUpPanel from 'rn-sliding-up-panel'; */
 import { Image, TouchableOpacity, Animated, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
 import { Button, Text, View, Form, Item, Input, Segment, List, ListItem, Drawer, Container, Header, Content, Card, CardItem, Body } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';

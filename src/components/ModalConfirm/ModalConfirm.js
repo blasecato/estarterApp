@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
-import { Image, Modal, TouchableOpacity, ScrollView } from 'react-native';
+import { Image, Modal, TouchableOpacity, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalConfirm.style';
 
@@ -11,7 +11,7 @@ export default function ModalConfirm({ navigation, hidden, setHidden, setModalAc
 			animationType="fade"
 			transparent={true}
 			visible={hidden != 0}>
-			<View style={styles.container}>
+			<TouchableWithoutFeedback style={styles.container} onPress={() => { setHidden(false) }}>
 				<View style={[styles.box, styles.box1]}>
 					<LinearGradient
 						colors={['#072148D9', '#000000D9']}
@@ -76,7 +76,7 @@ export default function ModalConfirm({ navigation, hidden, setHidden, setModalAc
 						</ScrollView>
 					</LinearGradient>
 				</View>
-			</View>
+			</TouchableWithoutFeedback>
 		</Modal>
 
 	);

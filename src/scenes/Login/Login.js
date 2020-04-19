@@ -29,7 +29,7 @@ export default function LoginScreen({ navigation }) {
         style={styles.container__Background}
       />
       <Container style={styles.content}>
-        <ScrollView contentContainerStyle={{ flexGrow: 1, width: '100%', justifyContent: 'center', alignItems: 'center' }}>
+        <View contentContainerStyle={{ flexGrow: 1, width: '100%', justifyContent: 'center', alignItems: 'center' }}>
           <Image
             style={styles.logo}
             source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
@@ -67,17 +67,16 @@ export default function LoginScreen({ navigation }) {
           >
             <Text uppercase={false} style={styles.buttonSignin__text}> Iniciar sesión </Text>
           </Button>
-          <Button style={{ marginBottom: 23, }} onPress={() => { setModalPassword(!modalPassword) }} transparent>
+          <Button style={{ marginBottom: 23, justifyContent: 'center' }} onPress={() => { setModalPassword(!modalPassword) }} transparent>
             <Text uppercase={false} style={styles.buttonForgot__text}> Olvide mi contraseña </Text>
           </Button>
-        </ScrollView>
+        </View>
       </Container>
       <Button
         onPress={() => { setModalRegister(!modalRegister) }} full style={styles.buttonSignup}
       >
         <Text uppercase={false} style={styles.buttonSignup__text}> ¿No tienes una cuenta? </Text>
       </Button>
-
       <ModalSignup
         hidden={modalRegister}
         setHidden={setModalRegister}
@@ -86,7 +85,6 @@ export default function LoginScreen({ navigation }) {
         setPhone={setPhone}
         setEmail={setEmail}
       >
-
       </ModalSignup>
       <ModalResetPassword hidden={modalPassword} setHidden={setModalPassword} setModalCode={setModalCode} ></ModalResetPassword>
       <ModalActivation hidden={modalActivation} setHidden={setModalActivation} phone={phone} email={email}>
@@ -94,8 +92,8 @@ export default function LoginScreen({ navigation }) {
       <ModalConfirm
         hidden={modalCode}
         setHidden={setModalCode}
-        setModalActivation={setModalActivation}></ModalConfirm>
+        setModalActivation={setModalActivation}>
+      </ModalConfirm>
     </Container>
-
   );
 }

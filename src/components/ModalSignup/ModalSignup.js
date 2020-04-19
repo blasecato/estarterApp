@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Header, Content, Button, Text, Form, Item, Input, Label, View, Alert, Right } from 'native-base';
-import { Image, Modal, TouchableOpacity } from 'react-native';
+import { Image, Modal, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './ModalSignup.style';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -16,7 +16,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 			animationType="fade"
 			transparent={true}
 			visible={hidden}>
-			<View style={styles.container}>
+			<TouchableWithoutFeedback style={styles.container} onPress={() => { setHidden(false) }}>
 				<View style={[styles.box, styles.box1]}>
 					<LinearGradient
 						colors={['#072148D9', '#000000D9']}
@@ -48,7 +48,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 										<Item style={styles.item} stackedLabel>
 											<Label style={styles.label}>
 												Número de identificación
-                                    </Label>
+                                  			  </Label>
 											<Controller
 												as={<Input style={styles.input} />}
 												control={control}
@@ -113,7 +113,7 @@ export default function ModalSignup({ navigation, hidden, setHidden, setModalCod
 						</ScrollView>
 					</LinearGradient>
 				</View>
-			</View>
+			</TouchableWithoutFeedback>
 		</Modal >
 	)
 }

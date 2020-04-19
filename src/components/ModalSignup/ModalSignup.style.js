@@ -58,7 +58,7 @@ export default styles = StyleSheet.create({
     },
     content: {
         width: '90%',
-        maxWidth: 328,
+        maxWidth: 428,
         backgroundColor: 'transparent',
         display: 'flex',
         alignItems: 'center',
@@ -74,13 +74,14 @@ export default styles = StyleSheet.create({
     },
     logo: {
         marginTop: 29,
-        width: 267,
+        width: 253,
         height: 61,
         resizeMode: 'contain',
         backgroundColor: 'transparent'
     },
     textRegister: {
         width: '90%',
+        maxWidth: 288,
         margin: 24,
         color: '#282828',
         textAlign: 'center',
@@ -116,7 +117,7 @@ export default styles = StyleSheet.create({
         backgroundColor: '#FFFFFF1A',
         width: box_width,
         maxHeight: 50,
-        maxWidth: 288
+        maxWidth: 300
     },
     button: {
         backgroundColor: '#417CCA',
