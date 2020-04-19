@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
         height: Dimensions.get('window').height,
     },
     container: {
-        height: '35%',
+        height: '51%',
         width: '100%',
         position: 'absolute',
         display: 'flex',
@@ -19,7 +19,6 @@ export default styles = StyleSheet.create({
         height: '100%',
         width: '100%',
         display: 'flex',
-        justifyContent: 'flex-end',
         alignItems: 'center',
         zIndex: 99
     },

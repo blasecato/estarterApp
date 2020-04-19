@@ -68,7 +68,7 @@ export default function ModalCodeQr({ navigation, hidden, setHidden }) {
 								<View style={[styles.card, { height: 480 }]}>
 									<View style={[styles.cardBox, styles.cardBoxOne]}>
 										<View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-											<Image style={{ height: 315, width: '100%', resizeMode: 'cover', zIndex: 1, marginTop: 14 }}
+											<Image style={{ height: 315, width: '100%', resizeMode: 'cover', zIndex: 1, marginTop: 24 }}
 												source={require('./../../../assets/code.png')} />
 										</View>
 									</View>

@@ -32,31 +32,32 @@ export default function CardHome({
 						</TouchableOpacity>
 					</View>
 					<Segment style={{}, activeTab == 1 ? styles.tab : styles.tabShared} >
-
-						<View style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab} >
-							<TouchableOpacity style={styles.view_tab}
-								onPress={() => {
-									setTimeout(() => {
-										setActiveTab(1)
-									}, 100);
-								}}>
+						<TouchableOpacity
+							onPress={() => {
+								setTimeout(() => {
+									setActiveTab(1)
+								}, 50);
+							}}
+							style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab} >
+							<View style={styles.view_tab}>
 								<Text style={activeTab == 1 ? styles.activeTab__text : styles.inactiveTab__text}>Mis rutas
                                 </Text>
 								<Image style={activeTab == 1 ? styles.activeTab__img : styles.inactiveTab__img} source={require('./../../../assets/down.png')}></Image>
-							</TouchableOpacity>
-						</View>
-						<View style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab} >
-							<TouchableOpacity style={styles.view_tab}
-								onPress={() => {
-									setTimeout(() => {
-										setActiveTab(2)
-									}, 100);
-								}}>
+							</View>
+						</TouchableOpacity>
+						<TouchableOpacity
+							onPress={() => {
+								setTimeout(() => {
+									setActiveTab(2)
+								}, 50);
+							}}
+							style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab} >
+							<View style={styles.view_tab}>
 								<Text style={activeTab == 1 ? styles.inactiveTab__text : styles.activeTab__text}>Compartidas
                                 </Text>
 								<Image style={activeTab == 1 ? styles.inactiveTab__img : styles.activeTab__img} source={require('./../../../assets/down.png')}></Image>
-							</TouchableOpacity>
-						</View>
+							</View>
+						</TouchableOpacity>
 
 						{/* <TouchableOpacity
 							style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab}
@@ -326,9 +327,9 @@ export default function CardHome({
 											</ListItem>
 										</List>
 									</ScrollView>
-									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: 0, position: "absolute", bottom: 10, right: 0 }}>
+									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: 0, position: "absolute", bottom: 4, right: 0 }}>
 										<TouchableOpacity onPress={() => { setModalCompartirRuta(true) }} style={[styles.box, styles.boxOne]}>
-											<Image style={{ width: 40, height: 40, resizeMode: 'contain' }}
+											<Image style={{ width: 70, height: 70, resizeMode: 'contain' }}
 												source={require('./../../../assets/add.png')}>
 											</Image>
 										</TouchableOpacity>
