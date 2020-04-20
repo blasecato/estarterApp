@@ -1,360 +1,165 @@
-import React, { useState } from 'react';
-/* import SlidingUpPanel from 'rn-sliding-up-panel'; */
-import { Image, TouchableOpacity, Animated, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
-import { Button, Text, View, Form, Item, Input, Segment, List, ListItem, Drawer, Container, Header, Content, Card, CardItem, Body } from 'native-base';
-import { LinearGradient } from 'expo-linear-gradient';
-import styles from './CardHome.style';
+import React, { useState } from "react";
+import {
+  Image,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from "react-native";
+import {
+  Text,
+  View,
+  Segment,
+  Container,
+  Card,
+  CardItem,
+  Body,
+} from "native-base";
+import { LinearGradient } from "expo-linear-gradient";
+import styles from "./CardHome.style";
+import TapOne from "./taps/TapOne";
+import TapTwo from "./taps/TapTwo";
 
 export default function CardHome({
-	setModalNuevaRuta,
-	setModalCompartirRuta,
-	activeTab,
-	setActiveTab,
-	setInstruction,
-	whatsapp,
-	setWhatsapp,
-	setModalAviso
+  setModalCompartirRuta,
+  activeTab,
+  setActiveTab,
+  setInstruction,
+  setWhatsapp,
+  setModalAviso,
 }) {
+  const [loading, setLoading] = useState(false);
+  const [succes, setSucces] = useState(false);
 
-	const [loading, setLoading] = useState(false)
-	const [succes, setSucces] = useState(false)
-
-	return (
-		<Container style={styles.container}>
-			<LinearGradient
-				colors={['#03325F00', '#1b7bd7E8', '#03325F']}
-				style={styles.container__gradient}>
-				<View style={styles.container_tab}>
-					<View style={{ width: ' 90%', justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: '10%' }}>
-						<TouchableOpacity style={styles.button__ubication}
-							onPress={() => { setModalAviso(true) }}>
-							<Image source={require('./../../../assets/marker.png')}></Image>
-						</TouchableOpacity>
-					</View>
-					<Segment style={{}, activeTab == 1 ? styles.tab : styles.tabShared} >
-						<TouchableOpacity
-							onPress={() => {
-								setTimeout(() => {
-									setActiveTab(1)
-								}, 50);
-							}}
-							style={{}, activeTab == 2 ? styles.inactiveTab : styles.activeTab} >
-							<View style={styles.view_tab}>
-								<Text style={activeTab == 1 ? styles.activeTab__text : styles.inactiveTab__text}>Mis rutas
-                                </Text>
-								<Image style={activeTab == 1 ? styles.activeTab__img : styles.inactiveTab__img} source={require('./../../../assets/down.png')}></Image>
-							</View>
-						</TouchableOpacity>
-						<TouchableOpacity
-							onPress={() => {
-								setTimeout(() => {
-									setActiveTab(2)
-								}, 50);
-							}}
-							style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab} >
-							<View style={styles.view_tab}>
-								<Text style={activeTab == 1 ? styles.inactiveTab__text : styles.activeTab__text}>Compartidas
-                                </Text>
-								<Image style={activeTab == 1 ? styles.inactiveTab__img : styles.activeTab__img} source={require('./../../../assets/down.png')}></Image>
-							</View>
-						</TouchableOpacity>
-
-						{/* <TouchableOpacity
-							style={{}, activeTab == 1 ? styles.inactiveTab : styles.activeTab}
-							onPress={() => {
-								setTimeout(() => {
-									setActiveTab(2)
-								}, 100);
-							}}>
-							<View style={styles.view_tab}>
-								<Text style={activeTab == 1 ? styles.inactiveTab__text : styles.activeTab__text}>Compartidas
-                                </Text>
-								<Image style={activeTab == 1 ? styles.inactiveTab__img : styles.activeTab__img} source={require('./../../../assets/down.png')}></Image>
-							</View>
-						</TouchableOpacity> */}
-					</Segment>
-				</View>
-				<Card style={activeTab == 1 ? styles.container__card : styles.container__cardShared}>
-					<CardItem>
-						<Body>
-							{activeTab == 1 &&
-
-								<View style={{ width: '100%' }} >
-									{!loading &&
-										<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-											<Text style={[styles.text__info, { marginBottom: 19, marginTop: 5 }]}>Ingresa el código que te han asignado en tu empresa.</Text>
-											<Form style={styles.form}>
-												<View style={{ width: '90%', maxWidth: '100%', }}>
-													<Item regular style={styles.item} last>
-														<Input
-															style={styles.input}
-															placeholderTextColor="#BEBEBE"
-															placeholder='Ejemplo: EST4RT3' />
-													</Item>
-												</View>
-											</Form>
-											<LinearGradient
-												colors={['#044C74', '#348AC7']}
-												start={{ x: 0.0, y: 0.2 }}
-												end={{ x: 0.8, y: 2.8 }}
-												style={[styles.buttonVinc, { width: '60%', marginTop: 10 }]}>
-												<TouchableOpacity onPress={() => {
-													setLoading(true)
-													setTimeout(() => {
-														setSucces(true)
-													}, 2000);
-												}}>
-													<Text uppercase={false} style={styles.buttonVinc__text}> VINCULAR </Text>
-												</TouchableOpacity>
-											</LinearGradient>
-										</View>
-									}
-
-									{loading && !succes &&
-										<View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-											<ActivityIndicator size="large" color="#00ff00" />
-											<Text style={styles.text__info}>
-												Estamos validando tu código por favor espera unos segundos.
-											</Text>
-										</View>
-									}
-
-									{/* {succes &&
-										<>
-											<Image style={styles.imageList} source={require('./../../../assets/msg.png')}></Image>											
-												<Text style={styles.text__info}>
-												Tu código no coincide con nuestras bases de datos por favor contacta con soporte técnico.
-                  		                       </Text>
-										</>
-									} */}
-
-									{succes &&
-										<View>
-											<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', }}>
-												<List style={styles.list} >
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-													<ListItem style={styles.listItem}>
-														<Image
-															style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-														<View style={styles.viewList}>
-															<Text style={styles.textList__routes}>RE1</Text>
-														</View>
-														<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-													</ListItem>
-												</List>
-											</ScrollView>
-
-										</View>
-									}
-
-								</View>
-							}
-							{activeTab == 2 &&
-
-								<View style={{ width: '100%' }} >
-									<ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center', width: '90%' }}>
-										<List style={styles.list} >
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/red.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/yellow.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-											<ListItem onPress={() => {
-												setInstruction(true)
-												setTimeout(() => {
-													setInstruction(false)
-													setWhatsapp(true)
-												}, 1500);
-											}}
-												style={styles.listItem}>
-												<Image
-													style={styles.imageList} source={require('./../../../assets/green.png')}></Image>
-												<Text style={styles.textList__info}> Unicentro - Calle 100 - Calle 13 </Text>
-											</ListItem>
-										</List>
-									</ScrollView>
-									<View style={{ flexGrow: 1, alignItems: 'flex-end', justifyContent: 'flex-end', marginTop: 0, position: "absolute", bottom: 4, right: 0 }}>
-										<TouchableOpacity onPress={() => { setModalCompartirRuta(true) }} style={[styles.box, styles.boxOne]}>
-											<Image style={{ width: 70, height: 70, resizeMode: 'contain' }}
-												source={require('./../../../assets/add.png')}>
-											</Image>
-										</TouchableOpacity>
-									</View>
-								</View>
-
-
-								// <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-								//     <Text style={styles.text__info}>Utiliza esta sección para compartir tu vehículo con tus compañeros de trabajo.</Text>
-								//     <View style={styles.viewButton}>
-								//         <LinearGradient
-								//             colors={['#044C74', '#348AC7']}>
-								//             start={{ x: 0.0, y: 0.2 }}
-								//             end={{ x: 0.8, y: 2.8 }}
-								//             <Button style={styles.buttonAna}>
-								//                 <Text uppercase={false} onPress={() => setModalCompartirRuta(true)} style={styles.buttonAna__text}> AÑADIR RUTA </Text>
-								//             </Button>
-								//         </LinearGradient>
-								//     </View>
-								// </View>
-							}
-						</Body>
-					</CardItem>
-				</Card>
-			</LinearGradient>
-		</Container>
-	);
+  return (
+    <Container style={styles.container}>
+      <LinearGradient
+        colors={["#03325F00", "#1b7bd7E8", "#03325F"]}
+        style={styles.container__gradient}
+      >
+        <View style={styles.container_tab}>
+          <View
+            style={{
+              width: " 90%",
+              justifyContent: "flex-end",
+              alignItems: "flex-end",
+              marginHorizontal: "10%",
+            }}
+          >
+            <TouchableOpacity
+              style={styles.button__ubication}
+              onPress={() => {
+                setModalAviso(true);
+              }}
+            >
+              <Image source={require("./../../../assets/marker.png")}></Image>
+            </TouchableOpacity>
+          </View>
+          <Segment style={({}, activeTab == 1 ? styles.tab : styles.tabShared)}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setTimeout(() => {
+                  setActiveTab(1);
+                }, 50);
+              }}
+              style={
+                ({}, activeTab == 2 ? styles.inactiveTab : styles.activeTab)
+              }
+            >
+              <View
+                style={
+                  (styles.view_tab,
+                  activeTab == 2 ? styles.inactiveTab : styles.activeTab)
+                }
+              >
+                <Text
+                  style={
+                    activeTab == 1
+                      ? styles.activeTab__text
+                      : styles.inactiveTab__text
+                  }
+                >
+                  Mis rutas
+                </Text>
+                <Image
+                  style={
+                    activeTab == 1
+                      ? styles.activeTab__img
+                      : styles.inactiveTab__img
+                  }
+                  source={require("./../../../assets/down.png")}
+                ></Image>
+              </View>
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setTimeout(() => {
+                  setActiveTab(2);
+                }, 50);
+              }}
+              style={
+                ({}, activeTab == 1 ? styles.inactiveTab : styles.activeTab)
+              }
+            >
+              <View
+                style={
+                  (styles.view_tab,
+                  activeTab == 1 ? styles.inactiveTab : styles.activeTab)
+                }
+              >
+                <Text
+                  style={
+                    activeTab == 1
+                      ? styles.inactiveTab__text
+                      : styles.activeTab__text
+                  }
+                >
+                  Compartidas
+                </Text>
+                <Image
+                  style={
+                    activeTab == 1
+                      ? styles.inactiveTab__img
+                      : styles.activeTab__img
+                  }
+                  source={require("./../../../assets/down.png")}
+                ></Image>
+              </View>
+            </TouchableWithoutFeedback>
+          </Segment>
+        </View>
+        <Card
+          style={
+            activeTab == 1
+              ? styles.container__card
+              : styles.container__cardShared
+          }
+        >
+          <CardItem style={{ paddingHorizontal: 0, marginHorizontal: 0 }}>
+            <Body
+              style={{
+                marginHorizontal: 0,
+                paddingHorizontal: 0,
+                width: "100%",
+              }}
+            >
+              {activeTab == 1 && (
+                <TapOne
+                  loading={loading}
+                  succes={succes}
+                  setSucces={setSucces}
+                  setLoading={setLoading}
+                />
+              )}
+              {activeTab == 2 && (
+                <TapTwo
+                  setModalCompartirRuta={setModalCompartirRuta}
+                  setInstruction={setInstruction}
+                  setWhatsapp={setWhatsapp}
+                />
+              )}
+            </Body>
+          </CardItem>
+        </Card>
+      </LinearGradient>
+    </Container>
+  );
 }
