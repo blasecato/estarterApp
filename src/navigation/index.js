@@ -326,6 +326,7 @@ export default function NavigatorSide() {
                     onPress={() => {
                       setProfile(false);
                     }}
+                    style={{display:"flex",flexDirection:"row"}}
                   >
                     <Image
                       style={{
@@ -337,16 +338,17 @@ export default function NavigatorSide() {
                       }}
                       source={require("./../../assets/back.png")}
                     />
-                  </TouchableOpacity>
                   <Image
                     style={{
                       resizeMode: "cover",
                       width: 54,
                       height: 12,
                       marginRight: 8,
+                      marginTop:9
                     }}
                     source={require("./../../assets/text-back.png")}
                   />
+                  </TouchableOpacity>
                 </View>
                 <View
                   style={{

@@ -40,7 +40,7 @@ export default function ModalQualification({ navigation, visibleQualification, s
 
                 <View style={[styles.box, styles.boxThree]}>
                     <Image style={{ width: 148, height: 56, resizeMode: 'contain', backgroundColor: 'transparent' }} source={{ uri: 'https://res.cloudinary.com/cacaotics/image/upload/v1583315329/Logo.png' }} />
-                    <Text style={{ fontSize: 10, lineHeight: 12, color: '#FFFFFF', fontWeight: 'bold' }}>Transporte + Tecnología + <Text>❤</Text></Text>
+                    <Text style={{ fontSize: 11, lineHeight: 12, color: '#FFFFFF', fontWeight: 'bold' }}>Transporte + Tecnología + ❤</Text>
                 </View>
 
             </LinearGradient>

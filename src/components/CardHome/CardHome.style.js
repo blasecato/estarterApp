@@ -302,5 +302,6 @@ export default styles = StyleSheet.create({
     width: 70,
     height: 70,
     resizeMode: "contain",
+    marginRight: -25
   },
 });
